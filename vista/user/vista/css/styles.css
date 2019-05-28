@@ -267,21 +267,21 @@ body{
 
 .grupo_event_teatro{
 	background: black;
-	background-image: url(../../../images/cinema.jpg);
+	background-image: url(../../../../images/cinema.jpg);
 	background-size: 100vw 100vh;
 	background-attachment: fixed;
 }
 
 .grupo_event_deporte{
 	background: black;
-	background-image: url(../../../images/futbol.jpg);
+	background-image: url(../../../../images/futbol.jpg);
 	background-size: 100vw 100vh;
 	background-attachment: fixed;
 }
 
 .grupo_event_congreso{
 	background: black;
-	background-image: url(../../../images/congreso.jpg);
+	background-image: url(../../../../images/congreso.jpg);
 	background-size: 100vw 100vh;
 	background-attachment: fixed;
 }
