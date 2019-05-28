@@ -104,8 +104,6 @@ CREATE TABLE T_EMPRESAS(
  emp_fec_elimina     date,
  emp_estado_elimina  varchar(2) DEFAULT 'N',
  emp_cat_id          int NOT NULL,
- emp_usu_id    		 int NOT NULL,
- FOREIGN KEY (emp_usu_id) REFERENCES T_USUARIOS(usu_id),
  FOREIGN KEY (emp_cat_id) REFERENCES T_CATEGORIAS(cat_id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 ```
@@ -132,6 +130,7 @@ CREATE TABLE T_EVENTOS(
  evt_trib_precio    int DEFAULT 0,
  evt_vip_precio     int DEFAULT 0,
  evt_box_precio     int DEFAULT 0,
+ evt_vendidos       int DEFAULT 0,
  evt_usu_crea       varchar(7) NOT NULL,
  evt_fec_crea       date NOT NULL,
  evt_usu_modifica   varchar(7),
