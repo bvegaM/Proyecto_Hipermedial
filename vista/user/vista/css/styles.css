@@ -239,7 +239,7 @@ body{
 
 .grupo_event_musica{
 	background: black;
-	background-image: url(../../../images/music.jpg);
+	background-image: url(../../../../images/music.jpg);
 	background-size: 100vw 100vh;
 	background-attachment: fixed;
 }
