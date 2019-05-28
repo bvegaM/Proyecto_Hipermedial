@@ -129,7 +129,7 @@
 			</div>
 		</section>
 		<section class="grupo_eventos grupo_event_congreso">
-			<h3 class="titulo_event_php">CATEGORIA CONGRESO</h3>
+			<h3 class="titulo_event_php" style="color:black;">CATEGORIA CONGRESO</h3>
 			<div class="eventos">
 				
 				<?php
