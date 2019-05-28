@@ -43,7 +43,7 @@
 			<ul class="menu" id="menu">
 				<li class="menu__item"><a href="#" class="menu__link menu__link--select"><i class="fas fa-home"><span>Home</span></i></a></li>
 				<li class="menu__item"><a href="perfil.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-user-edit"><span>Mi Perfil</span></i></a></li>
-				<li class="menu__item"><a href="category.php" class="menu__link"><i class="fas fa-ticket-alt"><span>Comprar</span></i></a></li>
+				<li class="menu__item"><a href="evento.php" class="menu__link"><i class="fas fa-ticket-alt"><span>Comprar</span></i></a></li>
 				<li class="menu__item"><a href="crear_evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Crear Evento</span></i></a></li>
 				<li class="menu__item"><a href="contact.html" class="menu__link"><i class="fas fa-money-check-alt"><span>Mis Compras</span></i></a></li>
 			</ul>
