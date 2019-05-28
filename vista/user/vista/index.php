@@ -44,12 +44,12 @@
 				<li class="menu__item"><a href="#" class="menu__link menu__link--select"><i class="fas fa-home"><span>Home</span></i></a></li>
 				<li class="menu__item"><a href="perfil.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-user-edit"><span>Mi Perfil</span></i></a></li>
 				<li class="menu__item"><a href="category.php" class="menu__link"><i class="fas fa-ticket-alt"><span>Comprar</span></i></a></li>
-				<li class="menu__item"><a href="eventos.php" class="menu__link"><i class="far fa-plus-square"><span>Crear Evento</span></i></a></li>
+				<li class="menu__item"><a href="crear_evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Crear Evento</span></i></a></li>
 				<li class="menu__item"><a href="contact.html" class="menu__link"><i class="fas fa-money-check-alt"><span>Mis Compras</span></i></a></li>
 			</ul>
 		</div>
 		<div class="rol">
-			<a href="registro.html" class="sesion"><i class="fas fa-smile-beam"><span>Bienvenido <?php echo $row["usu_nombres"]; ?></span></i></a>
+			<a href="perfil.php?codigo=<?php echo $codigo?>" class="sesion"><i class="fas fa-smile-beam"><span>Bienvenido <?php echo $row["usu_nombres"]; ?></span></i></a>
 			<a href="../controladores/php/cerrar_sesion.php" class="sesion"><i class="fas fa-sign-in-alt" id="inicio"><span>Cerrar Sesión</span></i></a>
 		</div>
 	</nav>

@@ -13,8 +13,7 @@
                   usu_contrasena = MD5('$contrasena') and
                   usu_estado_elimina = 'N'";
 
-	echo $usuario;
-	echo $contrasena;
+
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     
@@ -38,7 +37,7 @@
         }
         
     }else{
-        echo "hola";
+        	header("Location: ../../vista/login.html");
     }
     $conn->close();
 
