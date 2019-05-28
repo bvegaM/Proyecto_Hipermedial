@@ -1,12 +1,34 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
+        header("Location: ../../../public/vista/login.html");
+    }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Comprar/title>
+	<title>Comprar</title>
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
+
+	<?php
+		$codigo = $_GET["codigo"];
+		include '../../../config/conexion.php';
+		
+		$sql="SELECT *
+			  FROM T_USUARIOS
+			  WHERE usu_id = $codigo";
+		
+		$result = $conn->query($sql);
+		$row = $result->fetch_assoc();
+
+	?>
 	<header class="header">
 		<div class="cabecera">
 			<h1 class="logo"><i class="fas fa-ticket-alt"></i>Ticket Home</h1>
@@ -29,8 +51,8 @@
 			</ul>
 		</div>
 		<div class="rol">
-			<a href="login.html" class="sesion"><i class="fas fa-sign-in-alt" id="inicio"><span>Iniciar Sesión</span></i></a>
-			<a href="registro.html" class="sesion"><i class="fas fa-user-plus" id="registro"><span>Registrate</span></i></a>
+			<a href="perfil.php?codigo=<?php echo $codigo?>" class="sesion"><i class="fas fa-smile-beam"><span>Bienvenido <?php echo $row["usu_nombres"]; ?></span></i></a>
+			<a href="../controladores/php/cerrar_sesion.php" class="sesion"><i class="fas fa-sign-in-alt" id="inicio"><span>Cerrar Sesión</span></i></a>
 		</div>
 	</nav>
 	<section class="banner_category">
