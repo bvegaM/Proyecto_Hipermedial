@@ -13,13 +13,14 @@
 		$fecha = isset($_POST["fechaNacimiento"]) ? trim($_POST["fechaNacimiento"]): null;
 		$fechaC = date("y-m-d h:i:s",time());
  		$nombre_archivo = $_FILES['imagenUpdate']['name'];
-        $tipo_archivo = $_FILES['imagenUpdate']['type'];
-        $tamano_archivo = $_FILES['imagenUpdate']['size'];
-        
+       		$tipo_archivo = $_FILES['imagenUpdate']['type'];
+        	$tamano_archivo = $_FILES['imagenUpdate']['size'];
+		
+		echo $nombre_archivo;        
 		//IMAGEN
 		
 		if($nombre_archivo == ''){
-			$sql ="UPDATE T_USUARIOS 
+			   $sql ="UPDATE T_USUARIOS 
 			   SET usu_nombres = '$nombres',
 			   	   usu_apelidos = '$apellidos',
 				   usu_cedula = '$cedula',
@@ -31,13 +32,11 @@
 				   usu_fec_modifica = '$fechaC'
 				WHERE usu_id = $id";
 		}else{
-			$carpeta_destino = $_SERVER['DOCUMENT_ROOT'] .'/proyecto/images';
-        	move_uploaded_file($_FILES['imagenUpdate']['tmp_name'],$carpeta_destino."/".$nombre_archivo);
-        	$archivo_objetivo = fopen($carpeta_destino."/". $nombre_archivo,'r');
-        	$contenido=fread($archivo_objetivo,$tamano_archivo);
+		$carpeta_destino = $_SERVER['DOCUMENT_ROOT'] .'/Proyecto_Hipermedial/images';
+        	$archivo_objetivo = fopen($_FILES['imagenUpdate']['tmp_name'],'r');
+		$contenido=fread($archivo_objetivo,$tamano_archivo);
         	$contenido = addslashes($contenido);
-        	fclose($archivo_objetivo);
-			
+		fclose($archivo_objetivo);	
 			$sql ="UPDATE T_USUARIOS 
 			   SET usu_nombres = '$nombres',
 			   	   usu_apelidos = '$apellidos',
@@ -51,12 +50,12 @@
 				   usu_modifica = 'admin',
 				   usu_fec_modifica = '$fechaC'
 				WHERE usu_id = $id";
-		}
-		if($conn->query($sql) === TRUE) {
-             header("location: ../../vista/perfil.php?codigo=".$id);
-        } else {
-             echo "<div>";
-                    echo "<p class='exito'>Actualización erronea</p>";
-                echo "</div>";
-        }
+		};
+		if($conn->query($sql) === TRUE){
+            		 header("location: ../../vista/perfil.php?codigo=".$id);
+        	} else {
+             		echo "<div>";
+                    		echo "<p class='exito'>Actualización erronea</p>";
+                	echo "</div>";
+        	}
 ?>
