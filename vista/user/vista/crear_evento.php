@@ -31,30 +31,30 @@
         <div class="contact-wrapper">
             <div class="contact-form">
                 <h3>Paso 1: Crea tu Empresa u Organizador (Si ya lo registraste lo puedes encontrar)</h3>
-                <form action="../controladores/php/update_perfil.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
+                <form action="../controladores/php/crear_empresa.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
                     <p>
                         <input type="text" name="id" id="id" value="<?php echo $codigo ?>" hidden="hidden">
                         <label for="nombres">Nombre Empresa</label>
                         <input type="text" name="nombres" id="nombres">
                     </p>
                     <p>
-                        <label for="apellidos">RUC</label>
-                        <input type="text" name="apellidos" id="apellidos">
+                        <label for="ruc">RUC</label>
+                        <input type="text" name="ruc" id="ruc">
                     </p>
                     <p>
-                        <label for="apellidos">Direccion</label>
-                        <input type="text" name="apellidos" id="apellidos">
+                        <label for="direccion">Direccion</label>
+                        <input type="text" name="direccion" id="direccion">
                     </p>
                     <p>
-                        <label for="cedula">Telefono</label>
-                        <input type="text" name="cedula" id="cedula">
+                        <label for="telefono">Telefono</label>
+                        <input type="text" name="telefono" id="telefono">
                     </p>
                     <p>
                         <?php
 					    	$sql="SELECT * FROM T_CATEGORIAS";
 							$result = $conn->query($sql);
 						?>
-                        <label for="telefono">Categoria</label>
+                        <label for="categoria">Categoria</label>
                         <select name="cat" id="cat">
                   			<?php
 								while($row = $result->fetch_assoc()){
@@ -71,7 +71,7 @@
             </div>
             <div class="contact-info">
                 <h3>Paso 2: Crea tu Evento para que este disponible </h3>
-                <form action="../controladores/php/update_perfil.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
+                <form action="../controladores/php/crear_evento.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
                     <p>
                         <input type="text" name="id" id="id" value="<?php echo $codigo ?>" hidden="hidden">
                         <label for="nombres">Nombre del Evento</label>
@@ -79,7 +79,7 @@
                     </p>
                     <p>
                         <label for="fecha">Fecha del Evento</label>
-                        <input type="text" name="fechaNacimiento" id="fechaNacimiento">
+                        <input type="text" name="fecha" id="fecha">
                     </p>
                     <p>
                         <label for="direccion">Dirección</label>
@@ -134,7 +134,7 @@
 					    	$sql="SELECT * FROM T_EMPRESAS";
 							$result = $conn->query($sql);
 						?>
-                        <label for="mepresa">Empresa</label>
+                        <label for="empresa">Empresa</label>
                         <select name="emp" id="emp">
                   			<?php
 								while($row = $result->fetch_assoc()){
