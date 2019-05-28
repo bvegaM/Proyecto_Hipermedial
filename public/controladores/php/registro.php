@@ -23,9 +23,8 @@
 			$contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]): null;
 			$fechaC = date("y-m-d h:i:s",time());
 			
-			$sql = "INSERT INTO T_USUARIOS VALUES (0,STR_TO_DATE('$fecha', '%d/%m/%y'),'$cedula','$nombres','$apellidos','$telefono','$direccion','$correo',MD5('$contrasena'),null,null,'admin','$fechaC',null,null,null,null,'N',$rol)";
-	
-	
+			$sql = "INSERT INTO T_USUARIOS VALUES (0,STR_TO_DATE(REPLACE('$fecha','/','.') ,GET_FORMAT(date,'EUR')),'$cedula','$nombres','$apellidos','$telefono','$direccion','$correo',MD5('$contrasena'),null,null,'admin','$fechaC',null,null,null,null,'N',$rol)";
+		
 			if($conn->query($sql) == TRUE){
 				echo "<p>Se ha creado</p>";
 			}else{
