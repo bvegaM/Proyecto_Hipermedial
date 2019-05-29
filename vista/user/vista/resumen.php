@@ -63,7 +63,7 @@
 			<a href="../controladores/php/cerrar_sesion.php" class="sesion"><i class="fas fa-sign-in-alt" id="inicio"><span>Cerrar Sesión</span></i></a>
 		</div>
 	</nav>
-	<main class="main">
+	<main class="main" style="background: white;">
 		<h1>Nombre del Evento: <?php echo $row1["evt_desc"]?></h1>
 		<h2>Fecha: <?php echo $row1["evt_fec_evento"]?></h2>
 		<h2>Direccion: <?php echo $row1["evt_direccion"]?></h2>
