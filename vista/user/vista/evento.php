@@ -83,7 +83,7 @@
 						echo "<img class='img_event' src='data:".$row['evt_img_tipo']."; base64,".base64_encode($row['evt_img'])."'>";
 					 	echo "<h4 class='title_event'>".$row["evt_desc"]."</h4>";
 					 	echo "<p>".$row['evt_fec_evento']."</p>";
-					 	echo "<a href='resumen.php?evt=".$row["evt_id"]."' class='link_event'>Ir al Evento</a>";
+					 	echo "<a href='resumen.php?evt=".$row["evt_id"]."&codigo=".$codigo."' class='link_event'>Ir al Evento</a>";
 					echo "</div>";
 				 }
 				
@@ -113,7 +113,7 @@
 						echo "<img class='img_event' src='data:".$row['evt_img_tipo']."; base64,".base64_encode($row['evt_img'])."'>";
 					 	echo "<h4 class='title_event'>".$row["evt_desc"]."</h4>";
 					 	echo "<p>".$row['evt_fec_evento']."</p>";
-					 	echo "<a href='resumen.php?evt=".$row["evt_id"]."' class='link_event'>Ir al Evento</a>";
+					 	echo "<a href='resumen.php?evt=".$row["evt_id"]."&codigo=".$codigo."' class='link_event'>Ir al Evento</a>";
 					echo "</div>";
 				 }
 				
@@ -143,7 +143,7 @@
 						echo "<img class='img_event' src='data:".$row['evt_img_tipo']."; base64,".base64_encode($row['evt_img'])."'>";
 					 	echo "<h4 class='title_event'>".$row["evt_desc"]."</h4>";
 					 	echo "<p>".$row['evt_fec_evento']."</p>";
-					 	echo "<a href='resumen.php?evt=".$row["evt_id"]."' class='link_event'>Ir al Evento</a>";
+					 	echo "<a href='resumen.php?evt=".$row["evt_id"]."&codigo=".$codigo."' class='link_event'>Ir al Evento</a>";
 					echo "</div>";
 				 }
 				
@@ -173,7 +173,7 @@
 						echo "<img class='img_event' src='data:".$row['evt_img_tipo']."; base64,".base64_encode($row['evt_img'])."'>";
 					 	echo "<h4 class='title_event'>".$row["evt_desc"]."</h4>";
 					 	echo "<p>".$row['evt_fec_evento']."</p>";
-					 	echo "<a href='resumen.php?evt=".$row["evt_id"]."' class='link_event'>Ir al Evento</a>";
+					 	echo "<a href='resumen.php?evt=".$row["evt_id"]."&codigo=".$codigo."' class='link_event'>Ir al Evento</a>";
 					echo "</div>";
 				 }
 				
