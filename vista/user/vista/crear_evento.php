@@ -206,9 +206,9 @@
 		<div class="footer-menu-one">
 			<ul>
 				<li><a href="index.php?codigo=<?php echo $codigo?>">Home</a></li>
-				<li><a href="#">Mi Perfil</a></li>
-				<li><a href="">Comprar</a></li>
-				<li><a href="">Crear Eventos</a></li>
+				<li><a href="perfil.php?codigo=<?php echo $codigo?>">Mi Perfil</a></li>
+				<li><a href="evento.php?codigo=<?php echo $codigo?>">Comprar</a></li>
+				<li><a href="#">Crear Eventos</a></li>
 				<li><a href="">Mis Compras</a></li>
 			</ul>
 		</div>
