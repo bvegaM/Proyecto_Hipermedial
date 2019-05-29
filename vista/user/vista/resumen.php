@@ -65,7 +65,7 @@
 		<h1><?php echo $row1["evt_desc"]?></h1>
 		<h2>Fecha: <?php echo $row1["evt_fec_evento"]?></h2>
 		<h2>Direccion: <?php echo $row1["evt_direccion"]?></h2>
-		<?php echo "<img class='img_event' src='data:".$row['evt_img_tipo']."; base64,".base64_encode($row['evt_img'])."'>"; ?>
+		<?php echo "<img class='img_event' src='data:".$row1['evt_img_tipo']."; base64,".base64_encode($row1['evt_img'])."'>"; ?>
 	</main>
 	<footer class="footer">
 		<div class="footer-social-icons">
