@@ -70,7 +70,7 @@
         }
     </script>
     <style>
-		.info{
+		.info-block{
 			background: #181818;
 			color: white;
 			display: grid;
@@ -106,12 +106,12 @@
 		</div>
 	</nav>
 	<main class="main" style="background: white;">
-		<section class="info block">
-			<p>
+		<section class="info-block">
+			<article style="display:block;">
 				<h1><?php echo $row1["evt_desc"]?></h1>
 				<h2>Fecha: <?php echo $row1["evt_fec_evento"]?></h2>
 				<h2>Direccion: <?php echo $row1["evt_direccion"]?></h2>	
-			</p>
+			</article>
 			<?php echo "<img class='img_event' src='data:".$row1['evt_img_tipo']."; base64,".base64_encode($row1['evt_img'])."'>"; ?>
 		</section>
 		<div id="map_canvas" style="width: 50%; height: 400px;" class="block"></div>
