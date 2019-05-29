@@ -25,9 +25,7 @@
 	$latitud =  isset($_POST["latitud"])?trim($_POST["latitud"]):null;
 	$longitud =  isset($_POST["longitud"])?trim($_POST["longitud"]):null;
 
-	$carpeta_destino = $_SERVER['DOCUMENT_ROOT'] .'/proyecto/images';
-    move_uploaded_file($_FILES['imagenUpdate']['tmp_name'],$carpeta_destino."/".$nombre_archivo);
-    $archivo_objetivo = fopen($carpeta_destino."/". $nombre_archivo,'r');
+    $archivo_objetivo = fopen($_FILES['imagenUpdate']['tmp_name'],'r');
     $contenido=fread($archivo_objetivo,$tamano_archivo);
     $contenido = addslashes($contenido);
     fclose($archivo_objetivo);
