@@ -87,9 +87,9 @@
                     </p>
                     <p class="block">
                     	<label for="latitude">Latitud:</label>
-                    	<input id="txtLat" type="text" style="color:red" value="19.4326077" />
+                    	<input id="txtLat" name="latitud" type="text" style="color:red" value="19.4326077" />
                     	<label for="longitude">Longitud:</label>
-                    	<input id="txtLng" type="text" style="color:red" value="-99.13320799999997" /><br />
+                    	<input id="txtLng"  name="longitud" type="text" style="color:red" value="-99.13320799999997" /><br />
                     </p>
                     	<div id="map_canvas" style="width: auto; height: 400px;"></div>	
                     <p>
