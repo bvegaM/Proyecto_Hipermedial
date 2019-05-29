@@ -15,6 +15,8 @@
 	
 	$sql ="INSERT INTO T_EMPRESAS VALUES(0,'$ruc','$nombres','$direccion','$telefono',$latitud,$longitud,'admin','$fecha',null,null,null,null,'N',$categoria)";
 
+	echo $sql;
+
 	if($conn->query($sql) == TRUE){
 		header("Location: ../../vista/crear_evento.php?codigo=".$id);
 	}else{
