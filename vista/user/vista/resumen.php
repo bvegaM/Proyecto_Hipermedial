@@ -73,8 +73,12 @@
 		.info-block{
 			background: #181818;
 			color: white;
+			padding: 10px;
 			display: grid;
 			grid-template-columns: 1fr 1fr; 
+		}
+		.img_event{
+			margin: 0 auto;
 		}
 	</style>
 </head>
