@@ -182,10 +182,12 @@
                     <p class="block">
                     	<label for="latitude">Latitud:</label>
                     	<input id="txtLat" name="latitud" type="text" style="color:red" value="19.4326077" />
+                    </p>
+                    <p class="block">
                     	<label for="longitude">Longitud:</label>
                     	<input id="txtLng"  name="longitud" type="text" style="color:red" value="-99.13320799999997" /><br />
                     </p>
-                    	<div id="map_canvas" style="width: auto; height: 400px;"></div>	
+                    	<div id="map_canvas" style="width: auto; height: 400px; display:block;"></div>	
                     <p class="block">
                         <input type="submit" value="Registrar" class="button" id="botonA">
                         <input type="reset" value="Cancelar" class="button" id="botonB">
