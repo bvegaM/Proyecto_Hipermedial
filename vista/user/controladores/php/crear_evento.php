@@ -31,7 +31,7 @@
     fclose($archivo_objetivo);
 
 
-	$sql = "INSERT INTO T_EVENTOS VALUES(0,'$nombres',STR_TO_DATE('$fecha', '%d/%m/%y'),'$direccion',$latitud,$longitud,'$contenido','$tipo_archivo',$asientos,$asientosG,$asientosT,$asientosV,$asientosB,$precio,$precioG,$precioT,$precioV,$precioB,null,'admin','$fechaC',null,null,null,null,'N',$empresa)";
+	$sql = "INSERT INTO T_EVENTOS VALUES(0,'$nombres',STR_TO_DATE(REPLACE('$fecha','/','.') ,GET_FORMAT(date,'EUR')),'$direccion',$latitud,$longitud,'$contenido','$tipo_archivo',$asientos,$asientosG,$asientosT,$asientosV,$asientosB,$precio,$precioG,$precioT,$precioV,$precioB,null,'admin','$fechaC',null,null,null,null,'N',$empresa)";
 	
 	echo $sql;
 	
