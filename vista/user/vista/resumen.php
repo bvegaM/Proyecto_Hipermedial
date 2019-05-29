@@ -33,8 +33,41 @@
 	<title>Comprar</title>
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoJ3ujl8XgJZMJ3H8Hfu4wXa41tY_Eozc"></script>
+    <script type="text/javascript">
+        function initialize() {
+            // Creating map object
+            var map = new google.maps.Map(document.getElementById('map_canvas'), {
+                zoom: 12,
+                center: new google.maps.LatLng(<?php echo $row1["evt_latitud"]?>,<?php echo $row1["evt_longitud"]?>),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            // creates a draggable marker to the given coords
+            var vMarker = new google.maps.Marker({
+                position: new google.maps.LatLng(<?php echo $row1["evt_latitud"]?>,<?php echo $row1["evt_longitud"]?>),
+                draggable: true
+            });
+
+            // adds a listener to the marker
+            // gets the coords when drag event ends
+            // then updates the input with the new coords
+            google.maps.event.addListener(vMarker, 'dragend', function (evt) {
+                $("#txtLat").val(evt.latLng.lat().toFixed(6));
+                $("#txtLng").val(evt.latLng.lng().toFixed(6));
+
+                map.panTo(evt.latLng);
+            });
+
+            // centers the map on markers coords
+            map.setCenter(vMarker.position);
+
+            // adds the marker on the map
+            vMarker.setMap(map);
+        }
+    </script>
 </head>
-<body>
+<body onload="initialize();">
 	<header class="header">
 		<div class="cabecera">
 			<h1 class="logo"><i class="fas fa-ticket-alt"></i>Ticket Home</h1>
@@ -66,6 +99,7 @@
 		<h2>Fecha: <?php echo $row1["evt_fec_evento"]?></h2>
 		<h2>Direccion: <?php echo $row1["evt_direccion"]?></h2>
 		<?php echo "<img class='img_event' src='data:".$row1['evt_img_tipo']."; base64,".base64_encode($row1['evt_img'])."'>"; ?>
+		<div id="map_canvas" style="width: auto; height: 400px;" class="block"></div>
 	</main>
 	<footer class="footer">
 		<div class="footer-social-icons">
