@@ -43,11 +43,11 @@
 		<div class="menu_despegable">
 			<i class="fas fa-bars" id="btnmenu"></i>
 			<ul class="menu" id="menu">
-				<li class="menu__item"><a href="index.html" class="menu__link menu__link--select"><i class="fas fa-home"><span>Home</span></i></a></li>
-				<li class="menu__item"><a href="about.html" class="menu__link"><i class="fas fa-book-open"><span>About</span></i></a></li>
-				<li class="menu__item"><a href="category.php" class="menu__link"><i class="fab fa-buffer"><span>Category</span></i></a></li>
-				<li class="menu__item"><a href="eventos.php" class="menu__link"><i class="far fa-calendar"><span>Events</span></i></a></li>
-				<li class="menu__item"><a href="contact.html" class="menu__link"><i class="fas fa-address-card"><span>Contact</span></i></a></li>
+				<li class="menu__item"><a href="index.php?codigo=<?php echo $codigo?>" class="menu__link menu__link--select"><i class="fas fa-home"><span>Home</span></i></a></li>
+				<li class="menu__item"><a href="perfil.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-user-edit"><span>Mi Perfil</span></i></a></li>
+				<li class="menu__item"><a href="evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-ticket-alt"><span>Comprar</span></i></a></li>
+				<li class="menu__item"><a href="crear_evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Crear Evento</span></i></a></li>
+				<li class="menu__item"><a href="contact.html" class="menu__link"><i class="fas fa-money-check-alt"><span>Mis Compras</span></i></a></li>
 			</ul>
 		</div>
 		<div class="rol">
