@@ -69,6 +69,14 @@
             vMarker.setMap(map);
         }
     </script>
+    <style>
+		.info{
+			background: #181818;
+			color: white;
+			display: grid;
+			grid-template-columns: 1fr 1fr; 
+		}
+	</style>
 </head>
 <body onload="initialize();">
 	<header class="header">
@@ -98,10 +106,14 @@
 		</div>
 	</nav>
 	<main class="main" style="background: white;">
-		<h1><?php echo $row1["evt_desc"]?></h1>
-		<h2>Fecha: <?php echo $row1["evt_fec_evento"]?></h2>
-		<h2>Direccion: <?php echo $row1["evt_direccion"]?></h2>
-		<?php echo "<img class='img_event' src='data:".$row1['evt_img_tipo']."; base64,".base64_encode($row1['evt_img'])."'>"; ?>
+		<section class="info block">
+			<p>
+				<h1><?php echo $row1["evt_desc"]?></h1>
+				<h2>Fecha: <?php echo $row1["evt_fec_evento"]?></h2>
+				<h2>Direccion: <?php echo $row1["evt_direccion"]?></h2>	
+			</p>
+			<?php echo "<img class='img_event' src='data:".$row1['evt_img_tipo']."; base64,".base64_encode($row1['evt_img'])."'>"; ?>
+		</section>
 		<div id="map_canvas" style="width: 50%; height: 400px;" class="block"></div>
 	</main>
 	<footer class="footer">
