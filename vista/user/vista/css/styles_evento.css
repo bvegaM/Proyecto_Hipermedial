@@ -76,8 +76,7 @@ body{
 
 .contact-form form input, 
 .contac-form form .button,
-.contact-form form textarea,
-.contact-form form #map_canvas{
+.contact-form form textarea{
     width: 100%;
     padding: 0.7em;
     border: none;
