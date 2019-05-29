@@ -21,13 +21,13 @@
             // Creating map object
             var map = new google.maps.Map(document.getElementById('map_canvas'), {
                 zoom: 12,
-                center: new google.maps.LatLng(19.4326077, -99.13320799999997),
+                center: new google.maps.LatLng(-2.897583, -78.997963),
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             });
 
             // creates a draggable marker to the given coords
             var vMarker = new google.maps.Marker({
-                position: new google.maps.LatLng(19.4326077, -99.13320799999997),
+                position: new google.maps.LatLng(-2.897583, -78.997963),
                 draggable: true
             });
 
