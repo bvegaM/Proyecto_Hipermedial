@@ -131,11 +131,11 @@
 		</div>
 		<div class="footer-menu-one">
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">Quienes Somos</a></li>
-				<li><a href="category.php">Categorias</a></li>
-				<li><a href="eventos.php">Eventos</a></li>
-				<li><a href="contact.html">Contactos</a></li>
+				<li><a href="index.php?codigo=<?php echo $codigo?>">Home</a></li>
+				<li><a href="perfil.php?codigo=<?php echo $codigo?>">Mi Perfil</a></li>
+				<li><a href="evento.php?codigo=<?php echo $codigo?>">Comprar</a></li>
+				<li><a href="crear_evento.php?codigo=<?php echo $codigo?>">Crear Eventos</a></li>
+				<li><a href="">Mis Compras</a></li>
 			</ul>
 		</div>
 		<div class="footer-txt">
