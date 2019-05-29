@@ -111,8 +111,8 @@
 	</nav>
 	<main class="main" style="background: white;">
 		<section class="info-block">
-			<article style="display:block; text-aling:center;">
-				<h1 style="color:red; font-size:20px;"><?php echo $row1["evt_desc"]?></h1>
+			<article style="display:block;">
+				<h1 style="color:red; font-size:30px; text-aling:center;"><?php echo $row1["evt_desc"]?></h1>
 				<h2>Fecha: <?php echo $row1["evt_fec_evento"]?></h2>
 				<h2>Direccion: <?php echo $row1["evt_direccion"]?></h2>	
 			</article>
