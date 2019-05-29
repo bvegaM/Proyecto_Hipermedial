@@ -91,10 +91,7 @@
                     	<label for="longitude">Longitud:</label>
                     	<input id="txtLng" type="text" style="color:red" value="-99.13320799999997" /><br />
                     </p>
-                    <p>
                     	<div id="map_canvas" style="width: auto; height: 400px;"></div>	
-                    </p>
-					
                     <p>
                         <?php
 					    	$sql="SELECT * FROM T_CATEGORIAS";
