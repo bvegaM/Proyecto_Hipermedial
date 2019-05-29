@@ -28,6 +28,13 @@
 		
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
+	
+		$sql1="SELECT *
+			   FROM T_EVENTOS
+			   WHERE evt_id = $evento";
+	
+		$result1 = $conn->query($sql1);
+		$row1 = $result1->fetch_assoc();
 
 	?>
 	<header class="header">
