@@ -85,13 +85,6 @@
                         <label for="telefono">Telefono</label>
                         <input type="text" name="telefono" id="telefono">
                     </p>
-                    <p class="block">
-                    	<label for="latitude">Latitud:</label>
-                    	<input id="txtLat" name="latitud" type="text" style="color:red" value="19.4326077" />
-                    	<label for="longitude">Longitud:</label>
-                    	<input id="txtLng"  name="longitud" type="text" style="color:red" value="-99.13320799999997" /><br />
-                    </p>
-                    	<div id="map_canvas" style="width: auto; height: 400px;"></div>	
                     <p>
                         <?php
 					    	$sql="SELECT * FROM T_CATEGORIAS";
@@ -186,6 +179,13 @@
 							?>
                         </select>
                     </p>
+                    <p class="block">
+                    	<label for="latitude">Latitud:</label>
+                    	<input id="txtLat" name="latitud" type="text" style="color:red" value="19.4326077" />
+                    	<label for="longitude">Longitud:</label>
+                    	<input id="txtLng"  name="longitud" type="text" style="color:red" value="-99.13320799999997" /><br />
+                    </p>
+                    	<div id="map_canvas" style="width: auto; height: 400px;"></div>	
                     <p class="block">
                         <input type="submit" value="Registrar" class="button" id="botonA">
                         <input type="reset" value="Cancelar" class="button" id="botonB">

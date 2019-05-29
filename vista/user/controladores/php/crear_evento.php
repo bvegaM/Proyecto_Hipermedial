@@ -22,6 +22,8 @@
 	$nombre_archivo = $_FILES['imagenUpdate']['name'];
     $tipo_archivo = $_FILES['imagenUpdate']['type'];
     $tamano_archivo = $_FILES['imagenUpdate']['size'];
+	$latitud =  isset($_POST["latitud"])?trim($_POST["latitud"]):null;
+	$longitud =  isset($_POST["longitud"])?trim($_POST["longitud"]):null;
 
 	$carpeta_destino = $_SERVER['DOCUMENT_ROOT'] .'/proyecto/images';
     move_uploaded_file($_FILES['imagenUpdate']['tmp_name'],$carpeta_destino."/".$nombre_archivo);
@@ -31,7 +33,7 @@
     fclose($archivo_objetivo);
 
 
-	$sql = "INSERT INTO T_EVENTOS VALUES(0,'$nombres',STR_TO_DATE('$fecha', '%d/%m/%y'),'$direccion','$contenido','$tipo_archivo',$asientos,$asientosG,$asientosT,$asientosV,$asientosB,$precio,$precioG,$precioT,$precioV,$precioB,null,'admin','$fechaC',null,null,null,null,'N',$empresa)";
+	$sql = "INSERT INTO T_EVENTOS VALUES(0,'$nombres',STR_TO_DATE('$fecha', '%d/%m/%y'),'$direccion',$latitud,$longitud,'$contenido','$tipo_archivo',$asientos,$asientosG,$asientosT,$asientosV,$asientosB,$precio,$precioG,$precioT,$precioV,$precioB,null,'admin','$fechaC',null,null,null,null,'N',$empresa)";
 
 	if($conn->query($sql) == TRUE){
 		header("Location: ../../vista/crear_evento.php?codigo=".$id);

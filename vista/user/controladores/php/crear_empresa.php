@@ -10,18 +10,9 @@
 	$telefono = isset($_POST["telefono"]) ? trim($_POST["telefono"]):null;
 	$id = isset($_POST["id"]) ? trim($_POST["id"]): null;
 	$fechaC = date("y-m-d h:i:s",time());
-	$latitud =  isset($_POST["latitud"])?trim($_POST["latitud"]):null;
-	$longitud =  isset($_POST["longitud"])?trim($_POST["longitud"]):null;
 	
-<<<<<<< HEAD
-	$sql ="INSERT INTO T_EMPRESAS VALUES(0,'$ruc','$nombres','$direccion','$telefono',$latitud,$longitud,'admin','$fechaC',null,null,null,null,'N',$categoria)";
-	echo $sql;
-=======
-	$sql ="INSERT INTO T_EMPRESAS VALUES(0,'$ruc','$nombres','$direccion','$telefono',$latitud,$longitud,'admin','$fecha',null,null,null,null,'N',$categoria)";
+	$sql ="INSERT INTO T_EMPRESAS VALUES(0,'$ruc','$nombres','$direccion','$telefono','admin','$fechaC',null,null,null,null,'N',$categoria)";
 
-	echo $sql;
-
->>>>>>> b418876c404687654970bba0cef92f50f6d715c0
 	if($conn->query($sql) == TRUE){
 		header("Location: ../../vista/crear_evento.php?codigo=".$id);
 	}else{
