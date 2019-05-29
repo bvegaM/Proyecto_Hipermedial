@@ -86,7 +86,7 @@
                         <input type="text" name="telefono" id="telefono">
                     </p>
                     <p>
-                    	<div id="map_canvas" style="width: auto; height: 500px;"></div>	
+                    	<div id="map_canvas" style="width: auto; height: 400px;"></div>	
                     </p>
 					
                     <p>
