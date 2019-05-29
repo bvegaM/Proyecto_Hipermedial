@@ -15,7 +15,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key="></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=zSQ9Tw97bh6g.ksp39_Q3LiBc"></script>
     <script type="text/javascript">
         function initialize() {
             // Creating map object
