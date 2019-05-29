@@ -33,7 +33,6 @@
 
 	$sql = "INSERT INTO T_EVENTOS VALUES(0,'$nombres',STR_TO_DATE(REPLACE('$fecha','/','.') ,GET_FORMAT(date,'EUR')),'$direccion',$latitud,$longitud,'$contenido','$tipo_archivo',$asientos,$asientosG,$asientosT,$asientosV,$asientosB,$precio,$precioG,$precioT,$precioV,$precioB,null,'admin','$fechaC',null,null,null,null,'N',$empresa)";
 	
-	echo $sql;
 	
 	if($conn->query($sql) == TRUE){
 		header("Location: ../../vista/crear_evento.php?codigo=".$id);
