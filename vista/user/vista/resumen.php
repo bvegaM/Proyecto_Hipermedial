@@ -5,19 +5,7 @@
     }
 ?>
 
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Comprar</title>
-	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-</head>
-<body>
-
-	<?php
+<?php
 		$codigo = $_GET["codigo"];
 		$evento = $_GET["evt"];
 		include '../../../config/conexion.php';
@@ -36,7 +24,17 @@
 		$result1 = $conn->query($sql1);
 		$row1 = $result1->fetch_assoc();
 
-	?>
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Comprar</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
 	<header class="header">
 		<div class="cabecera">
 			<h1 class="logo"><i class="fas fa-ticket-alt"></i>Ticket Home</h1>
@@ -64,9 +62,10 @@
 		</div>
 	</nav>
 	<main class="main" style="background: white;">
-		<h1>Nombre del Evento: <?php echo $row1["evt_desc"]?></h1>
+		<h1><?php echo $row1["evt_desc"]?></h1>
 		<h2>Fecha: <?php echo $row1["evt_fec_evento"]?></h2>
 		<h2>Direccion: <?php echo $row1["evt_direccion"]?></h2>
+		<?php echo "<img class='img_event' src='data:".$row['evt_img_tipo']."; base64,".base64_encode($row['evt_img'])."'>"; ?>
 	</main>
 	<footer class="footer">
 		<div class="footer-social-icons">
