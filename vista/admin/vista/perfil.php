@@ -17,7 +17,7 @@
    
    <?php
 		$codigo = $_GET["codigo"];
-		$usu = $_get["usu"];
+		$usu = $_GET["usu"];
 		include '../../../config/conexion.php';
 		
 		$sql="SELECT *
