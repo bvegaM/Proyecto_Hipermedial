@@ -25,6 +25,8 @@
 		
 		$resultadoF=$conn->query($factura);
 		$row=$resultadoF->fetch_assoc();
+		
+		echo $row['fc_id'];
 	}
 	
 	
