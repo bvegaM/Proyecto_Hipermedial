@@ -194,7 +194,8 @@ function validarFecha(){
              document.getElementById("fechaNacimiento").style.background = "rgba(135, 246, 7,0.5)"   
             }
       }
-  }
+  }  
+}
 
 function validarContrasena(){
     var contrasena = document.getElementById("contrasena").value
@@ -213,6 +214,4 @@ function validarContrasena(){
         document.getElementById("cajaP").style.background = "none"
             document.getElementById("cajaR").style.background = "none"
     }
-}
-  
 }
