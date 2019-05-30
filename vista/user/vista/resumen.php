@@ -119,8 +119,8 @@
 			<?php echo "<img class='img_event' src='data:".$row1['evt_img_tipo']."; base64,".base64_encode($row1['evt_img'])."'>"; ?>
 		</section>
 		<section class="info-block">
-			<div id="map_canvas" style="width: 50%; height: 400px;"></div>
-			<table border="1">
+			<div id="map_canvas" style="width: 100%; height: 400px;"></div>
+			<table border="1" >
 				<tr>
 					<th>Tipo</th>
 					<th>Precio</th>
