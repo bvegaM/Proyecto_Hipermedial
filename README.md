@@ -43,6 +43,13 @@ El resto de requerimientos se puede encontrar en el repositorio
 
 Otro aspecto importante del diseño del sistema es el diagramado UML el cual nos permite entender como se va a realizar la secuencia de nuestro sistema, como también entender que personas actuan en la misma y que relación tienen entre sí, muy util para desarrollar la base de datos, entre otras cosas más. Este paso fue desarrollado por Javier Vazquez y Alex Reinoso, obteniendo los siguientes resultados:
 
+![4](images_readme/4.PNG)
+![5](images_readme/5.PNG)
+![6](images_readme/6.PNG)
+![7](images_readme/7.PNG)
+
+Los diagramas se pueden ver así mismo en el repositorio
+
 
 # Base De Datos
 
