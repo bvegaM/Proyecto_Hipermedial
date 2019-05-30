@@ -5,6 +5,8 @@
     }
 ?>
  <?php
+		$evt=$_GET["evt"];
+		$evtId=$_GET["evtId"];
 		$codigo = $_GET["codigo"];
 		include '../../../config/conexion.php';
 		
@@ -14,6 +16,15 @@
 		
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
+		
+		$sql1="SELECT *
+			  FROM T_EVENTOS
+			  WHERE usu_id = $evt";
+		
+		$result1 = $conn->query($sql1);
+		$row1 = $result->fetch_assoc();
+
+
 	?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,16 +102,57 @@
                    		<br>
                    		<br>
                    		<br>
-                   		<tr>
-                   			<td>1</td>
-                   			<td>Montaner vs Vita General</td>
-                   			<td>$20</td>
-                   		</tr>
-                   		<tr>
-                   			<td></td>
-                   			<td style="font-weight: bolder;">Total:</td>
-                   			<td>$20</td>
-                   		</tr>
+                   		<?php 
+						 if($evtId == 1){
+							echo "<tr>";
+                   				echo "<td id='cantidad'>1</td>";
+                   				echo "<td>".$row1["evt_desc"]." General</td>";
+                   				echo "<td>$".$row1["evt_gen_precio"]."</td>";
+                   			echo "</tr>";
+                   			echo "<tr>";
+                   				echo "<td></td>";
+                   				echo "<td style='font-weight: bolder;'>Total:</td>";
+                   				echo "<td>$".$row1["evt_gen_precio"]."</td>";
+                   			echo "</tr>";
+						 }
+						if($evtId == 2){
+							echo "<tr>";
+                   				echo "<td id='cantidad'>1</td>";
+                   				echo "<td>".$row1["evt_desc"]." Tribuna</td>";
+                   				echo "<td>$".$row1["evt_trib_precio"]."</td>";
+                   			echo "</tr>";
+                   			echo "<tr>";
+                   				echo "<td></td>";
+                   				echo "<td style='font-weight: bolder;'>Total:</td>";
+                   				echo "<td>$".$row1["evt_trib_precio"]."</td>";
+                   			echo "</tr>";
+						 }
+						if($evtId == 3){
+							echo "<tr>";
+                   				echo "<td id='cantidad'>1</td>";
+                   				echo "<td>".$row1["evt_desc"]." VIP</td>";
+                   				echo "<td>$".$row1["evt_vip_precio"]."</td>";
+                   			echo "</tr>";
+                   			echo "<tr>";
+                   				echo "<td></td>";
+                   				echo "<td style='font-weight: bolder;'>Total:</td>";
+                   				echo "<td>$".$row1["evt_vip_precio"]."</td>";
+                   			echo "</tr>";
+						 }
+						if($evtId == 4){
+							echo "<tr>";
+                   				echo "<td id='cantidad'>1</td>";
+                   				echo "<td>".$row1["evt_desc"]." BOX</td>";
+                   				echo "<td>$".$row1["evt_box_precio"]."</td>";
+                   			echo "</tr>";
+                   			echo "<tr>";
+                   				echo "<td></td>";
+                   				echo "<td style='font-weight: bolder;'>Total:</td>";
+                   				echo "<td>$".$row1["evt_box_precio"]."</td>";
+                   			echo "</tr>";
+						 }
+						?>
+                   		
                    	</table>
                    </div>
                     <p class="block">
