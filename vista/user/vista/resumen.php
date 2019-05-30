@@ -134,34 +134,38 @@
 					
 					$result = $conn->query($sql);
 					$row = $result->fetch_assoc();
+				
+					if($row["evt_gen"]>0){
+						echo "<tr>";
+						echo "<td>GENERAL</td>";
+						echo "<td>$".$row["evt_gen_precio"]."</td>";
+						echo "<td>".$row["evt_gen"]."</td>";
+						echo "</tr>";
+					}
+					if($row["evt_trib"]>0){
+						echo "<tr>";
+						echo "<td>GENERAL</td>";
+						echo "<td>$".$row["evt_gen_precio"]."</td>";
+						echo "<td>".$row["evt_gen"]."</td>";
+						echo "</tr>";
+					}
+					if($row["evt_vip"]>0){
+						echo "<tr>";
+						echo "<td>GENERAL</td>";
+						echo "<td>$".$row["evt_gen_precio"]."</td>";
+						echo "<td>".$row["evt_gen"]."</td>";
+						echo "</tr>";
+					}
+					if($row["evt_box"]>0){
+						echo "<tr>";
+						echo "<td>GENERAL</td>";
+						echo "<td>$".$row["evt_gen_precio"]."</td>";
+						echo "<td>".$row["evt_gen"]."</td>";
+						echo "</tr>";
+					}
 				?>
-				<tr>
-					<td>GENERAL</td>
-					<td>$<?php echo $row["evt_gen_precio"]?></td>
-					<td><?php echo $row["evt_gen"]?></td>
-					
-				</tr>
-				<tr>
-					<td>TRIBUNA</td>
-					<td>$<?php echo $row["evt_trib_precio"]?></td>
-					<td><?php echo $row["evt_trib"]?></td>
-					
-				</tr>
-				<tr>
-					<td>VIP</td>
-					<td>$<?php echo $row["evt_vip_precio"]?></td>
-					<td><?php echo $row["evt_vip"]?></td>
-					
-				</tr>
-				<tr>
-					<td>BOX</td>
-					<td>$<?php echo $row["evt_box_precio"]?></td>
-					<td><?php echo $row["evt_box"]?></td>
-					
-				</tr>
 			</table>	
-		</section>
-		
+		</section>	
 	</main>
 	<footer class="footer">
 		<div class="footer-social-icons">
