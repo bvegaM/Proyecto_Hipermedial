@@ -21,7 +21,9 @@
 				   T_EVENTOS
 			  WHERE fc_id = fd_fc_id AND
 			  		evt_id = fd_evt_id AND
-					fc_usu_id=$codigo";
+					fc_usu_id=$codigo AND
+					fc_estado ='N' AND
+					fd_estado = 'N'";
 		
 		$result1 = $conn->query($sql1);
 	?>
