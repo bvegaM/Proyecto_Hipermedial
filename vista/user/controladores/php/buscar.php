@@ -24,7 +24,8 @@
             $evento = $_GET['evt'];
             $sql ="SELECT *
                 FROM T_EVENTOS
-				WHERE evt_desc like '%$evento%'";
+				WHERE evt_desc like '%$evento%' AMD
+					  evt_estado_elimina ='N'";
                 $result = $conn->query($sql);
                 if($result->num_rows > 0){
                          while($row = $result->fetch_assoc()){
