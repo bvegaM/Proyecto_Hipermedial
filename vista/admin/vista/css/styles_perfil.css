@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: #181818;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1.5em;
+}
+
+.content{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+.logo{
+    text-align: center;
+    font-size: 3em;
+}
+
+.logo span{
+    color: rgb(229,9,20,1);
+}
+
+.contact-wrapper{
+    box-shadow: 0 0 20px 0 rgba(255,255,255,0.3);
+}
+
+.contact-wrapper > *{
+    padding: 1em;
+}
+
+.contact-wrapper p select{
+	width: 100%;
+    padding: 0.7em;
+    border: none;
+    background: none;
+    border-bottom: 1px solid rgb(229,9,20,1);
+    outline: 0;
+    color:rgb(229,9,20,1);
+}
+.contact-form{
+    background: #222222;
+}
+
+.contact-form form{
+    margin: 0;
+    padding: 1em;
+}
+.contact-form form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form .block{
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+    grid-column:1 / 3;
+}
+
+.contact-form form .block_contact{
+	grid-column: 1 / 3;
+}
+
+.contact-form .button:hover,
+.contact-form .button:focus{
+    background: #d63031;
+    color: white;
+    transition: background-color: 1s ease-out;
+    outline: 0;
+}
+
+.contact-form form input, 
+.contac-form form .button,
+.contact-form form textarea{
+    width: 100%;
+    padding: 0.7em;
+    border: none;
+    background: none;
+    border-bottom: 1px solid rgb(229,9,20,1);
+    outline: 0;
+    color: white;
+}
+
+.contact-form form select{
+	color: rgb(229,9,20,1);
+}
+
+.contact-form form p{
+    width: 100%;
+    padding: 0.7em;
+    outline: 0;
+    color: white;
+}
+
+.contact-form form .button{
+    background: rgb(229,9,20,1);
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.contact-info{
+    background: black;
+}
+
+.contact-info h4, 
+.contact-info ul,
+.contact-info p{
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.contact-info h4{
+	font-size: 20px;
+}
+
+.contact-info h4 i{
+	margin-right: 5px;
+}
+
+.contact-info ul{
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li{
+    padding: 0.5em;
+}
+
+.contact-info ul li a{
+	text-decoration: none;
+	color: white;
+}
+
+.contact-info ul li a:hover{
+	color: #b70e21;
+}
+
+.contact-info ul li .img_perfil{
+	width: 50%;
+	height: auto;
+	border-radius: 50%;
+}
+
+/**pantallas grandes**/
+@media(min-width: 700px){
+    body{
+        padding: 0 4em;
+    }
+    
+    .contact-wrapper{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .contact-wrapper > *{
+        padding: 2em;
+    }
+}
+
+/*----Footer--*/
+
+.footer{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	background: black;
+	padding: 20px 0px;
+}
+
+.footer-social-icons{
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+.footer-social-icons ul{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.footer-social-icons ul li{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0 10px;
+	border-radius: 100%;
+	background: rgb(229,9,20,1);
+}
+
+.footer-social-icons ul li a{
+	color: white;
+	font-size: 25px;
+}
+
+.footer-social-icons ul li a i{
+	line-height: 50px;
+}
+
+.footer-menu-one{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 25px;
+}
+
+.footer-menu-one ul{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+.footer-menu-one ul li{
+	display: inline-block;
+	margin: 0px 20px;
+}
+
+.footer-menu-one ul li a{
+	font-size: 15px;
+	font-weight: 600;
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.footer-txt{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 25px;
+}
+
+.footer-txt p{
+	text-align: center;
+	color: white;
+	margin: 0;
+}
+
+#f-min{
+	font-size: 12px;
+}
