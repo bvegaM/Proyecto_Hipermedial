@@ -25,7 +25,7 @@
 			$codigo = $_GET['usuario'];
             $sql ="SELECT *
                 FROM T_EVENTOS
-				WHERE evt_desc like '%$evento%' AMD
+				WHERE evt_desc like '%$evento%' AND
 					  evt_estado_elimina ='N'";
                 $result = $conn->query($sql);
                 if($result->num_rows > 0){
