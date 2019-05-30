@@ -80,6 +80,11 @@
 		.img_event{
 			margin: 0 auto;
 		}
+		td a i{
+			color: greenyellow;
+			text-align: center;
+			font-size: 20px;
+		}
 	</style>
 </head>
 <body onload="initialize();">
