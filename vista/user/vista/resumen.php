@@ -166,7 +166,7 @@
 							}
 						?>
 				</table>
-				<p style="color:white;">Para comprar hacer click en el enlace de compra para que te pueda llevar al proceso de compra, recuerde que una vez hecha la compra, se puede ir a la sección de mis compras para poder anular la factura y anular su compra</p>
+				<p style="color:white; text-align:center; margin:15px;">Para comprar hacer click en el enlace de compra para que te pueda llevar al proceso de compra, recuerde que una vez hecha la compra, se puede ir a la sección de mis compras para poder anular la factura y anular su compra</p>
 			</section>	
 		</section>	
 	</main>
