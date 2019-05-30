@@ -11,6 +11,9 @@
 		$sql="SELECT *
 			  FROM T_USUARIOS
 			  WHERE usu_id = $codigo";
+
+		$result = $conn->query($sql);
+		$row = $result->fetch_assoc();
 	?>
 <!DOCTYPE html>
 <html lang="en">
