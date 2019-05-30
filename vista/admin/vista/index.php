@@ -42,10 +42,9 @@
 			<i class="fas fa-bars" id="btnmenu"></i>
 			<ul class="menu" id="menu">
 				<li class="menu__item"><a href="index.php?codigo=<?php echo $codigo?>" class="menu__link menu__link--select"><i class="fas fa-home"><span>Home</span></i></a></li>
-				<li class="menu__item"><a href="perfil.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-user-edit"><span>Mi Perfil</span></i></a></li>
-				<li class="menu__item"><a href="evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-ticket-alt"><span>Comprar</span></i></a></li>
-				<li class="menu__item"><a href="crear_evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Crear Evento</span></i></a></li>
-				<li class="menu__item"><a href="mis_compras.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-money-check-alt"><span>Mis Compras</span></i></a></li>
+				<li class="menu__item"><a href="evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-ticket-alt"><span>Facturas</span></i></a></li>
+				<li class="menu__item"><a href="crear_evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Eventos</span></i></a></li>
+				<li class="menu__item"><a href="mis_compras.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-money-check-alt"><span>Usuarios</span></i></a></li>
 			</ul>
 		</div>
 		<div class="rol">
@@ -120,10 +119,9 @@
 		<div class="footer-menu-one">
 			<ul>
 				<li><a href="index.php?codigo=<?php echo $codigo?>">Home</a></li>
-				<li><a href="#">Mi Perfil</a></li>
-				<li><a href="evento.php?codigo=<?php echo $codigo?>">Comprar</a></li>
-				<li><a href="crear_evento.php?codigo=<?php echo $codigo?>">Crear Eventos</a></li>
-				<li><a href="mis_compras.php?codigo=<?php echo $codigo?>">Mis Compras</a></li>
+				<li><a href="evento.php?codigo=<?php echo $codigo?>">Facturas</a></li>
+				<li><a href="crear_evento.php?codigo=<?php echo $codigo?>">Eventos</a></li>
+				<li><a href="mis_compras.php?codigo=<?php echo $codigo?>">Usuarios</a></li>
 			</ul>
 		</div>
 		<div class="footer-txt">
