@@ -73,7 +73,10 @@
 		<div class="banner__content">Por medio de esta página elige el evento y compra el ticket</div>
 	</section>
 	<main class="main">
-	
+		<form action="" class="busqueda">
+                <input type="text"  id="remite" name="remitente" value="<?php echo $codigo?>" hidden="hidden">
+                <input type="text" name="correo" placeholder="buscar por remitente" id="correo" value="" onkeyup="buscarPorCorreo()">
+            </form>
 		<section class="grupo_eventos grupo_event_musica">
 			<h3 class="titulo_event_php">CATEGORIA MUSICA</h3>
 			<div class="eventos">
