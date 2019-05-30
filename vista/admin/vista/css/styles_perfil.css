@@ -91,6 +91,53 @@
 	color: red;
 }
 
+/*-----Menu del nav----*/
+
+.menu{
+	height: 0;
+	margin: 10px 0;
+	padding: 0;
+	position:absolute;
+	background: rgba(255,255,255,0.2);
+	overflow: hidden;
+	transition: height .3s linear;
+}
+
+
+.menu .menu__item{
+	margin:0;
+	padding: 15px 45px 15px 0;
+	border-bottom: solid 1px white;
+	list-style: none;
+	background: rgba(0,0,0,0.8);
+}
+
+
+.menu .menu__item .menu__link i span{
+	font-weight: normal;
+	margin-left: 5px;
+	font-family: 'Quicksand',sans-serif;
+}
+
+.menu .menu__item:hover{
+	background: white;
+}
+
+.menu .menu__item .menu__link:hover{
+	color: red;
+}
+
+.menu .menu__item .menu__link{
+	text-decoration: none;
+	color: white;
+	padding: 35px;
+}
+
+.mostrar{
+	height: 250px;
+}
+
+
 
 body{
     background: #181818;
