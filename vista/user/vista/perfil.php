@@ -76,7 +76,7 @@
                 <h4 class="logo"><i class="fas fa-ticket-alt" style="color: rgb(229,9,20,1)"></i><?php echo $row["usu_nombres"]; echo " ";echo $row["usu_apelidos"] ?></h4>
                 <ul>
                     <li><?php echo "<img class='img_perfil' src='data:".$row['usu_img_tipo']."; base64,".base64_encode($row['usu_img'])."'>";?></li>
-                    <li><a href="about.html">Cambiar Contraseña</a></li>
+                    <li><a href="cambiar_contrasena.php?codigo=<?php echo $codigo;?>">Cambiar Contraseña</a></li>
                     <li><p style="color:white; font-size:10px;">Este es tu perfil, en donde puedes ver todos los datos que has ingresado al momento de registrarte en nuestra página si deseas cambiar cualquier campo hazlo sin ningun problema</p></li>
                 </ul>
             </div>

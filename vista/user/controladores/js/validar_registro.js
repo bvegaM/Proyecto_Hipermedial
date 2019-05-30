@@ -195,5 +195,24 @@ function validarFecha(){
             }
       }
   }
+
+function validarContrasena(){
+    var contrasena = document.getElementById("contrasena").value
+    var rcontrasena = document.getElementById("rcontrasena").value
+    
+    if(rcontrasena.length >0){
+        if(rcontrasena === contrasena){
+            document.getElementById("contrasena").style.background = "rgba(135, 246, 7,0.5)"
+            document.getElementById("rcontrasena").style.background = "rgba(135, 246, 7,0.5)"
+        }else{
+            document.getElementById("contrasena").style.background = "rgba(255, 0, 0,0.5)"
+            document.getElementById("rcontrasena").style.background = "rgba(255, 0, 0,0.5)"
+
+        }
+    }else{
+        document.getElementById("cajaP").style.background = "none"
+            document.getElementById("cajaR").style.background = "none"
+    }
+}
   
 }
