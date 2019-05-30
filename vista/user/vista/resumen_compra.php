@@ -19,7 +19,7 @@
 		
 		$sql1="SELECT *
 			  FROM T_EVENTOS
-			  WHERE usu_id = $evt";
+			  WHERE evt_id = $evt";
 		
 		$result1 = $conn->query($sql1);
 		$row1 = $result1->fetch_assoc();
