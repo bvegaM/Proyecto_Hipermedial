@@ -81,7 +81,7 @@
                    		<p class="datos-info"><?php echo $row["usu_direccion"]?></p>
                    	</article>
                    </div>
-                   <div class="detalle">
+                   <div class="detalle" style="background:white;">
                    	<table style="width:100%; color:black; text-align:center;">
                    		<tr>
                    			<th>Cantidad</th>
@@ -93,9 +93,21 @@
                    			<td>Montaner vs Vita General</td>
                    			<td>$20</td>
                    		</tr>
-                   		<tr></tr>
-                   		<tr></tr>
-                   		<tr></tr>
+                   		<tr>
+                   			<td></td>
+                   			<td></td>
+                   			<td></td>
+                   		</tr>
+                   		<tr>
+                   			<td></td>
+                   			<td></td>
+                   			<td></td>
+                   		</tr>
+                   		<tr>
+                   			<td></td>
+                   			<td></td>
+                   			<td></td>
+                   		</tr>
                    		<tr>
                    			<td></td>
                    			<td>Total:</td>
