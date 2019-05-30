@@ -1,4 +1,7 @@
 <?php
+	
+	include '../../../../config/conexion.php';
+
 	$codigo =isset($_POST["codigo"])?trim($_POST["codigo"]):null;
 	$contrasena = isset($_POST["rcontrasena"]) ? trim($_POST["rcontrasena"]) : null;
 
@@ -7,8 +10,6 @@
 	$sql ="UPDATE T_USUARIOS
 		  SET usu_contrasena = MD5('$contrasena')
 		  WHERE usu_id = $codigo";
-
-	echo $sql;
 
 	$result = $conn->query($sql);
 
