@@ -15,13 +15,10 @@
 	$sql="INSERT INTO T_FACTURA_CABECERA VALUES(0,'$fechaC',$codigo)";
 	$result =$conn->query($sql);
 
-	echo $sql;
-
 	if($eventoId == 1){
 		var $desc = "Boleto General";
 		var  $id = $conn->insert_id;
-		$sqlFD="INSERT INTO T_FACTURA_DETALLE VALUES(0,'$desc',$cantidad,$precio,$id,$evento)";
-		echo $sqlFD;
+		
 	}
 	
 	
