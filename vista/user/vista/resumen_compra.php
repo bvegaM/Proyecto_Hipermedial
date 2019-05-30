@@ -63,8 +63,17 @@
             <div class="contact-form">
                 <h3>Vista Previa</h3>
                 <form action="../controladores/php/crear_empresa.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
+                   <div class="cabecera">
+                   	<i class="fas fa-ticket-alt"></i>
+                   	<h2>TIcket Home</h2>
+                   	<article class="datos">
+                   		<p><?php echo $row["usu_nombres"]?></p>
+                   		<p><?php echo $row["usu_cedula"]?></p>
+                   		<p><?php echo $row["usu_direccion"]?></p>
+                   	</article>
+                   </div>
                     <p class="block">
-                        <input type="submit" value="Registrar" class="button" id="botonA">
+                        <input type="submit" value="Comprar" class="button" id="botonA">
                         <input type="reset" value="Cancelar" class="button" onclick="limpiar()" id="botonB">
                     </p>
                 </form>
