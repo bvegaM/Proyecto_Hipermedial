@@ -24,9 +24,12 @@
             $evento = $_GET['evt'];
 			$codigo = $_GET['usu'];
             $sql ="SELECT *
-                FROM T_EVENTOS
+                FROM T_EVENTOS,
+					 T_EMPRESAS
 				WHERE evt_desc like '%$evento%' AND
-					  evt_estado_elimina ='N'";
+					  evt_estado_elimina ='N' AND
+					  emp_id=evt_emp_id AND
+					  emp_estado_elimina='N'";
                 $result = $conn->query($sql);
                 if($result->num_rows > 0){
                          while($row = $result->fetch_assoc()){
