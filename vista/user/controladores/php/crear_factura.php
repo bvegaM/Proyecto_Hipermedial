@@ -17,5 +17,49 @@
 
 	echo $sql;
 
+	if($eventoId == 1){
+		$factura="SELECT *
+				  FROM T_FACTURA_CABECERA 
+				  WHERE fc_usu_id=$codigo AND
+				  fc_fecha='$fechaC'";
+		
+		$resultadoF=$conn->query($factura);
+		$row=$resultadoF->fetch_assoc();
+		$sql1="INSERT INTO T_FACTURA_DETALLE VALUES(0,'boleto General',$cantidad,$precio,$row['fc_id'],$evento)";
+		$result1 =$conn->query($sql1);
+	}
+	if($eventoId == 2){
+		$factura="SELECT *
+				  FROM T_FACTURA_CABECERA 
+				  WHERE fc_usu_id=$codigo AND
+				  fc_fecha='$fechaC'";
+		
+		$resultadoF=$conn->query($factura);
+		$row=$resultadoF->fetch_assoc();
+		$sql1="INSERT INTO T_FACTURA_DETALLE VALUES(0,'boleto Tribuna',$cantidad,$precio,$row['fc_id'],$evento)";
+		$result1 =$conn->query($sql1);
+	}
+	if($eventoId == 3){
+		$factura="SELECT *
+				  FROM T_FACTURA_CABECERA 
+				  WHERE fc_usu_id=$codigo AND
+				  fc_fecha='$fechaC'";
+		
+		$resultadoF=$conn->query($factura);
+		$row=$resultadoF->fetch_assoc();
+		$sql1="INSERT INTO T_FACTURA_DETALLE VALUES(0,'boleto VIP',$cantidad,$precio,$row['fc_id'],$evento)";
+		$result1 =$conn->query($sql1);
+	}
+	if($eventoId == 4){
+		$factura="SELECT *
+				  FROM T_FACTURA_CABECERA 
+				  WHERE fc_usu_id=$codigo AND
+				  fc_fecha='$fechaC'";
+		
+		$resultadoF=$conn->query($factura);
+		$row=$resultadoF->fetch_assoc();
+		$sql1="INSERT INTO T_FACTURA_DETALLE VALUES(0,'boleto BOX',$cantidad,$precio,$row['fc_id'],$evento)";
+		$result1 =$conn->query($sql1);
+	}
 	
 ?>
