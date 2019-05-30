@@ -126,6 +126,6 @@
 			<p id="f-min">Cuenca-Ecuador</p>
 		</div>
 	</footer>
-	<script src="../controladores/js/funciones.js"></script>
+	<script src="../controladores/js/funcion.js"></script>
 </body>
 </html>
