@@ -22,7 +22,7 @@
 		
 		$sql="SELECT *
 			  FROM T_USUARIOS
-			  WHERE usu_id = $usu";
+			  WHERE usu_id = $codigo";
 		
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
@@ -60,7 +60,7 @@
                 <h3>Este es tu perfil</h3>
                 <form action="../controladores/php/update_perfil.php" method="post" enctype="multipart/form-data">
                     <p>
-                        <input type="text" name="id" id="id" value="<?php echo $row["usu_id"] ?>" hidden="hidden">
+                        <input type="text" name="id" id="id" value="<?php echo $codigo ?>" hidden="hidden">
                         <label for="nombres">Nombres</label>
                         <input type="text" name="nombres" id="nombres" value="<?php echo $row["usu_nombres"]?>" onkeyup="validarLetras(this,'nombres')">
                     </p>
