@@ -213,4 +213,5 @@ CREATE TABLE T_CONTACTOS(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 ```
 Una vez revisado las tablas nuestro diagrama ER queda de la siguiente manera:
-
+ 
+ ![8](images_readme/8.PNG)
