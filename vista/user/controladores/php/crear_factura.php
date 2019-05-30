@@ -17,6 +17,7 @@
 	if($eventoId == 1){
 		$id = $conn->insert_id;
 		$facturaD = "INSERT INTO T_FACTURA_DETALLE(0,'BOLETO PARA GENERAL',$cantidad,$precio,$id,$evento)";
+		$resultFD = $conn->query($facturaD);
 	}
 	
 	
