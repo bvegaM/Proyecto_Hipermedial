@@ -127,6 +127,19 @@
 					<th>Asientos</th>
 					<th>Comprar</th>
 				</tr>
+				<?php
+					$sql = "SELECT * 
+							FROM T_EVENTOS
+							WHERE evt_id=$evento";
+					
+					$result = $conn->query($sql);
+					$row = $result->fetch_assoc();
+				?>
+				<tr>
+					<td>GENERAL</td>
+					<td><?php echo $row["evt_gen"]?></td>
+					<td><?php echo $row["evt_gen_precio"]?></td>
+				</tr>
 			</table>	
 		</section>
 		
