@@ -81,6 +81,10 @@
                    	 <label for="cant">Cantidad de Boletos </label>
                    	 <input type="number" name="cant" id="cant" min="0" max="3" step="1">
                    </p>
+                   <p style="text-align:center"> 
+                   	 Te recordamos que solo puedes escoger hasta tres boletos ya que más de 3 es excederse del limite acordado, si deseas más tickets
+                   	 genera otra compra y se te creara otra factura.
+                   </p>
                 </form>
             </div>
             <div class="contact-form">
