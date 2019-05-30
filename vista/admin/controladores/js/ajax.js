@@ -44,7 +44,7 @@ function buscarPorEvt(){
     var evento = document.getElementById("evento").value
 	var usuario = document.getElementById("usuario").value
     if(evento ==""){
-        document.getElementById("empresa").innerHTML="";
+        document.getElementById("event").innerHTML="";
     }else{
         if(window.XMLHttpRequest){
             xmlhttp = new XMLHttpRequest();
@@ -53,7 +53,7 @@ function buscarPorEvt(){
         }
         xmlhttp.onreadystatechange = function(){
             if(this.readyState == 4 && this.status == 200){
-                document.getElementById("empresa").innerHTML = this.responseText;
+                document.getElementById("event").innerHTML = this.responseText;
             }
         };
         xmlhttp.open("GET","../controladores/php/buscarEvt.php?evt="+evento+"&usu="+usuario,true);

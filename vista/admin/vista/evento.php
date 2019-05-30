@@ -87,7 +87,7 @@
                 <input type="text"  id="usuario" name="remitente" value="<?php echo $codigo?>" hidden="hidden">
                 <input type="text" name="evento" placeholder="buscar por remitente" id="evento" value="" onkeyup="buscarPorEvt()" style="display:block; margin:0 auto; padding:5px 85px; border-radius:5px; width:100%; border-style:solid; border-color:black;">
    				 </form>
-                <form action="../controladores/php/crear_factura.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
+                <form action="../controladores/php/crear_factura.php" method="post" onsubmit="return validar()" enctype="multipart/form-data" id="event">
                    <div class="detalle" style="background:white;">
                    	<table style="width:100%; color:black; text-align:center;">
                    		<tr>
