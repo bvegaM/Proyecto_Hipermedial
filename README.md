@@ -7,6 +7,7 @@ Lo que se busca en este proyecto es crear unsistema que sirva para la venta de b
 ## Tabla de contenido
 - [URL de Página Web](#URL-de-Página-Web).
 - [Slack](#Slack).
+- [Cronograma](#CRONOGRAMA).
 - [Base De Datos](#Base-De-Datos).
 
 # URL
@@ -20,6 +21,11 @@ http://134.209.68.216/
 Por medio del Slack tenemos todos los requerimientos y diagramas que hemos realizado a lo largo del proyecto del sistema, todo fue llevado correctamente desde la toma de requerimiento hasta el diseño de diagramas
 
 **URL:** https://fooddriverhipermedial.slack.com
+
+# CRONOGRAMA
+Antes de poder hacer todo el proyecto se empezo con el cronograma de actividades el cual tenia el objetivo de cumplir con todas las actividades propuestas para obtner un buen sistema, el cronograma para el proyecto fue desarrollado por Bryam Vega Jefe de Grupo, dejandolo de la siguiente manera:
+
+![2](images_readme/2.PNG)
 
 # Base De Datos
 
@@ -178,6 +184,5 @@ CREATE TABLE T_CONTACTOS(
     cnt_calificacion int NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 ```
-# CRONOGRAMA
-Antes de poder hacer todo el proyecto se empezo con el cronograma de actividades el cual tenia el objetivo de cumplir con todas las actividades propuestas para obtner un buen sistema, el cronograma para el proyecto fue desarrollado por Bryam Vega Jefe de Grupo, dejandolo de la siguiente manera:
+
 
