@@ -15,5 +15,17 @@
 	$sql="INSERT INTO T_FACTURA_CABECERA VALUES(0,'$fechaC',$codigo)";
 	$result =$conn->query($sql);
 
+	echo $sql;
+
+	if($eventoId == 1){
+		$factura="SELECT *
+				  FROM T_FACTURA_CABECERA 
+				  WHERE fc_usu_id=$codigo AND
+				  fc_fecha='$fechaC'";
+		
+		$resultadoF=$conn->query($factura);
+		$row=$resultadoF->fetch_assoc();
+	}
+	
 	
 ?>
