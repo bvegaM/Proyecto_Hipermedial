@@ -50,7 +50,8 @@
 						 	  T_CATEGORIAS,
 							  T_EMPRESAS
 					 	 WHERE evt_emp_id = emp_id and
-						 	   emp_cat_id =cat_id";
+						 	   emp_cat_id =cat_id and
+							   evt_estado_elimina='N'";
 				
 				 $result = $conn->query($sql);
 				

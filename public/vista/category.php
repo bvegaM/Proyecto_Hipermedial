@@ -52,7 +52,8 @@
 							  T_EMPRESAS
 					 	 WHERE evt_emp_id = emp_id and
 						 	   emp_cat_id =cat_id and
-							   cat_id =1";
+							   cat_id =1 and
+							   evt_estado_elimina='N'";
 				
 				 $result = $conn->query($sql);
 				
@@ -82,7 +83,8 @@
 							  T_EMPRESAS
 					 	 WHERE evt_emp_id = emp_id and
 						 	   emp_cat_id =cat_id and
-							   cat_id = 2";
+							   cat_id = 2 and
+							   evt_estado_elimina='N'";
 				
 				 $result = $conn->query($sql);
 				
@@ -112,7 +114,8 @@
 							  T_EMPRESAS
 					 	 WHERE evt_emp_id = emp_id and
 						 	   emp_cat_id =cat_id and
-							   cat_id = 3";
+							   cat_id = 3 and
+							   evt_estado_elimina='N'";
 				
 				 $result = $conn->query($sql);
 				
@@ -142,7 +145,8 @@
 							  T_EMPRESAS
 					 	 WHERE evt_emp_id = emp_id and
 						 	   emp_cat_id =cat_id and
-							   cat_id = 4";
+							   cat_id = 4 and
+							   evt_estado_elimina='N'";
 				
 				 $result = $conn->query($sql);
 				
