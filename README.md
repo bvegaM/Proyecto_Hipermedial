@@ -178,3 +178,6 @@ CREATE TABLE T_CONTACTOS(
     cnt_calificacion int NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 ```
+# CRONOGRAMA
+Antes de poder hacer todo el proyecto se empezo con el cronograma de actividades el cual tenia el objetivo de cumplir con todas las actividades propuestas para obtner un buen sistema, el cronograma para el proyecto fue desarrollado por Bryam Vega Jefe de Grupo, dejandolo de la siguiente manera:
+
