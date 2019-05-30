@@ -16,11 +16,7 @@
 		$row = $result->fetch_assoc();
 		
 		$sql1="SELECT *
-			  FROM T_FACTURA_CABECERA,
-			  	   T_FACTURA_DETALLE,
-				   T_EVENTOS
-			  WHERE fc_id = fd_fc_id AND
-			  		evt_id = fd_evt_id";
+			  FROM T_EVENTOS";
 		
 		$result1 = $conn->query($sql1);
 	?>
@@ -76,19 +72,19 @@
                    		<tr>
                    			<th style="border-bottom:1px solid black;">Nombre del Evento</th>
                    			<th style="border-bottom:1px solid black;">Fecha del Evento</th>
-                   			<th style="border-bottom:1px solid black;">Descripcion</th>
-                   			<th style="border-bottom:1px solid black;">Cantidad</th>
-                   			<th style="border-bottom:1px solid black;">Total</th>
-                   			<th style="border-bottom:1px solid black;">Anular Factura</th>
+                   			<th style="border-bottom:1px solid black;">Asientos</th>
+                   			<th style="border-bottom:1px solid black;">Precio</th>
+                   			<th style="border-bottom:1px solid black;">Vendidos</th>
+                   			<th style="border-bottom:1px solid black;">Eliminar Evento</th>
                    		</tr>
                    		<?php
 							while($row1 = $result1->fetch_assoc()){
 								echo "<tr class='datos'>";
 									echo "<td>".$row1["evt_desc"]."</td>";
 									echo "<td>".$row1["evt_fec_evento"]."</td>";
-									echo "<td>".$row1["fd_desc"]."</td>";
-									echo "<td>".$row1["fd_cantidad"]."</td>";
-									echo "<td>$".$row1["fd_precio"]."</td>";
+									echo "<td>".$row1["evt_asientos"]."</td>";
+									echo "<td>".$row1["evt_precio"]."</td>";
+									echo "<td>$".$row1["evt_vendidos"]."</td>";
 									if($row1["fd_estado"] == 'N'){
 										echo "<td class='link_compra'><a href='../controladores/php/anular_factura.php?fc=".$row1["fc_id"]."&fd=".$row1["fd_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
 									}else{
