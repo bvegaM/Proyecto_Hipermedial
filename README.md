@@ -9,6 +9,7 @@ Lo que se busca en este proyecto es crear unsistema que sirva para la venta de b
 - [Slack](#Slack).
 - [Cronograma](#CRONOGRAMA).
 - [Toma de Requerimientos](#REQUERIMIENTOS).
+- [Diagramas UML](#UML).
 - [Base De Datos](#Base-De-Datos).
 
 # URL
@@ -35,6 +36,13 @@ Como se puede apreciar las primeras partes hablamos sobre la primera reunión y 
 Una de las partes más importantes al momento de realizar un sistema es obtener la toma de requerimientos, de tal manera que se puedan realizar los requisitos que el usuario necesita para su sistema, la toma de requisitos fue hecha por Adrian Viscaino quien conjuntamente con el cliente obtuvo los siguientes requisitos.
 
 ![3](images_readme/3.PNG)
+
+El resto de requerimientos se puede encontrar en el repositorio
+
+# UML
+
+Otro aspecto importante del diseño del sistema es el diagramado UML el cual nos permite entender como se va a realizar la secuencia de nuestro sistema, como también entender que personas actuan en la misma y que relación tienen entre sí, muy util para desarrollar la base de datos, entre otras cosas más. Este paso fue desarrollado por Javier Vazquez y Alex Reinoso, obteniendo los siguientes resultados:
+
 
 # Base De Datos
 
