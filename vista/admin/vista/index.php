@@ -14,7 +14,19 @@
     <link rel="stylesheet" href="css/styles_perfil.css">
 </head>
 <body>
-   
+   <?php
+			include '../../../config/conexion.php';
+
+			$codigoc = $_GET['codigo'];
+			$sqlc = "SELECT * 
+					FROM T_USUARIOS 
+					where usu_id = $codigoc";
+			$resultc = $conn->query($sqlc);
+			$rowc = $resultc->fetch_assoc();
+			if($rowc["usu_rol_id"] == 2){
+			   header("Location: ../../../public/vista/blanco.html"); 
+			}
+  		?>
    <?php
 		$codigo = $_GET["codigo"];
 		include '../../../config/conexion.php';

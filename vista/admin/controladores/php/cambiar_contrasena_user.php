@@ -2,7 +2,7 @@
 	
 	include '../../../../config/conexion.php';
 
-	$codigo =isset($_POST["codigo"])?trim($_POST["codigo"]):null;
+	$codigo =isset($_POST["codi"])?trim($_POST["codi"]):null;
 	$contrasena = isset($_POST["rcontrasena"]) ? trim($_POST["rcontrasena"]) : null;
 
 	echo $codigo;
