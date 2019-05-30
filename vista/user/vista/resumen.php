@@ -137,8 +137,27 @@
 				?>
 				<tr>
 					<td>GENERAL</td>
+					<td>$<?php echo $row["evt_gen_precio"]?></td>
 					<td><?php echo $row["evt_gen"]?></td>
-					<td><?php echo $row["evt_gen_precio"]?></td>
+					
+				</tr>
+				<tr>
+					<td>TRIBUNA</td>
+					<td>$<?php echo $row["evt_trib_precio"]?></td>
+					<td><?php echo $row["evt_trib"]?></td>
+					
+				</tr>
+				<tr>
+					<td>VIP</td>
+					<td>$<?php echo $row["evt_vip_precio"]?></td>
+					<td><?php echo $row["evt_vip"]?></td>
+					
+				</tr>
+				<tr>
+					<td>BOX</td>
+					<td>$<?php echo $row["evtbox_precio"]?></td>
+					<td><?php echo $row["evt_box"]?></td>
+					
 				</tr>
 			</table>	
 		</section>
