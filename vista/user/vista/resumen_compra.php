@@ -92,7 +92,7 @@
                 <form enctype="multipart/form-data" style="display:block;">
                    <p>
                    	 <label for="cant">Cantidad de Boletos </label>
-                   	 <input type="number" name="cant" id="cant" min="0" max="3" step="1" onclick="cambiarCantidad();">
+                   	 <input type="number" name="cant" id="cant" min="0" max="3" step="1" onclick="cambiarCantidad();" onchange="cambiarCantidad();" onkeyup="cambiarCantidad();">
                    </p>
                    <p style="text-align:center display:block;"> 
                    	 Te recordamos que solo puedes escoger hasta tres boletos ya que más de 3 es excederse del limite acordado, si deseas más tickets
