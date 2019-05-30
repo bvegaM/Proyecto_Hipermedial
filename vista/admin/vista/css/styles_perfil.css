@@ -4,6 +4,94 @@
     box-sizing: border-box;
 }
 
+
+/*--cabecera--*/
+
+.header{
+	width: 100%;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	justify-content: space-between;
+	color: white;
+	background: #E50914;
+}
+
+.cabecera{
+	width: 100%;
+	padding: 0.5em;
+	display: flex;
+	justify-content: space-between;
+}
+
+.cabecera .logo{
+	margin: 0;
+	display: inline-block;
+	padding: 0;
+	width: 20%;
+	font-size: 20px;
+	font-weight: bold;
+	top: -50px;
+	text-transform: uppercase;
+	height: auto;
+}
+
+.cabecera .logo i{
+	margin: 0 15px;
+}
+
+.cabecera .info{
+	margin: auto 0;
+}
+
+.cabecera .info i{
+	margin: 0 15px;
+}
+
+.cabecera .info i span{
+	font-family: 'Quicksand',sans-serif;
+	font-weight: normal;
+	margin: 0 5px;
+}
+
+/*----menu-----*/
+
+.navegador{
+	width: 100%;
+	margin: 15px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu_desplegable{
+	display: inline-block;
+}
+
+#btnmenu{
+	color: white;
+	margin: 0 25px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.navegador .rol,
+.navegador .rol a{
+	margin: 0 15px;
+	color: white;
+}
+
+.navegador .rol a i span{
+	font-weight: normal;
+	font-family: 'Quicksand',sans-serif;
+	margin: 0 10px;
+}
+
+
+.navegador .rol .sesion:hover{
+	color: red;
+}
+
+
 body{
     background: #181818;
     color: white;
