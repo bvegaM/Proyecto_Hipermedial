@@ -120,7 +120,7 @@
 		</section>
 		<section class="info-block">
 			<div id="map_canvas" style="width: 100%; height: 400px;"></div>
-			<section class="compra" style="display:block margin:auto 0;">
+			<section class="compra" style="display:block; margin:auto 0;">
 					<table border="1" style="width:100%;" >
 						<tr>
 							<th>Tipo</th>
