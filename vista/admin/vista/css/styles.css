@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Quicksand', sans-serif;
+	background: black;
+}
+
+/*--cabecera--*/
+
+.header{
+	width: 100%;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	justify-content: space-between;
+	color: white;
+	background: #E50914;
+}
+
+.cabecera{
+	width: 100%;
+	padding: 0.5em;
+	display: flex;
+	justify-content: space-between;
+}
+
+.cabecera .logo{
+	margin: 0;
+	display: inline-block;
+	padding: 0;
+	width: 20%;
+	font-size: 20px;
+	font-weight: bold;
+	top: -50px;
+	text-transform: uppercase;
+	height: auto;
+}
+
+.cabecera .logo i{
+	margin: 0 15px;
+}
+
+.cabecera .info{
+	margin: auto 0;
+}
+
+.cabecera .info i{
+	margin: 0 15px;
+}
+
+.cabecera .info i span{
+	font-family: 'Quicksand',sans-serif;
+	font-weight: normal;
+	margin: 0 5px;
+}
+
+/*----menu-----*/
+
+.navegador{
+	width: 100%;
+	margin: 15px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu_desplegable{
+	display: inline-block;
+}
+
+#btnmenu{
+	color: white;
+	margin: 0 25px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.navegador .rol,
+.navegador .rol a{
+	margin: 0 15px;
+	color: white;
+}
+
+.navegador .rol a i span{
+	font-weight: normal;
+	font-family: 'Quicksand',sans-serif;
+	margin: 0 10px;
+}
+
+
+.navegador .rol .sesion:hover{
+	color: red;
+}
+
+/*-----Menu del nav----*/
+
+.menu{
+	height: 0;
+	margin: 10px 0;
+	padding: 0;
+	position:absolute;
+	background: rgba(255,255,255,0.2);
+	overflow: hidden;
+	transition: height .3s linear;
+}
+
+
+.menu .menu__item{
+	margin:0;
+	padding: 15px 45px 15px 0;
+	border-bottom: solid 1px white;
+	list-style: none;
+	background: rgba(0,0,0,0.8);
+}
+
+
+.menu .menu__item .menu__link i span{
+	font-weight: normal;
+	margin-left: 5px;
+	font-family: 'Quicksand',sans-serif;
+}
+
+.menu .menu__item:hover{
+	background: white;
+}
+
+.menu .menu__item .menu__link:hover{
+	color: red;
+}
+
+.menu .menu__item .menu__link{
+	text-decoration: none;
+	color: white;
+	padding: 35px;
+}
+
+.mostrar{
+	height: 200px;
+}
+
+
+
+/*-----banner------*/
+
+.banner{
+	position:relative;
+	background-image: url(../../../../images/banner.jpg);
+	border-style: solid 12px white;
+	margin-top: -105px;
+	z-index: -1000;
+	height: 100vh;
+	background-size: 100vw 100vh;
+	background-attachment: fixed;
+	background-position: center;
+	
+}
+
+
+.banner__content{
+	width: 100%;
+	text-align: center;
+	color: white;
+	position: absolute;
+	top: 50%;
+	font-size: 35px;
+	text-transform: uppercase;
+}
+
+
+/*----banner_category-------*/
+
+.banner_category{
+	position:relative;
+	background-image: url(../../../../images/categoria.jpg);
+	border-style: solid 12px white;
+	margin-top: -105px;
+	z-index: -1000;
+	height: 100vh;
+	background-size: 100vw 100vh;
+	background-attachment: fixed;
+	background-position: center;
+	
+}
+
+.banner_category:before{
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+}
+
+
+
+/*--------Intro--------*/
+
+.main{
+	margin: 0;
+}
+.grupo_eventos{
+	width: 100%;
+	color: black;
+}
+
+.grupo_eventos .intro > *{
+	margin: 0;
+	padding: 25px 0;
+	background: white;
+}
+
+.grupo_eventos .intro h2{
+	font-size: 35px;
+	color: #E50914;
+}
+
+.grupo_eventos .intro h2,
+.grupo_eventos .intro p{
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+/*----eventos-------*/
+
+
+
+.titulo_event{
+	text-align: center;
+	z-index: 2000;
+	color: #E50914;
+	margin: 0 0 15px 0;
+	padding: 10px 0;
+	font-size: 35px;
+}
+
+.grupo_event_musica{
+	background: black;
+	background-image: url(../../../../images/music.jpg);
+	background-size: 100vw 100vh;
+	background-attachment: fixed;
+}
+
+.titulo_event{
+	text-align: center;
+	z-index: 2000;
+	color: #E50914;
+	margin: 0 0 15px 0;
+	padding: 10px 0;
+	font-size: 35px;
+}
+
+.titulo_event_php{
+	position: relative;
+	text-align: center;
+	z-index: 2000;
+	background:rgba(255,255,255,0.6);
+	color: black;
+	margin: 0 0 15px 0;
+	padding: 10px 0;
+	font-size: 30px;
+}
+
+
+.grupo_event_teatro{
+	background: black;
+	background-image: url(../../../../images/cinema.jpg);
+	background-size: 100vw 100vh;
+	background-attachment: fixed;
+}
+
+.grupo_event_deporte{
+	background: black;
+	background-image: url(../../../../images/futbol.jpg);
+	background-size: 100vw 100vh;
+	background-attachment: fixed;
+}
+
+.grupo_event_congreso{
+	background: black;
+	background-image: url(../../../../images/congreso.jpg);
+	background-size: 100vw 100vh;
+	background-attachment: fixed;
+}
+
+
+.eventos{
+	display: flex;
+	width: 100%;
+	height: auto;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: auto;
+}
+
+.eventos .column_event{
+	width: 260px;
+	height: auto;
+	box-shadow: 2px 2px 2px 2px rgba(255,255,255,0.5);
+	overflow: hidden;
+	margin: 20px 57px;
+	text-align: center;
+	z-index: 1000;
+	background: rgba(229,9,20,0.8);
+	transition: all 0.25s;
+}
+
+.eventos .column_event h4{
+	font-weight: 600;
+	color: white;
+	font-size: 25px;
+	padding: 0;
+	margin: 0 0 25px 0;
+}
+
+.eventos .column_event p{
+	font-weight: 600;
+	color: white;
+	font-size: 15px;
+	padding: 0; 
+	margin: 0 0 10px 0;
+}
+
+
+.eventos .column_event a{
+	font-weight: 600;
+	color: white;
+	font-size: 15px;
+	padding: 5px;
+	display: inline-block;
+	background:rgba(229,9,20,1); 
+	text-decoration: none;
+	margin: 10px 0;
+	cursor: pointer;
+}
+
+
+.eventos .column_event a:hover{
+	color: rgb(229,9,20,1);
+	background: white;
+	border: solid 1px rgb(229,9,20);
+}
+
+
+/*----Footer--*/
+
+.footer{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	background: black;
+	padding: 20px 0px;
+}
+
+.footer-social-icons{
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+.footer-social-icons ul{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.footer-social-icons ul li{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0 10px;
+	border-radius: 100%;
+	background: rgb(229,9,20,1);
+}
+
+.footer-social-icons ul li a{
+	color: white;
+	font-size: 25px;
+}
+
+.footer-social-icons ul li a i{
+	line-height: 50px;
+}
+
+.footer-menu-one{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 25px;
+}
+
+.footer-menu-one ul{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+.footer-menu-one ul li{
+	display: inline-block;
+	margin: 0px 20px;
+}
+
+.footer-menu-one ul li a{
+	font-size: 15px;
+	font-weight: 600;
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.footer-txt{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 25px;
+}
+
+.footer-txt p{
+	text-align: center;
+	color: white;
+	margin: 0;
+}
+
+#f-min{
+	font-size: 12px;
+}
