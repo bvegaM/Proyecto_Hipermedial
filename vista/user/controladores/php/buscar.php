@@ -22,6 +22,7 @@
 		 <?php
             include '../../../../config/conexion.php';
             $evento = $_GET['evt'];
+			$codigo = $_GET['usuario'];
             $sql ="SELECT *
                 FROM T_EVENTOS
 				WHERE evt_desc like '%$evento%' AMD

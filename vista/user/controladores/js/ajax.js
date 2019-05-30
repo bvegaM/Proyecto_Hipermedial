@@ -1,5 +1,6 @@
 function buscarPorEvento(){
     var evento = document.getElementById("evento").value
+	var usuario = document.getElementById("usuario").value
     if(evento ==""){
         document.getElementById("eventos").innerHTML="";
     }else{
@@ -13,7 +14,7 @@ function buscarPorEvento(){
                 document.getElementById("eventos").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","../controladores/php/buscar.php?evt="+evento,true);
+        xmlhttp.open("GET","../controladores/php/buscar.php?evt="+evento+"&usu="+usuario,true);
         xmlhttp.send();
     }
 }
