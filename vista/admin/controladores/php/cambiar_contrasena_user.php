@@ -13,6 +13,5 @@
 
 	$result = $conn->query($sql);
 
-	header("Location: cerrar_sesion.php");
-
+	header("location: ../../vista/usuario.php?codigo=".$codigo);
 ?>

@@ -24,7 +24,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Facturas</title>
+    <title>Usuarios</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles_evento.css">
@@ -62,7 +62,7 @@
 		</div>
 	</nav>
     <div class="content">
-        <h1 class="logo">Revisa TU <span>Compra</span></h1>
+        <h1 class="logo"><span>Usuarios</span></h1>
         <div class="contact-wrapper-compras">               
             <div class="contact-form-compras">
                 <h3>Mis Compras</h3>

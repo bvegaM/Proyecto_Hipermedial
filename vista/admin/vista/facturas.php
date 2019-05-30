@@ -66,7 +66,7 @@
 		</div>
 	</nav>
     <div class="content">
-        <h1 class="logo">Revisa TU <span>Compra</span></h1>
+        <h1 class="logo"><span>Facturas</span></h1>
         <div class="contact-wrapper-compras">               
             <div class="contact-form-compras">
                 <h3>Mis Compras</h3>
