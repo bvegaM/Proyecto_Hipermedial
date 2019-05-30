@@ -22,7 +22,7 @@
 		
 		$sql="SELECT *
 			  FROM T_USUARIOS
-			  WHERE usu_id = $codigo";
+			  WHERE usu_id = $usu";
 		
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
