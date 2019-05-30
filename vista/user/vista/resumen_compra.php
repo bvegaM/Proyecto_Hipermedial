@@ -28,8 +28,8 @@
 			color: black;
 			margin: 0;
 			padding: 0;
-			text-align: center;
-			font-size: 15px;
+			text-align: right;
+			font-size: 10px;
 		}
 	</style>
 </head>
