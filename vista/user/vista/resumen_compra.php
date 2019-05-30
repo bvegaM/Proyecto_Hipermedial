@@ -27,6 +27,7 @@
 		.datos > p{
 			color: black;
 			margin: 0;
+			padding: 0;
 			text-align: center;
 			font-size: 15px;
 		}
@@ -71,7 +72,7 @@
             <div class="contact-form">
                 <h3>Vista Previa</h3>
                 <form action="../controladores/php/crear_empresa.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
-                   <div class="cabecera">
+                   <div class="cabecera" style="background: white;">
                    	<i class="fas fa-ticket-alt" style="font-size:35px; color:red;"></i>
                    	<h2 style="margin:0; font-size:20px; color:black;">TIcket Home</h2>
                    	<article class="datos">
