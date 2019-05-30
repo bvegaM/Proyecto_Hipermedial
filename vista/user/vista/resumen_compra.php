@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles_evento.css">
     <style>
-		.datos > p{
+		.datos .datos-info{
 			color: black;
 			margin: 0;
 			padding: 0;
@@ -76,9 +76,9 @@
                    	<i class="fas fa-ticket-alt" style="font-size:35px; color:red;"></i>
                    	<h2 style="margin:0; font-size:20px; color:black;">TIcket Home</h2>
                    	<article class="datos">
-                   		<p><?php echo $row["usu_nombres"]?></p>
-                   		<p><?php echo $row["usu_cedula"]?></p>
-                   		<p><?php echo $row["usu_direccion"]?></p>
+                   		<p class="datos-info"><?php echo $row["usu_nombres"]?></p>
+                   		<p class="datos-info"><?php echo $row["usu_cedula"]?></p>
+                   		<p class="datos-info"><?php echo $row["usu_direccion"]?></p>
                    	</article>
                    </div>
                     <p class="block">
