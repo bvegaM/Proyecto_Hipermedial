@@ -8,7 +8,9 @@
 	 <?php
     
         //incluir conexion a la base de datos
-        include '../../../config/conexion.php';
+		include '../../../config/conexion.php';
+		
+		//comentario 
 	
 		date_default_timezone_set("America/Guayaquil");	
 	
