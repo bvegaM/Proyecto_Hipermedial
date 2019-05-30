@@ -18,7 +18,7 @@
 </head>
 <body>
  <?php
-            include '../../../config/conexion.php';
+            include '../../../../config/conexion.php';
             $evento = $_GET['evt'];
             $sql ="SELECT *
                 FROM T_EVENTOS
