@@ -118,15 +118,18 @@
 			</article>
 			<?php echo "<img class='img_event' src='data:".$row1['evt_img_tipo']."; base64,".base64_encode($row1['evt_img'])."'>"; ?>
 		</section>
-		<div id="map_canvas" style="width: 50%; height: 400px;" class="info-block"></div>
-		<table border="1" class="info-block">
-			<tr>
-				<th>Tipo</th>
-				<th>Precio</th>
-				<th>Asientos</th>
-				<th>Comprar</th>
-			</tr>
-		</table>
+		<section class="info-block">
+			<div id="map_canvas" style="width: 50%; height: 400px;"></div>
+			<table border="1">
+				<tr>
+					<th>Tipo</th>
+					<th>Precio</th>
+					<th>Asientos</th>
+					<th>Comprar</th>
+				</tr>
+			</table>	
+		</section>
+		
 	</main>
 	<footer class="footer">
 		<div class="footer-social-icons">
