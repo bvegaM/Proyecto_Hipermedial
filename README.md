@@ -173,6 +173,7 @@ CREATE TABLE T_EVENTOS(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 ```
 ### T_FACTURA_CABECERA
+Esta tabla nos permite guardar la cabecera de la factura, ya que como se sabe una factura tiene una cabecera y un detalle el cual se ve a continuación
 ```
 CREATE TABLE T_FACTURA_CABECERA (
  fc_id int(11) NOT NULL AUTO_INCREMENT,
@@ -185,6 +186,7 @@ CREATE TABLE T_FACTURA_CABECERA (
 ```
 
 ### T_FACTURA_DETALLE
+Como se dijo en la anterior explicación esta es la tabla para el detalle de la factura el cual almacena el id de la factura cabecera creando una relación
 ```
 CREATE TABLE T_FACTURA_DETALLE (
 	fd_id  int 	NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -198,6 +200,8 @@ CREATE TABLE T_FACTURA_DETALLE (
 ```
 
 ### T_CONTACTOS
+Esta tabla se utiliza cuando una persona quiere dejar un comentario de nuestro sistema, de la misma manera esta viene con un sistema de calificación el cual se guarda en la base de datos.
+
 ```
 CREATE TABLE T_CONTACTOS(
 	cnt_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
