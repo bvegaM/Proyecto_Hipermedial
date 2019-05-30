@@ -97,7 +97,7 @@
 				<li><a href="#">Mi Perfil</a></li>
 				<li><a href="evento.php?codigo=<?php echo $codigo?>">Comprar</a></li>
 				<li><a href="crear_evento.php?codigo=<?php echo $codigo?>">Crear Eventos</a></li>
-				<li><a href="">Mis Compras</a></li>
+				<li><a href="mis_compras.php?codigo=<?php echo $codigo?>">Mis Compras</a></li>
 			</ul>
 		</div>
 		<div class="footer-txt">
