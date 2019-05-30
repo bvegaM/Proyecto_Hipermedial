@@ -91,7 +91,7 @@
 									echo "<td>".$row1["fd_desc"]."</td>";
 									echo "<td>".$row1["fd_cantidad"]."</td>";
 									echo "<td>$".$row1["fd_precio"]."</td>";
-									echo "<td class='link_compra'><a href='resumen_compra.php?evt=".$evento."&evtId=1&codigo=".$codigo."'><i class='fas fa-trash-alt'></i></a></td>";
+									echo "<td class='link_compra'><a href='resumen_compra.php?fc=".$row1["fc_id"]."&fd=1&codigo=".$row1["fd_id"]."'><i class='fas fa-trash-alt'></i></a></td>";
 								echo "</tr>";
 							}
 						?>
