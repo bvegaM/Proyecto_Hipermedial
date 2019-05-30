@@ -80,7 +80,7 @@
         <h1 class="logo"><span>EMPRESAS</span></h1>
         <div class="contact-wrapper-compras">               
             <div class="contact-form-compras">
-                <h3>Mis Compras</h3>
+                <h3>Mis Empresas</h3>
                 <form action="" class="busqueda" style="display:block;padding:10px 0; backgound:#181818;">
                 <h2 style="text-align:center; color:red;">Tu Buscador</h2>
                 <input type="text"  id="usuario" name="remitente" value="<?php echo $codigo?>" hidden="hidden">
