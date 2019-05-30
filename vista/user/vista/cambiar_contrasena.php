@@ -57,8 +57,8 @@
 	</nav> 
     <div class="content">
         <h1 class="logo">Revisa TU <span>Compra</span></h1>
-        <div class="contact-wrapper-compras">               
-            <div class="contact-form-compras">
+        <div class="contact-wrapper-compras contact-wrapper">               
+            <div class="contact-form">
                 <h3>Mis Compras</h3>
                 <form action="../controladores/php/crear_factura.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
                    <p>
