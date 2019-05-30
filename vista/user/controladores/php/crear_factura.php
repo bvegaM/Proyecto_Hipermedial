@@ -2,7 +2,7 @@
 	$evento=isset($_POST["evento"])?trim($_POST["evento"]):null;
 	$codigo =isset($_POST["codigo"])?trim($_POST["codigo"]):null;
 	$eventoId=isset($_POST["eventoId"])?trim($_POST["eventoId"]):null;
-	$precio=isset($_POST["totalI"])?trim($_POST["totalI"]):null;
+	$precio=isset($_POST["total"])?trim($_POST["total"]):null;
 	$cantidad=isset($_POST["cnt"])?trim($_POST["cnt"]):null;
 
 	echo $evento;
