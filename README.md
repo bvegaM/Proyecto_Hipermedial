@@ -215,3 +215,7 @@ CREATE TABLE T_CONTACTOS(
 Una vez revisado las tablas nuestro diagrama ER queda de la siguiente manera:
  
  ![8](images_readme/8.PNG)
+ 
+ # DESARROLLO
+ 
+ La explicación del funcionamiento del sistema sera explicado en clases en frente del profesor, se revisara el código desarrollado por cada uno de los integrantes del grupo, se recuerda que el código esta en e repositorio, del cual se puede descargar y usarlo sin ningun problema siguiendo paso a paso toda la guía que se hace. A continuación mostramos un informe de lo que cada integrandte realizo a lo largo del proyecto, como un informe de rendición de cuentas.
