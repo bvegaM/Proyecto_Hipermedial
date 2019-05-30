@@ -81,6 +81,7 @@
                    			<th style="border-bottom:1px solid black;">Descripcion</th>
                    			<th style="border-bottom:1px solid black;">Cantidad</th>
                    			<th style="border-bottom:1px solid black;">Total</th>
+                   			<th style="border-bottom:1px solid black;">Anular Factura</th>
                    		</tr>
                    		<?php
 							while($row1 = $result1->fetch_assoc()){
@@ -90,6 +91,7 @@
 									echo "<td>".$row1["fd_desc"]."</td>";
 									echo "<td>".$row1["fd_cantidad"]."</td>";
 									echo "<td>$".$row1["fd_precio"]."</td>";
+									echo "<td class='link_compra'><a href='resumen_compra.php?evt=".$evento."&evtId=1&codigo=".$codigo."'><i class='fas fa-trash-alt'></i></a></td>";
 								echo "</tr>";
 							}
 						?>
