@@ -23,9 +23,17 @@
 		$sql="SELECT *
 			  FROM T_USUARIOS
 			  WHERE usu_id = $usu";
+	
+		$sql1="SELECT *
+			  FROM T_USUARIOS
+			  WHERE usu_id = $codigo";
+		
 		
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
+	
+		$result1 = $conn->query($sql1);
+		$row1 = $result1->fetch_assoc();
 
 	?>
    <header class="header">
@@ -49,7 +57,7 @@
 			</ul>
 		</div>
 		<div class="rol">
-			<a href="index.php?codigo=<?php echo $codigo?>" class="sesion"><i class="fas fa-smile-beam"><span>Bienvenido <?php echo $row["usu_nombres"]; ?></span></i></a>
+			<a href="index.php?codigo=<?php echo $codigo?>" class="sesion"><i class="fas fa-smile-beam"><span>Bienvenido <?php echo $row1["usu_nombres"]; ?></span></i></a>
 			<a href="../controladores/php/cerrar_sesion.php" class="sesion"><i class="fas fa-sign-in-alt" id="inicio"><span>Cerrar Sesión</span></i></a>
 		</div>
 	</nav>
@@ -60,7 +68,7 @@
                 <h3>Este es tu perfil</h3>
                 <form action="../controladores/php/update_perfil.php" method="post" enctype="multipart/form-data">
                     <p>
-                        <input type="text" name="id" id="id" value="<?php echo $codigo ?>" hidden="hidden">
+                        <input type="text" name="id" id="id" value="<?php echo $row["usu_id"] ?>" hidden="hidden">
                         <label for="nombres">Nombres</label>
                         <input type="text" name="nombres" id="nombres" value="<?php echo $row["usu_nombres"]?>" onkeyup="validarLetras(this,'nombres')">
                     </p>
