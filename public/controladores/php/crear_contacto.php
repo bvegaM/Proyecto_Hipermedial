@@ -11,5 +11,5 @@
 
 	$result= $conn->query($sql);
 
-	header("Location: ../../vista/about.html");
+	header("Location: ../../vista/login.html");
 ?>
