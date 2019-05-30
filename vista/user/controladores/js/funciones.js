@@ -11,6 +11,7 @@ function cambiarCantidad(){
 	var to = "$"+t
 	document.getElementById("cantidad").innerHTML=c;
 	document.getElementById("cnt").value=c;
+	document.getElementById("totalI").value=t;
 	document.getElementById("total").innerHTML=to;
 }
 	
