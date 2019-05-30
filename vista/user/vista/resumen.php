@@ -155,7 +155,7 @@
 				</tr>
 				<tr>
 					<td>BOX</td>
-					<td>$<?php echo $row["evtbox_precio"]?></td>
+					<td>$<?php echo $row["evt_box_precio"]?></td>
 					<td><?php echo $row["evt_box"]?></td>
 					
 				</tr>
