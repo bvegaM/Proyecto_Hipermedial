@@ -82,7 +82,7 @@
                    	</article>
                    </div>
                    <div class="detalle">
-                   	<table border="1">
+                   	<table style="width:100%; color:black; text-align:center;">
                    		<tr>
                    			<th>Cantidad</th>
                    			<th>Descripcion</th>
@@ -91,6 +91,14 @@
                    		<tr>
                    			<td>1</td>
                    			<td>Montaner vs Vita General</td>
+                   			<td>$20</td>
+                   		</tr>
+                   		<tr></tr>
+                   		<tr></tr>
+                   		<tr></tr>
+                   		<tr>
+                   			<td></td>
+                   			<td>Total:</td>
                    			<td>$20</td>
                    		</tr>
                    	</table>
