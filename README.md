@@ -212,5 +212,5 @@ CREATE TABLE T_CONTACTOS(
     cnt_calificacion int NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 ```
-
+Una vez revisado las tablas nuestro diagrama ER queda de la siguiente manera:
 
