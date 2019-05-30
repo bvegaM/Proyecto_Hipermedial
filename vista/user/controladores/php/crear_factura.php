@@ -18,24 +18,40 @@
 		$id = $conn->insert_id;
 		$facturaD = "INSERT INTO T_FACTURA_DETALLE VALUES(0,'BOLETO PARA GENERAL',$cantidad,$precio,'N',$id,$evento)";
 		$resultFD = $conn->query($facturaD);
+		$update= "UPDATE T_EVENTOS
+				  SET evt_gen =evt_gen-$cantidad
+				  WHERE evt_id=$evento";
+		$rup=$conn->query($update);
 		header("Location: ../../vista/mis_compras.php?codigo=".$codigo);
 	}
 	if($eventoId == 2){
 		$id = $conn->insert_id;
 		$facturaD = "INSERT INTO T_FACTURA_DETALLE VALUES(0,'BOLETO PARA TRIBUNA',$cantidad,$precio,'N',$id,$evento)";
 		$resultFD = $conn->query($facturaD);
+		$update= "UPDATE T_EVENTOS
+				  SET evt_gen =evt_trib-$cantidad
+				  WHERE evt_id=$evento";
+		$rup=$conn->query($update);
 		header("Location: ../../vista/mis_compras.php?codigo=".$codigo);
 	}
 	if($eventoId == 3){
 		$id = $conn->insert_id;
 		$facturaD = "INSERT INTO T_FACTURA_DETALLE VALUES(0,'BOLETO PARA VIP',$cantidad,$precio,'N',$id,$evento)";
 		$resultFD = $conn->query($facturaD);
+		$update= "UPDATE T_EVENTOS
+				  SET evt_gen =evt_vip-$cantidad
+				  WHERE evt_id=$evento";
+		$rup=$conn->query($update);
 		header("Location: ../../vista/mis_compras.php?codigo=".$codigo);
 	}
 	if($eventoId == 4){
 		$id = $conn->insert_id;
 		$facturaD = "INSERT INTO T_FACTURA_DETALLE VALUES(0,'BOLETO PARA BOX',$cantidad,$precio,'N',$id,$evento)";
 		$resultFD = $conn->query($facturaD);
+		$update= "UPDATE T_EVENTOS
+				  SET evt_gen =evt_box-$cantidad
+				  WHERE evt_id=$evento";
+		$rup=$conn->query($update);
 		header("Location: ../../vista/mis_compras.php?codigo=".$codigo);
 	}
 	
