@@ -81,7 +81,7 @@
 							while($row1 = $result1->fetch_assoc()){
 								echo "<tr class='datos'>";
 									echo "<td>".$row1["usu_nombres"]."</td>";
-									echo "<td>".$row1["usu_apellidos"]."</td>";
+									echo "<td>".$row1["usu_apelidos"]."</td>";
 									echo "<td>".$row1["usu_cedula"]."</td>";
 									echo "<td>".$row1["usu_correo"]."</td>";
 									echo "<td class='link_compra'><a href='../controladores/php/anular_factura.php?usu=".$row1["usu_id"]."&codigo=".$codigo."'><i class='fas fa-user-edit' style='color:greenyellow;'></i></a></td>";
