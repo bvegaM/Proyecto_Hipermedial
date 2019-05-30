@@ -54,19 +54,19 @@
     <div class="content">
         <h1 class="logo">Crear <span>Evento</span></h1>
         <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>Selecciona la cantidad de Tickets a comprar</h3>
+                <form onsubmit="return validar()" enctype="multipart/form-data">
+                   
+                </form>
+            </div>
             <div class="contact-form">
-                <h3>Seleccione la cantidad de tickets a comprar</h3>
+                <h3>Vista Previa</h3>
                 <form action="../controladores/php/crear_empresa.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
                     <p class="block">
                         <input type="submit" value="Registrar" class="button" id="botonA">
                         <input type="reset" value="Cancelar" class="button" onclick="limpiar()" id="botonB">
                     </p>
-                </form>
-            </div>
-            <div class="contact-info">
-                <h3>Vista Previa</h3>
-                <form onsubmit="return validar()" enctype="multipart/form-data">
-                   
                 </form>
             </div>
         </div>
