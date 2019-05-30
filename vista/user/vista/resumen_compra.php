@@ -22,7 +22,7 @@
 			  WHERE usu_id = $evt";
 		
 		$result1 = $conn->query($sql1);
-		$row1 = $result->fetch_assoc();
+		$row1 = $result1->fetch_assoc();
 
 
 	?>
