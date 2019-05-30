@@ -26,7 +26,7 @@
         
         if($row_1["rol"] == 1){
             $_SESSION['isLogged'] = TRUE;
-            header("Location: ../../vista/admin/vista/index.php?codigo=".$row_1["id"]);    
+            header("Location: ../../../vista/admin/vista/index.php?codigo=".$row_1["id"]);    
         }else{
             $_SESSION['isLogged'] = TRUE;
             header("Location: ../../../vista/user/vista/index.php?codigo=".$row_1["id"]);
