@@ -2,17 +2,17 @@
 	
 	include '../../../../config/conexion.php';
 
-	$usu =isset($_POST["codigo"])?trim($_POST["codigo"]):null;
+	$codigo =isset($_POST["codigo"])?trim($_POST["codigo"]):null;
 	$contrasena = isset($_POST["rcontrasena"]) ? trim($_POST["rcontrasena"]) : null;
-	$codigo = isset($_POST["codi"]) ? trim($_POST["codi"]): null;
+
 	echo $codigo;
 	echo $contrasena;
 	$sql ="UPDATE T_USUARIOS
 		  SET usu_contrasena = MD5('$contrasena')
-		  WHERE usu_id = $usu";
+		  WHERE usu_id = $codigo";
 
 	$result = $conn->query($sql);
 
-	header("location: ../../vista/usuario.php?codigo=".$codigo);
+	header("Location: cerrar_sesion.php");
 
 ?>

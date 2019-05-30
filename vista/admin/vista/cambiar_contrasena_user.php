@@ -28,7 +28,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Comprar</title>
+    <title>Contraseña</title>
     <script type="text/javascript" src="../controladores/js/validar_registro.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -67,12 +67,13 @@
 		</div>
 	</nav>
     <div class="content">
-        <h1 class="logo">Revisa TU <span>Compra</span></h1>
+        <h1 class="logo">Cambiar <span>Contraseña</span></h1>
         <div class="contact-wrapper-compras contact-wrapper">               
             <div class="contact-form">
                 <h3>Mis Compras</h3>
-                <form action="../controladores/php/cambiar_contrasena.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
+                <form action="../controladores/php/cambiar_contrasena_user.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
                   <input type="text" name="codigo" id="codigo" value="<?php echo $row["usu_id"];?>" hidden="hidden">
+                  <input type="text" name="codi" id="codi" value="<?php echo $codigo;?>" hidden="hidden">
                    <p>
                    	<label for="contrasena">Escribir nueva contraseña</label>
                    	<input type="password" id="contrasena">
