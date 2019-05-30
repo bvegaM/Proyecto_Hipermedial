@@ -115,7 +115,7 @@
                    				echo "<td id='cantidad'>1</td>";
                    				echo "<td>".$row1["evt_desc"]." General</td>";
                    				echo "<td>$".$row1["evt_gen_precio"]."</td>";
-							 	echo "<td id='precio'>".$row1["evt_gen_precio"]."</td>";
+							 	echo "<input type='number' id='precio' name='precio' value='".$row1["evt_gen_precio"]."'>""</td>";
                    			echo "</tr>";
                    			echo "<tr>";
                    				echo "<td></td>";

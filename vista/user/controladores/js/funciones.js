@@ -6,7 +6,8 @@ btnMenu.addEventListener('click',function(){
 });
 function cambiarCantidad(){
 	var c = Number(document.getElementById("cant").value)
-	alert(c)
+	var x = Number(document.getElementById("precio").value)
+	alert(x)
 	document.getElementById("cantidad").innerHTML=c;
 }
 	
