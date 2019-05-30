@@ -86,7 +86,8 @@
 							  T_EMPRESAS
 					 	 WHERE evt_emp_id = emp_id and
 						 	   emp_cat_id =cat_id and
-							   evt_estado_elimina = 'N'";
+							   evt_estado_elimina = 'N' and
+							   emp_estado_elimina = 'N'";
 				
 				 $result = $conn->query($sql);
 				
