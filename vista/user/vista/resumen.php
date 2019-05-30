@@ -141,7 +141,7 @@
 								echo "<td>GENERAL</td>";
 								echo "<td>$".$row["evt_gen_precio"]."</td>";
 								echo "<td>".$row["evt_gen"]."</td>";
-								echo "<a href=''><i class='fas fa-ticket-alt'></i></a>";
+								echo "<td><a href=''><i class='fas fa-ticket-alt'></i></a></td>";
 								echo "</tr>";
 							}
 							if($row["evt_trib"]>0){
@@ -149,7 +149,7 @@
 								echo "<td>TRIBUNA</td>";
 								echo "<td>$".$row["evt_trib_precio"]."</td>";
 								echo "<td>".$row["evt_trib"]."</td>";
-								echo "<a href=''><i class='fas fa-ticket-alt'></i></a>";
+								echo "<td><a href=''><i class='fas fa-ticket-alt'></i></a></td>";
 								echo "</tr>";
 							}
 							if($row["evt_vip"]>0){
@@ -157,7 +157,7 @@
 								echo "<td>VIP</td>";
 								echo "<td>$".$row["evt_vip_precio"]."</td>";
 								echo "<td>".$row["evt_vip"]."</td>";
-								echo "<a href=''><i class='fas fa-ticket-alt'></i></a>";
+								echo "<td><a href=''><i class='fas fa-ticket-alt'></i></a></td>";
 								echo "</tr>";
 							}
 							if($row["evt_box"]>0){
@@ -165,7 +165,7 @@
 								echo "<td>BOX</td>";
 								echo "<td>$".$row["evt_box_precio"]."</td>";
 								echo "<td>".$row["evt_box"]."</td>";
-								echo "<a href=''><i class='fas fa-ticket-alt'></i></a>";
+								echo "<td><a href=''><i class='fas fa-ticket-alt'></i></a></td>";
 								echo "</tr>";
 							}
 						?>
