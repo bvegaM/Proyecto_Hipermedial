@@ -73,12 +73,13 @@
 		<div class="opacidad"></div>
 		<div class="banner__content">Por medio de esta página elige el evento y compra el ticket</div>
 	</section>
-	<main class="main">
-		<form action="" class="busqueda" style="display:block;padding:10px 0; backgound:#181818;">
+	<form action="" class="busqueda" style="display:block;padding:10px 0; backgound:#181818;">
                 <h2 style="text-align:center; color:red;">Tu Buscador</h2>
                 <input type="text"  id="remite" name="remitente" value="<?php echo $codigo?>" hidden="hidden">
                 <input type="text" name="evento" placeholder="buscar por remitente" id="evento" value="" onkeyup="buscarPorEvento()" style="display:block; margin:0 auto; padding:5px 85px; border-radius:5px; width:100%; border-style:solid; border-color:black;">
-            </form>
+    </form>
+	<main class="main" id="eventos">
+		
 		<section class="grupo_eventos grupo_event_musica">
 			<h3 class="titulo_event_php">CATEGORIA MUSICA</h3>
 			<div class="eventos">
@@ -111,7 +112,7 @@
 		</section>
 		<section class="grupo_eventos grupo_event_teatro">
 			<h3 class="titulo_event_php">CATEGORIA TEATRO</h3>
-			<div class="eventos" id="eventos">
+			<div class="eventos" >
 				
 				<?php
 				 include '../../config/conexion.php';

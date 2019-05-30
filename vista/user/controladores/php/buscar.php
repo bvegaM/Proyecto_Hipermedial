@@ -17,7 +17,9 @@
     </style>
 </head>
 <body>
- <?php
+<section class="grupo_eventos grupo_event_musica">
+	<div class="eventos">
+		 <?php
             include '../../../../config/conexion.php';
             $evento = $_GET['evt'];
             $sql ="SELECT *
@@ -34,8 +36,11 @@
 							echo "</div>";
                          }  
                 }else{
-                }       
-            
+                }      
         ?>
+	</div>
+</section>
+
+
 </body>
 </html>
