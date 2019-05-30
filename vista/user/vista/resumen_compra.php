@@ -43,7 +43,6 @@
 			font-size: 10px;
 		}
 	</style>
-	
 </head>
 <body>  
  	<header class="header">
@@ -115,12 +114,12 @@
 							echo "<tr>";
                    				echo "<td id='cantidad'>1</td>";
                    				echo "<td>".$row1["evt_desc"]." General</td>";
-                   				echo "<td>$".$row1["evt_gen_precio"]."</td>";
+                   				echo "<td id='precio'>$".$row1["evt_gen_precio"]."</td>";
                    			echo "</tr>";
                    			echo "<tr>";
                    				echo "<td></td>";
                    				echo "<td style='font-weight: bolder;'>Total:</td>";
-                   				echo "<td>$".$row1["evt_gen_precio"]."</td>";
+                   				echo "<td id='total'>$".$row1["evt_gen_precio"]."</td>";
                    			echo "</tr>";
 						 }
 						if($evtId == 2){
