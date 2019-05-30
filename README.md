@@ -8,6 +8,7 @@ Lo que se busca en este proyecto es crear unsistema que sirva para la venta de b
 - [URL de Página Web](#URL-de-Página-Web).
 - [Slack](#Slack).
 - [Cronograma](#CRONOGRAMA).
+- [Toma de Requerimientos](#REQUERIMIENTOS).
 - [Base De Datos](#Base-De-Datos).
 
 # URL
@@ -27,6 +28,11 @@ Antes de poder hacer todo el proyecto se empezo con el cronograma de actividades
 
 ![2](images_readme/2.PNG)
 
+Como se puede apreciar las primeras partes hablamos sobre la primera reunión y por consiguiente asignamos tareas a cada integrante del grupo los cuales estan cargados en slack en donde cual trabajamos simultaneamente para obtener buenos resultados.
+
+# REQUERIMIENTOS
+
+Una de las partes más importantes al momento de realizar un sistema es obtener la toma de requerimientos, de tal manera que se puedan realizar los requisitos que el usuario necesita para su sistema, la toma de requisitos fue hecha por Adrian Viscaino quien conjuntamente con el cliente obtuvo los siguientes requisitos.
 # Base De Datos
 
 El nombre de la base de datos es **entretenimiento** y las tablas creadas fueron pensadas detenidamente para generar una base de datos consistente respetando las reglas de normalización y al mismo tiempo viendo que todas las tablas esten bien referenciadas y cualquier persona que desee utilizar la pueda entender
