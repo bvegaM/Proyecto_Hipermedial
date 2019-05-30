@@ -85,7 +85,7 @@
 									echo "<td>".$row1["evt_asientos"]."</td>";
 									echo "<td>".$row1["evt_precio"]."</td>";
 									echo "<td>$".$row1["evt_vendidos"]."</td>";
-									if($row1["fd_estado"] == 'N'){
+									if($row1["evt_estado"] == 'N'){
 										echo "<td class='link_compra'><a href='../controladores/php/anular_factura.php?fc=".$row1["fc_id"]."&fd=".$row1["fd_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
 									}else{
 										echo "<td>ANULADA</td>";
