@@ -23,6 +23,14 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles_evento.css">
+    <style>
+		.datos > p{
+			color: black;
+			margin: 0;
+			text-align: center;
+			font-size: 15px;
+		}
+	</style>
 </head>
 <body>  
  	<header class="header">
@@ -64,8 +72,8 @@
                 <h3>Vista Previa</h3>
                 <form action="../controladores/php/crear_empresa.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
                    <div class="cabecera">
-                   	<i class="fas fa-ticket-alt"></i>
-                   	<h2>TIcket Home</h2>
+                   	<i class="fas fa-ticket-alt" style="font-size:35px; color:red;"></i>
+                   	<h2 style="margin:0; font-size:20px; color:black;">TIcket Home</h2>
                    	<article class="datos">
                    		<p><?php echo $row["usu_nombres"]?></p>
                    		<p><?php echo $row["usu_cedula"]?></p>
