@@ -88,14 +88,14 @@
                    			<th>Descripcion</th>
                    			<th>Precio</th>
                    		</tr>
+                   		<br>
+                   		<br>
+                   		<br>
                    		<tr>
                    			<td>1</td>
                    			<td>Montaner vs Vita General</td>
                    			<td>$20</td>
                    		</tr>
-                   		<br>
-                   		<br>
-                   		<br>
                    		<tr>
                    			<td></td>
                    			<td style="font-weight: bolder;">Total:</td>
