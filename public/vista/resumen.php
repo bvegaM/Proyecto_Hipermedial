@@ -135,7 +135,7 @@
 								echo "<td>GENERAL</td>";
 								echo "<td>$".$row["evt_gen_precio"]."</td>";
 								echo "<td>".$row["evt_gen"]."</td>";
-								echo "<td class='link_compra'><a href='resumen_compra.php?evt=".$evento."&evtId=1&codigo=".$codigo."'><i class='fas fa-ticket-alt'></i></a></td>";
+								echo "<td class='link_compra'><a href='login.html'><i class='fas fa-ticket-alt'></i></a></td>";
 								echo "</tr>";
 							}
 							if($row["evt_trib"]>0){
@@ -143,7 +143,7 @@
 								echo "<td>TRIBUNA</td>";
 								echo "<td>$".$row["evt_trib_precio"]."</td>";
 								echo "<td>".$row["evt_trib"]."</td>";
-								echo "<td class='link_compra'><a href='resumen_compra.php?evt=".$evento."&evtId=2&codigo=".$codigo."'><i class='fas fa-ticket-alt'></i></a></td>";
+								echo "<td class='link_compra'><a href='login.html'><i class='fas fa-ticket-alt'></i></a></td>";
 								echo "</tr>";
 							}
 							if($row["evt_vip"]>0){
@@ -151,7 +151,7 @@
 								echo "<td>VIP</td>";
 								echo "<td>$".$row["evt_vip_precio"]."</td>";
 								echo "<td>".$row["evt_vip"]."</td>";
-								echo "<td class='link_compra'><a href='resumen_compra.php?evt=".$evento."&evtId=3&codigo=".$codigo."'><i class='fas fa-ticket-alt'></i></a></td>";
+								echo "<td class='link_compra'><a href='login.html'><i class='fas fa-ticket-alt'></i></a></td>";
 								echo "</tr>";
 							}
 							if($row["evt_box"]>0){
@@ -159,7 +159,7 @@
 								echo "<td>BOX</td>";
 								echo "<td>$".$row["evt_box_precio"]."</td>";
 								echo "<td>".$row["evt_box"]."</td>";
-								echo "<td class='link_compra'><a href='resumen_compra.php?evt=".$evento."&evtId=4&codigo=".$codigo."'><i class='fas fa-ticket-alt'></i></a></td>";
+								echo "<td class='link_compra'><a href='login.html'><i class='fas fa-ticket-alt'></i></a></td>";
 								echo "</tr>";
 							}
 						?>
