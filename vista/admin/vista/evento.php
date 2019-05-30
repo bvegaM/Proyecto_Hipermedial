@@ -16,7 +16,8 @@
 		$row = $result->fetch_assoc();
 		
 		$sql1="SELECT *
-			  FROM T_EVENTOS";
+			  FROM T_EVENTOS where
+			  evt_estado_elimina = 'N'";
 		
 		$result1 = $conn->query($sql1);
 	?>
