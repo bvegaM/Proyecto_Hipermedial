@@ -79,11 +79,11 @@
                    <div class="detalle" style="background:white;">
                    	<table style="width:100%; color:black; text-align:center;">
                    		<tr>
-                   			<th>Nombre del Evento</th>
-                   			<th>Fecha del Evento</th>
-                   			<th>Descripcion</th>
-                   			<th>Cantidad</th>
-                   			<th>Total</th>
+                   			<th style="border-bottom:1px solid black;">Nombre del Evento</th>
+                   			<th style="border-bottom:1px solid black;">Fecha del Evento</th>
+                   			<th style="border-bottom:1px solid black;">Descripcion</th>
+                   			<th style="border-bottom:1px solid black;">Cantidad</th>
+                   			<th style="border-bottom:1px solid black;">Total</th>
                    		</tr>
                    		<?php
 							while($row1 = $result1->fetch_assoc()){
