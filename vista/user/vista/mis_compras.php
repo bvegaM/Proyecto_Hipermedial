@@ -27,6 +27,19 @@
 		
 		$result1 = $conn->query($sql1);
 	?>
+	<?php
+			include '../../../config/conexion.php';
+
+			$codigoc = $_GET['codigo'];
+			$sqlc = "SELECT * 
+					FROM T_USUARIOS 
+					where usu_id = $codigoc";
+			$resultc = $conn->query($sqlc);
+			$rowc = $resultc->fetch_assoc();
+			if($rowc["usu_rol_id"] == 1){
+			   header("Location: ../../../public/vista/blanco.html"); 
+			}
+  		?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

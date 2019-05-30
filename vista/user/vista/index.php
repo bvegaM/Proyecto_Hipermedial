@@ -27,6 +27,19 @@
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
 		?>
+		<?php
+			include '../../../config/conexion.php';
+
+			$codigoc = $_GET['codigo'];
+			$sqlc = "SELECT * 
+					FROM T_USUARIOS 
+					where usu_id = $codigoc";
+			$resultc = $conn->query($sqlc);
+			$rowc = $resultc->fetch_assoc();
+			if($rowc["usu_rol_id"] == 1){
+			   header("Location: ../../../public/vista/blanco.html"); 
+			}
+  		?>
 	<header class="header">
 		<div class="cabecera">
 			<h1 class="logo"><i class="fas fa-ticket-alt"></i>Ticket Home</h1>
