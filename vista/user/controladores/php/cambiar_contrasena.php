@@ -2,9 +2,13 @@
 	$codigo =isset($_POST["codigo"])?trim($_POST["codigo"]):null;
 	$contrasena = isset($_POST["rcontrasena"]) ? trim($_POST["rcontrasena"]) : null;
 
+	echo $codigo;
+	echo $contrasena;
 	$sql ="UPDATE T_USUARIOS
 		  SET usu_contrasena = MD5('$contrasena')
 		  WHERE usu_id = $codigo";
+
+	echo $sql;
 
 	$result = $conn->query($sql);
 
