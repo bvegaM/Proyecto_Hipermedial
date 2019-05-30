@@ -1,6 +1,6 @@
 <?php
 		$evento = $_GET["evt"];
-		include '../../../config/conexion.php';
+		include '../../config/conexion.php';
 	
 		$sql1="SELECT *
 			   FROM T_EVENTOS
