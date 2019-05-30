@@ -15,6 +15,8 @@
 	$sql="INSERT INTO T_FACTURA_CABECERA(0,'$fechaC',$codigo)";
 	$result =$conn->query($sql);
 
+	echo $sql;
+
 	if($eventoId == 1){
 		$factura="SELECT *
 				  FROM T_FACTURA_CABECERA 
