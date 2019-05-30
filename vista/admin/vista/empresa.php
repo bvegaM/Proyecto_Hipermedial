@@ -99,7 +99,7 @@
 									echo "<td>".$row1["emp_direccion"]."</td>";
 									echo "<td>".$row1["emp_telefono"]."</td>";
 									if($row1["emp_estado_elimina"] == 'N'){
-										echo "<td class='link_compra'><a href='../controladores/php/eliminar_evento.php?evt=".$row1["emp_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
+										echo "<td class='link_compra'><a href='../controladores/php/eliminar_empresa.php?emp=".$row1["emp_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
 									}else{
 										echo "<td>ELIMINADA</td>";
 									}
