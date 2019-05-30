@@ -14,7 +14,7 @@
 
 	$sql="INSERT INTO T_FACTURA_CABECERA VALUES(0,'$fechaC',$codigo)";
 	$result =$conn->query($sql);
-	if($evtId == 1){
+	if($eventoId == 1){
 		echo $conn->insert_id;
 	}
 	
