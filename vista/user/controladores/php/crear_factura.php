@@ -17,7 +17,7 @@
 
 	if($eventoId == 1){
 		var $desc = "Boleto General";
-		var  $id = $conn->insert_id;
+		var  $id = $conn->insert_id();
 		
 	}
 	
