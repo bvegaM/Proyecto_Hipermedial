@@ -66,9 +66,10 @@
         <div class="contact-wrapper">
             <div class="contact-form">
                 <h3>Este es tu perfil</h3>
-                <form action="../controladores/php/update_perfil.php" method="post" enctype="multipart/form-data">
+                <form action="../controladores/php/update_perfil_usuario.php" method="post" enctype="multipart/form-data">
                     <p>
                         <input type="text" name="id" id="id" value="<?php echo $row["usu_id"] ?>" hidden="hidden">
+                         <input type="text" name="codi" id="codi" value="<?php echo $codigo ?>" hidden="hidden">
                         <label for="nombres">Nombres</label>
                         <input type="text" name="nombres" id="nombres" value="<?php echo $row["usu_nombres"]?>" onkeyup="validarLetras(this,'nombres')">
                     </p>
