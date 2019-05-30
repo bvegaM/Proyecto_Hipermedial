@@ -211,7 +211,7 @@ function validarContrasena(){
 
         }
     }else{
-        document.getElementById("cajaP").style.background = "none"
-            document.getElementById("cajaR").style.background = "none"
+        document.getElementById("contrasena").style.background = "none"
+            document.getElementById("rcontrasena").style.background = "none"
     }
 }

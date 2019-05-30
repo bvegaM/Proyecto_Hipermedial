@@ -67,6 +67,9 @@
                    	<label for="rcontrasena">Repetir nueva contraseña</label>
                    	<input type="password" id="rcontrasena" name="rcontrasena" onkeyup="validarContrasena()">
                    </p>
+                   <p class="block">
+                        <input type="submit" value="Cambiar" class="button" id="botonA">
+                    </p>
                 </form>
             </div>
         </div>
