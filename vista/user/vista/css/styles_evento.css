@@ -181,6 +181,15 @@ body{
     .contact-wrapper > *{
         padding: 2em;
     }
+	
+	 .contact-wrapper-compras{
+        display: block;
+    }
+	
+	 .contact-wrapper-compras > *{
+        padding: 2em;
+    }
+	
 }
 
 /*----Footer--*/
