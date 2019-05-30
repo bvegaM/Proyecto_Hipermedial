@@ -26,7 +26,7 @@
 		$resultadoF=$conn->query($factura);
 		$row=$resultadoF->fetch_assoc();
 		var $id = $row['fc_id'];
-		var $desc = "Boleto General"
+		var $desc = "Boleto General";
 		$sqlFD="INSERT INTO T_FACTURA_DETALLE VALUES(0,'$desc',$cantidad,$precio,$id,$evento)";
 		echo $sqlFD;
 	}
