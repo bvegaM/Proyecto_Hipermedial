@@ -18,6 +18,7 @@
 		$id = $conn->insert_id;
 		$facturaD = "INSERT INTO T_FACTURA_DETALLE VALUES(0,'BOLETO PARA GENERAL',$cantidad,$precio,$id,$evento)";
 		$resultFD = $conn->query($facturaD);
+		header("Location: ../../vista/mis_compras.php?codigo=".$codigo);
 	}
 	
 	
