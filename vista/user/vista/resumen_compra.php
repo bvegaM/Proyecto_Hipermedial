@@ -43,12 +43,7 @@
 			font-size: 10px;
 		}
 	</style>
-	<script type="text/javascript">
-		function cambiarCantidad(){
-			var c = Number(document.getElementById("cant").value)
-			alert(c)
-		}
-	</script>
+	
 </head>
 <body>  
  	<header class="header">
