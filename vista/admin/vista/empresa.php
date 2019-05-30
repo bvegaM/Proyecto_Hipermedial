@@ -16,8 +16,7 @@
 		$row = $result->fetch_assoc();
 		
 		$sql1="SELECT *
-			  FROM T_EMPRESAS 
-			  WHERE emp_estado_elimina = 'N'";
+			  FROM T_EMPRESAS";
 		
 		$result1 = $conn->query($sql1);
 	?>
