@@ -34,12 +34,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles_evento.css">
     <style>
-		.datos .datos-info{
-			color: black;
-			margin: 0;
-			padding: 0;
-			text-align: right;
-			font-size: 10px;
+		.datos{
+			background: rgb(229,9,20,1);
+			color: white;
 		}
 	</style>
 </head>
@@ -87,7 +84,7 @@
                    		</tr>
                    		<?php
 							while($row1 = $result1->fetch_assoc()){
-								echo "<tr>";
+								echo "<tr class='datos'>";
 									echo "<td>".$row1["evt_desc"]."</td>";
 									echo "<td>".$row1["evt_fec_evento"]."</td>";
 									echo "<td>".$row1["fd_desc"]."</td>";
