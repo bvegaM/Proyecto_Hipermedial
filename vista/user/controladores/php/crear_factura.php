@@ -4,7 +4,7 @@
 	
 
 	$precio=isset($_POST["precio"])?trim($_POST["precio"]):null;
-	$cantidad=isset($_POST["cantidad"])?trim($_POST["cantidad"]):null;
+	$cantidad=isset($_POST["cnt"])?trim($_POST["cnt"]):null;
 
 	echo $evento;
 	echo $codigo;
