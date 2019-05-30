@@ -166,3 +166,15 @@ CREATE TABLE T_FACTURA_DETALLE (
 	FOREIGN KEY(fd_evt_id) REFERENCES T_EVENTOS(evt_id)    
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 ```
+
+### T_CONTACTOS
+```
+CREATE TABLE T_CONTACTOS(
+	cnt_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    cnt_nombre varchar(150) NOT NULL,
+    cnt_correo varchar(150) NOT NULL,
+    cnt_telefono varchar(12) NOT NULL,
+    cnt_asunto   varchar(1000) NOT NULL,
+    cnt_calificacion int NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+```
