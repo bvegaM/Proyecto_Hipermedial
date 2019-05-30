@@ -86,7 +86,7 @@
 			font-size: 20px;
 		}
 		
-		.link-compra{
+		.link_compra{
 			text-align: center;
 		}
 	</style>
