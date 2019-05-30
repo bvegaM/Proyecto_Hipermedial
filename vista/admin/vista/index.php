@@ -132,7 +132,7 @@
 		<div class="footer-menu-one">
 			<ul>
 				<li><a href="index.php?codigo=<?php echo $codigo?>">Home</a></li>
-				<li><a href="facturas.php?codigo=<?php echo $codigo?>">Facturas</a></li>
+				<li><a href="factura.php?codigo=<?php echo $codigo?>">Facturas</a></li>
 				<li><a href="evento.php?codigo=<?php echo $codigo?>">Eventos</a></li>
 				<li><a href="empresa.php?codigo=<?php echo $codigo?>">Empresa</a></li>
 				<li><a href="usuario.php?codigo=<?php echo $codigo?>">Usuarios</a></li>
