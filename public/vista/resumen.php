@@ -8,7 +8,6 @@
 	
 		$result1 = $conn->query($sql1);
 		$row1 = $result1->fetch_assoc();
-
 ?>
 
 <!DOCTYPE html>
@@ -91,16 +90,16 @@
 		<div class="menu_despegable">
 			<i class="fas fa-bars" id="btnmenu"></i>
 			<ul class="menu" id="menu">
-				<li class="menu__item"><a href="index.php?codigo=<?php echo $codigo?>" class="menu__link menu__link--select"><i class="fas fa-home"><span>Home</span></i></a></li>
-				<li class="menu__item"><a href="perfil.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-user-edit"><span>Mi Perfil</span></i></a></li>
-				<li class="menu__item"><a href="evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-ticket-alt"><span>Comprar</span></i></a></li>
-				<li class="menu__item"><a href="crear_evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Crear Evento</span></i></a></li>
-				<li class="menu__item"><a href="contact.html" class="menu__link"><i class="fas fa-money-check-alt"><span>Mis Compras</span></i></a></li>
+				<li class="menu__item"><a href="index.html" class="menu__link menu__link--select"><i class="fas fa-home"><span>Home</span></i></a></li>
+				<li class="menu__item"><a href="about.html" class="menu__link"><i class="fas fa-book-open"><span>About</span></i></a></li>
+				<li class="menu__item"><a href="category.php" class="menu__link"><i class="fab fa-buffer"><span>Category</span></i></a></li>
+				<li class="menu__item"><a href="eventos.php" class="menu__link"><i class="far fa-calendar"><span>Events</span></i></a></li>
+				<li class="menu__item"><a href="contact.html" class="menu__link"><i class="fas fa-address-card"><span>Contact</span></i></a></li>
 			</ul>
 		</div>
 		<div class="rol">
-			<a href="perfil.php?codigo=<?php echo $codigo?>" class="sesion"><i class="fas fa-smile-beam"><span>Bienvenido <?php echo $row["usu_nombres"]; ?></span></i></a>
-			<a href="../controladores/php/cerrar_sesion.php" class="sesion"><i class="fas fa-sign-in-alt" id="inicio"><span>Cerrar Sesión</span></i></a>
+			<a href="login.html" class="sesion"><i class="fas fa-sign-in-alt" id="inicio"><span>Iniciar Sesión</span></i></a>
+			<a href="registro.html" class="sesion"><i class="fas fa-user-plus" id="registro"><span>Registrate</span></i></a>
 		</div>
 	</nav>
 	<main class="main" style="background: white;">
@@ -179,11 +178,11 @@
 		</div>
 		<div class="footer-menu-one">
 			<ul>
-				<li><a href="index.php?codigo=<?php echo $codigo?>">Home</a></li>
-				<li><a href="perfil.php?codigo=<?php echo $codigo?>">Mi Perfil</a></li>
-				<li><a href="evento.php?codigo=<?php echo $codigo?>">Comprar</a></li>
-				<li><a href="crear_evento.php?codigo=<?php echo $codigo?>">Crear Eventos</a></li>
-				<li><a href="">Mis Compras</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">Quienes Somos</a></li>
+				<li><a href="category.php">Categorias</a></li>
+				<li><a href="eventos.php">Eventos</a></li>
+				<li><a href="contact.html">Contactos</a></li>
 			</ul>
 		</div>
 		<div class="footer-txt">
