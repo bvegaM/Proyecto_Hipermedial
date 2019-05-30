@@ -55,7 +55,7 @@
         <h1 class="logo">Crear <span>Evento</span></h1>
         <div class="contact-wrapper">
             <div class="contact-form">
-                <h3>Paso 1: Crea tu Empresa u Organizador (Si ya lo registraste lo puedes encontrar)</h3>
+                <h3>Seleccione la cantidad de tickets a comprar</h3>
                 <form action="../controladores/php/crear_empresa.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
                     <p class="block">
                         <input type="submit" value="Registrar" class="button" id="botonA">
@@ -64,7 +64,7 @@
                 </form>
             </div>
             <div class="contact-info">
-                <h3>Paso 2: Crea tu Evento para que este disponible </h3>
+                <h3>Vista Previa</h3>
                 <form onsubmit="return validar()" enctype="multipart/form-data">
                    
                 </form>
@@ -94,5 +94,6 @@
 			<p id="f-min">Cuenca-Ecuador</p>
 		</div>
 	</footer>
+	<script src="../controladores/js/funciones.js"></script>
 </body>
 </html>
