@@ -150,7 +150,7 @@
 								echo "<td>GENERAL</td>";
 								echo "<td>$".$row["evt_gen_precio"]."</td>";
 								echo "<td>".$row["evt_gen"]."</td>";
-								echo "<td class='link_compra'><a href=''><i class='fas fa-ticket-alt'></i></a></td>";
+								echo "<td class='link_compra'><a href='resumen_compra.php?evt=".$evento."&evtId=1&codigo=".$codigo."'><i class='fas fa-ticket-alt'></i></a></td>";
 								echo "</tr>";
 							}
 							if($row["evt_trib"]>0){
