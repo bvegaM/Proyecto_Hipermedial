@@ -77,7 +77,10 @@
             <div class="contact-info">
                 <h3>Selecciona la cantidad de Tickets a comprar</h3>
                 <form onsubmit="return validar()" enctype="multipart/form-data">
-                   
+                   <p>
+                   	 <label for="cant">Cantidad(Máximo tres boletos): </label>
+                   	 <input type="number" name="cant" id="cant" min="0" max="3" step="1">
+                   </p>
                 </form>
             </div>
             <div class="contact-form">
