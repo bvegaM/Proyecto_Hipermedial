@@ -73,8 +73,8 @@
     <div class="content">
         <h1 class="logo">Revisa TU <span>Compra</span></h1>
         <div class="contact-wrapper">               
-            <div class="contact-form">
-                <h3>Vista Previa</h3>
+            <div class="contact-form-compras">
+                <h3>Mis Compras</h3>
                 <form action="../controladores/php/crear_factura.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
                    <div class="detalle" style="background:white;">
                    	<table style="width:100%; color:black; text-align:center;">
@@ -98,10 +98,6 @@
 						?>
                    	</table>
                    </div>
-                    <p class="block">
-                        <input type="submit" value="Comprar" class="button" id="botonA">
-                        <input type="reset" value="Cancelar" class="button" onclick="limpiar()" id="botonB">
-                    </p>
                 </form>
             </div>
         </div>
