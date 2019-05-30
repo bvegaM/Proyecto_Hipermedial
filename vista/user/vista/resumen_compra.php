@@ -93,24 +93,12 @@
                    			<td>Montaner vs Vita General</td>
                    			<td>$20</td>
                    		</tr>
+                   		<br>
+                   		<br>
+                   		<br>
                    		<tr>
                    			<td></td>
-                   			<td></td>
-                   			<td></td>
-                   		</tr>
-                   		<tr>
-                   			<td></td>
-                   			<td></td>
-                   			<td></td>
-                   		</tr>
-                   		<tr>
-                   			<td></td>
-                   			<td></td>
-                   			<td></td>
-                   		</tr>
-                   		<tr>
-                   			<td></td>
-                   			<td>Total:</td>
+                   			<td style="font-weight: bolder;">Total:</td>
                    			<td>$20</td>
                    		</tr>
                    	</table>
