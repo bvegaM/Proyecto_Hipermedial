@@ -1,7 +1,7 @@
 function buscarPorEvento(){
     var evento = document.getElementById("evento").value
-    if(correo ==""){
-        document.getElementById("informacion").innerHTML="";
+    if(evento ==""){
+        document.getElementById("eventos").innerHTML="";
     }else{
         if(window.XMLHttpRequest){
             xmlhttp = new XMLHttpRequest();
