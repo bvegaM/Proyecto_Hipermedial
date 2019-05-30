@@ -27,6 +27,32 @@
 		$row = $result->fetch_assoc();
 
 	?>
+   <header class="header">
+		<div class="cabecera">
+			<h1 class="logo"><i class="fas fa-ticket-alt"></i>Ticket Home</h1>
+	
+			<div class="info">
+				<i class="fas fa-phone"><span>09-85164142</span></i>
+				<i class="fas fa-map-marker-alt"><span>Mall del Rio Planta Baja</span></i>
+			</div>
+		</div>
+	</header>
+	<nav class="navegador">
+		<div class="menu_despegable">
+			<i class="fas fa-bars" id="btnmenu"></i>
+			<ul class="menu" id="menu">
+				<li class="menu__item"><a href="index.php?codigo=<?php echo $codigo?>" class="menu__link menu__link--select"><i class="fas fa-home"><span>Home</span></i></a></li>
+				<li class="menu__item"><a href="perfil.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-user-edit"><span>Mi Perfil</span></i></a></li>
+				<li class="menu__item"><a href="evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-ticket-alt"><span>Comprar</span></i></a></li>
+				<li class="menu__item"><a href="crear_evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Crear Evento</span></i></a></li>
+				<li class="menu__item"><a href="mis_compras.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-money-check-alt"><span>Mis Compras</span></i></a></li>
+			</ul>
+		</div>
+		<div class="rol">
+			<a href="perfil.php?codigo=<?php echo $codigo?>" class="sesion"><i class="fas fa-smile-beam"><span>Bienvenido <?php echo $row["usu_nombres"]; ?></span></i></a>
+			<a href="../controladores/php/cerrar_sesion.php" class="sesion"><i class="fas fa-sign-in-alt" id="inicio"><span>Cerrar Sesión</span></i></a>
+		</div>
+	</nav>
     <div class="content">
         <h1 class="logo">Mi <span>Perfil</span></h1>
         <div class="contact-wrapper">
