@@ -7,7 +7,7 @@
 
 	$sql="UPDATE T_USUARIOS
 		  SET usu_estado_elimina ='S'
-		  WHERE usu_id=$fc";
+		  WHERE usu_id=$usu";
 	
 	$result=$conn->query($sql);
 
