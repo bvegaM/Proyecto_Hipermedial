@@ -66,6 +66,7 @@
 				<li class="menu__item"><a href="index.php?codigo=<?php echo $codigo?>" class="menu__link menu__link--select"><i class="fas fa-home"><span>Home</span></i></a></li>
 				<li class="menu__item"><a href="facturas.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-ticket-alt"><span>Facturas</span></i></a></li>
 				<li class="menu__item"><a href="evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Eventos</span></i></a></li>
+				<li class="menu__item"><a href="empresa.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Empresa</span></i></a></li>
 				<li class="menu__item"><a href="usuario.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-money-check-alt"><span>Usuarios</span></i></a></li>
 			</ul>
 		</div>
@@ -127,6 +128,7 @@
 				<li><a href="index.php?codigo=<?php echo $codigo?>">Home</a></li>
 				<li><a href="evento.php?codigo=<?php echo $codigo?>">Facturas</a></li>
 				<li><a href="evento.php?codigo=<?php echo $codigo?>">Eventos</a></li>
+				<li><a href="empresa.php?codigo=<?php echo $codigo?>">Eventos</a></li>
 				<li><a href="usuario.php?codigo=<?php echo $codigo?>">Usuarios</a></li>
 			</ul>
 		</div>

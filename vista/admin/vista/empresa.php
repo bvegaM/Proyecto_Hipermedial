@@ -11,9 +11,15 @@
 		$sql="SELECT *
 			  FROM T_USUARIOS
 			  WHERE usu_id = $codigo";
-
+		
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
+		
+		$sql1="SELECT *
+			  FROM T_EMPRESA where
+			  emp_estado_elimina = 'N'";
+		
+		$result1 = $conn->query($sql1);
 	?>
   <?php
 			include '../../../config/conexion.php';
@@ -32,8 +38,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contraseña</title>
-    <script type="text/javascript" src="../controladores/js/validar_registro.js"></script>
+    <title>Empresa</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles_evento.css">
@@ -62,7 +67,7 @@
 				<li class="menu__item"><a href="index.php?codigo=<?php echo $codigo?>" class="menu__link menu__link--select"><i class="fas fa-home"><span>Home</span></i></a></li>
 				<li class="menu__item"><a href="facturas.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-ticket-alt"><span>Facturas</span></i></a></li>
 				<li class="menu__item"><a href="evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Eventos</span></i></a></li>
-				<li class="menu__item"><a href="empresa.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Empresa</span></i></a></li>
+				<li class="menu__item"><a href="empresa.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Eventos</span></i></a></li>
 				<li class="menu__item"><a href="usuario.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-money-check-alt"><span>Usuarios</span></i></a></li>
 			</ul>
 		</div>
@@ -72,26 +77,43 @@
 		</div>
 	</nav>
     <div class="content">
-        <h1 class="logo">Cambiar<span>Contraseña</span></h1>
-        <div class="contact-wrapper-compras contact-wrapper">               
-            <div class="contact-form">
+        <h1 class="logo"><span>Eventos</span></h1>
+        <div class="contact-wrapper-compras">               
+            <div class="contact-form-compras">
                 <h3>Mis Compras</h3>
-                <form action="../controladores/php/cambiar_contrasena.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
-                  <input type="text" name="codigo" id="codigo" value="<?php echo $codigo;?>" hidden="hidden">
-                   <p>
-                   	<label for="contrasena">Escribir nueva contraseña</label>
-                   	<input type="password" id="contrasena">
-                   	<label for="rcontrasena">Repetir nueva contraseña</label>
-                   	<input type="password" id="rcontrasena" name="rcontrasena" onkeyup="validarContrasena()">
-                   </p>
-                   <p class="block">
-                        <input type="submit" value="Cambiar" class="button" id="botonA">
-                    </p>
+                <form action="../controladores/php/crear_factura.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
+                   <div class="detalle" style="background:white;">
+                   	<table style="width:100%; color:black; text-align:center;">
+                   		<tr>
+                   			<th style="border-bottom:1px solid black;">Nombre de la empresa</th>
+                   			<th style="border-bottom:1px solid black;">RUC</th>
+                   			<th style="border-bottom:1px solid black;">Direccion</th>
+                   			<th style="border-bottom:1px solid black;">Telefono</th>
+                   			<th style="border-bottom:1px solid black;">Eliminar Empresa</th>
+                   		</tr>
+                   		<?php
+							while($row1 = $result1->fetch_assoc()){
+								echo "<tr class='datos'>";
+									echo "<td>".$row1["emp_nombre"]."</td>";
+									echo "<td>".$row1["emp_ruc"]."</td>";
+									echo "<td>".$row1["emp_direccion"]."</td>";
+									echo "<td>".$row1["emp_telefono"]."</td>";
+									if($row1["evt_estado_elimina"] == 'N'){
+										echo "<td class='link_compra'><a href='../controladores/php/eliminar_evento.php?evt=".$row1["emp_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
+									}else{
+										echo "<td>ELIMINADA</td>";
+									}
+									
+								echo "</tr>";
+							}
+						?>
+                   	</table>
+                   </div>
                 </form>
             </div>
         </div>
     </div>
-    <footer class="footer">
+     <footer class="footer">
 		<div class="footer-social-icons">
 			<ul>
 				<li><a href="" target="blank"><i class="fab fa-facebook-square"></i>
@@ -103,10 +125,10 @@
 		<div class="footer-menu-one">
 			<ul>
 				<li><a href="index.php?codigo=<?php echo $codigo?>">Home</a></li>
-				<li><a href="facturas.php?codigo=<?php echo $codigo?>">Facturas</a></li>
+				<li><a href="evento.php?codigo=<?php echo $codigo?>">Facturas</a></li>
 				<li><a href="evento.php?codigo=<?php echo $codigo?>">Eventos</a></li>
 				<li><a href="empresa.php?codigo=<?php echo $codigo?>">Eventos</a></li>
-				<li><a href="usuario.php?codigo=<?php echo $codigo?>">Usuarios</a></li>
+				<li><a href="mis_compras.php?codigo=<?php echo $codigo?>">Usuarios</a></li>
 			</ul>
 		</div>
 		<div class="footer-txt">
