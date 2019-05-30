@@ -7,7 +7,7 @@
 
 	$sql="UPDATE T_EVENTOS
 		  SET evt_estado_elimina ='S'
-		  WHERE fc_id=$fc";
+		  WHERE evt_id=$fc";
 	
 	$result=$conn->query($sql);
 
