@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="css/styles_evento.css">
     <style>
 		.datos{
-			background: #18181818;
+			background: #181818;
 			color: white;
 		}
 	</style>
