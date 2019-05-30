@@ -85,10 +85,10 @@
         <div class="contact-wrapper-compras">               
             <div class="contact-form-compras">
                 <h3>Mis Facturas</h3>
-                <form action="" class="busqueda" style="display:block;padding:10px 0; backgound:#181818;">
+                <form action="" class="busqueda" style="display:block;padding:0px 0; backgound:#181818;">
                 <h2 style="text-align:center; color:red;">Tu Buscador</h2>
                 <input type="text"  id="usuario" name="remitente" value="<?php echo $codigo?>" hidden="hidden">
-                <input type="text" name="evento" placeholder="buscar por remitente" id="evento" value="" onkeyup="buscarPorEvento()" style="display:block; margin:0 auto; padding:5px 85px; border-radius:5px; width:100%; border-style:solid; border-color:black;">
+                <input type="text" name="evento" placeholder="buscar por evento" id="evento" value="" onkeyup="buscarPorEvento()" style="display:block; margin:0 auto; padding:0px 85px; border-radius:5px; width:100%; border-style:solid; border-color:black;">
    				 </form>
                 <form action="../controladores/php/crear_factura.php" method="post" onsubmit="return validar()" enctype="multipart/form-data" id="factura">
                    <div class="detalle" style="background:white;">

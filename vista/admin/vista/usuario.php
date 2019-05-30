@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles_evento.css">
+    <script type="text/javascript" src="../controladores/js/ajax.js"></script>
     <style>
 		.datos{
 			background: #181818;
@@ -79,8 +80,13 @@
         <h1 class="logo"><span>Usuarios</span></h1>
         <div class="contact-wrapper-compras">               
             <div class="contact-form-compras">
-                <h3>Mis Compras</h3>
-                <form action="../controladores/php/crear_factura.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
+                <h3>Mis Usuarios</h3>
+                 <form action="" class="busqueda" style="display:block;padding:0px 0; backgound:#181818;">
+                <h2 style="text-align:center; color:red;">Tu Buscador</h2>
+                <input type="text"  id="usuario" name="remitente" value="<?php echo $codigo?>" hidden="hidden">
+                <input type="text" name="evento" placeholder="buscar por correo" id="evento" value="" onkeyup="buscarPorCorreo()" style="display:block; margin:0 auto; padding:0px 85px; border-radius:5px; width:100%; border-style:solid; border-color:black;">
+   				 </form>
+                <form action="../controladores/php/crear_factura.php" method="post" onsubmit="return validar()" enctype="multipart/form-data" id="cor">
                    <div class="detalle" style="background:white;">
                    	<table style="width:100%; color:black; text-align:center;">
                    		<tr>
