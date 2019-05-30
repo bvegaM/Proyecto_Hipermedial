@@ -128,11 +128,12 @@
                    				echo "<td id='cantidad'>1</td>";
                    				echo "<td>".$row1["evt_desc"]." Tribuna</td>";
                    				echo "<td>$".$row1["evt_trib_precio"]."</td>";
+								echo "<input type='number' id='precio' name='precio' value='".$row1["evt_trib_precio"]."'></td>";
                    			echo "</tr>";
                    			echo "<tr>";
                    				echo "<td></td>";
                    				echo "<td style='font-weight: bolder;'>Total:</td>";
-                   				echo "<td>$".$row1["evt_trib_precio"]."</td>";
+                   				echo "<td id='total'>$".$row1["evt_trib_precio"]."</td>";
                    			echo "</tr>";
 						 }
 						if($evtId == 3){
@@ -140,11 +141,12 @@
                    				echo "<td id='cantidad'>1</td>";
                    				echo "<td>".$row1["evt_desc"]." VIP</td>";
                    				echo "<td>$".$row1["evt_vip_precio"]."</td>";
+								echo "<input type='number' id='precio' name='precio' value='".$row1["evt_vip_precio"]."'></td>";
                    			echo "</tr>";
                    			echo "<tr>";
                    				echo "<td></td>";
                    				echo "<td style='font-weight: bolder;'>Total:</td>";
-                   				echo "<td>$".$row1["evt_vip_precio"]."</td>";
+                   				echo "<td id='total'>$".$row1["evt_vip_precio"]."</td>";
                    			echo "</tr>";
 						 }
 						if($evtId == 4){
@@ -152,11 +154,12 @@
                    				echo "<td id='cantidad'>1</td>";
                    				echo "<td>".$row1["evt_desc"]." BOX</td>";
                    				echo "<td>$".$row1["evt_box_precio"]."</td>";
+								echo "<input type='number' id='precio' name='precio' value='".$row1["evt_box_precio"]."'></td>";
                    			echo "</tr>";
                    			echo "<tr>";
                    				echo "<td></td>";
                    				echo "<td style='font-weight: bolder;'>Total:</td>";
-                   				echo "<td>$".$row1["evt_box_precio"]."</td>";
+                   				echo "<td id='total'>$".$row1["evt_box_precio"]."</td>";
                    			echo "</tr>";
 						 }
 						?>

@@ -9,7 +9,6 @@ function cambiarCantidad(){
 	var x = Number(document.getElementById("precio").value)
 	var t = x*c
 	var to = "$"+t
-	alert(x)
 	document.getElementById("cantidad").innerHTML=c;
 	document.getElementById("total").innerHTML=to;
 }
