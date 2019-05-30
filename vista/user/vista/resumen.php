@@ -120,51 +120,54 @@
 		</section>
 		<section class="info-block">
 			<div id="map_canvas" style="width: 100%; height: 400px;"></div>
-			<table border="1" >
-				<tr>
-					<th>Tipo</th>
-					<th>Precio</th>
-					<th>Asientos</th>
-					<th>Comprar</th>
-				</tr>
-				<?php
-					$sql = "SELECT * 
-							FROM T_EVENTOS
-							WHERE evt_id=$evento";
-					
-					$result = $conn->query($sql);
-					$row = $result->fetch_assoc();
-				
-					if($row["evt_gen"]>0){
-						echo "<tr>";
-						echo "<td>GENERAL</td>";
-						echo "<td>$".$row["evt_gen_precio"]."</td>";
-						echo "<td>".$row["evt_gen"]."</td>";
-						echo "</tr>";
-					}
-					if($row["evt_trib"]>0){
-						echo "<tr>";
-						echo "<td>TRIBUNA</td>";
-						echo "<td>$".$row["evt_trib_precio"]."</td>";
-						echo "<td>".$row["evt_trib"]."</td>";
-						echo "</tr>";
-					}
-					if($row["evt_vip"]>0){
-						echo "<tr>";
-						echo "<td>VIP</td>";
-						echo "<td>$".$row["evt_vip_precio"]."</td>";
-						echo "<td>".$row["evt_vip"]."</td>";
-						echo "</tr>";
-					}
-					if($row["evt_box"]>0){
-						echo "<tr>";
-						echo "<td>BOX</td>";
-						echo "<td>$".$row["evt_box_precio"]."</td>";
-						echo "<td>".$row["evt_box"]."</td>";
-						echo "</tr>";
-					}
-				?>
-			</table>	
+			<section class="compra">
+					<table border="1" >
+						<tr>
+							<th>Tipo</th>
+							<th>Precio</th>
+							<th>Asientos</th>
+							<th>Comprar</th>
+						</tr>
+						<?php
+							$sql = "SELECT * 
+									FROM T_EVENTOS
+									WHERE evt_id=$evento";
+
+							$result = $conn->query($sql);
+							$row = $result->fetch_assoc();
+
+							if($row["evt_gen"]>0){
+								echo "<tr>";
+								echo "<td>GENERAL</td>";
+								echo "<td>$".$row["evt_gen_precio"]."</td>";
+								echo "<td>".$row["evt_gen"]."</td>";
+								echo "</tr>";
+							}
+							if($row["evt_trib"]>0){
+								echo "<tr>";
+								echo "<td>TRIBUNA</td>";
+								echo "<td>$".$row["evt_trib_precio"]."</td>";
+								echo "<td>".$row["evt_trib"]."</td>";
+								echo "</tr>";
+							}
+							if($row["evt_vip"]>0){
+								echo "<tr>";
+								echo "<td>VIP</td>";
+								echo "<td>$".$row["evt_vip_precio"]."</td>";
+								echo "<td>".$row["evt_vip"]."</td>";
+								echo "</tr>";
+							}
+							if($row["evt_box"]>0){
+								echo "<tr>";
+								echo "<td>BOX</td>";
+								echo "<td>$".$row["evt_box_precio"]."</td>";
+								echo "<td>".$row["evt_box"]."</td>";
+								echo "</tr>";
+							}
+						?>
+				</table>
+				<p style="color:white;">Para comprar hacer click en el enlace de compra para que te pueda llevar al proceso de compra, recuerde que una vez hecha la compra, se puede ir a la sección de mis compras para poder anular la factura y anular su compra</p>
+			</section>	
 		</section>	
 	</main>
 	<footer class="footer">
