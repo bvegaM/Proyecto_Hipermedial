@@ -92,7 +92,7 @@
 									echo "<td>".$row1["evt_fec_evento"]."</td>";
 									echo "<td>".$row1["fd_desc"]."</td>";
 									echo "<td>".$row1["fd_cantidad"]."</td>";
-									echo "<td>".$row1["fd_total"]."</td>";
+									echo "<td>$".$row1["fd_precio"]."</td>";
 								echo "</tr>";
 							}
 						?>
