@@ -76,7 +76,7 @@
 		<form action="" class="busqueda" style="display:block;background:white; padding:10px 0;">
                 <h2 style="text-align:center;">Tu Buscador</h2>
                 <input type="text"  id="remite" name="remitente" value="<?php echo $codigo?>" hidden="hidden">
-                <input type="text" name="correo" placeholder="buscar por remitente" id="correo" value="" onkeyup="buscarPorCorreo()" style="display:block; margin:0 auto; padding:5px 85px; border-radius:5px; width:100%;">
+                <input type="text" name="correo" placeholder="buscar por remitente" id="correo" value="" onkeyup="buscarPorCorreo()" style="display:block; margin:0 auto; padding:5px 85px; border-radius:5px; width:100%; border-style:solid; border-color:black;">
             </form>
 		<section class="grupo_eventos grupo_event_musica">
 			<h3 class="titulo_event_php">CATEGORIA MUSICA</h3>
