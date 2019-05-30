@@ -10,6 +10,7 @@ function cambiarCantidad(){
 	var t = x*c
 	var to = "$"+t
 	document.getElementById("cantidad").innerHTML=c;
+	document.getElementById("cnt").innerHTML=c;
 	document.getElementById("total").innerHTML=to;
 }
 	

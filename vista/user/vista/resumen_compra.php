@@ -89,7 +89,10 @@
             </div>
             <div class="contact-form">
                 <h3>Vista Previa</h3>
-                <form action="../controladores/php/crear_empresa.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
+                <form action="../controladores/php/crear_factura.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
+                  <input type="text" name="cnt" id="cnt" value="" hidden="hidden">
+                  <input type="text" name="codigo" id="codigo" value="<?php echo $codigo;?>" hidden="hidden">
+                  <input type="text" name="evento" id="evento" value="<?php echo $evt;?>" hidden="hidden">
                    <div class="cabecera" style="background: white;">
                    	<i class="fas fa-ticket-alt" style="font-size:35px; color:red;"></i>
                    	<h2 style="margin:0; font-size:20px; color:black;">TIcket Home</h2>
