@@ -93,6 +93,7 @@
                   <input type="text" name="cnt" id="cnt" value="" hidden="hidden">
                   <input type="text" name="codigo" id="codigo" value="<?php echo $codigo;?>" hidden="hidden">
                   <input type="text" name="evento" id="evento" value="<?php echo $evt;?>" hidden="hidden">
+                  <input type="text" name="eventoId" id="eventoId" value="<?php echo $evtId;?>" hidden="hidden">
                    <div class="cabecera" style="background: white;">
                    	<i class="fas fa-ticket-alt" style="font-size:35px; color:red;"></i>
                    	<h2 style="margin:0; font-size:20px; color:black;">TIcket Home</h2>
