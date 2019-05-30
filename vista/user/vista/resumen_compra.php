@@ -19,7 +19,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Evento</title>
+    <title>Comprar</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles_evento.css">
@@ -61,7 +61,7 @@
 		</div>
 	</nav> 
     <div class="content">
-        <h1 class="logo">Crear <span>Evento</span></h1>
+        <h1 class="logo">Revisa TU <span>Compra</span></h1>
         <div class="contact-wrapper">
             <div class="contact-info">
                 <h3>Selecciona la cantidad de Tickets a comprar</h3>
@@ -80,6 +80,20 @@
                    		<p class="datos-info"><?php echo $row["usu_cedula"]?></p>
                    		<p class="datos-info"><?php echo $row["usu_direccion"]?></p>
                    	</article>
+                   </div>
+                   <div class="detalle">
+                   	<table border="1">
+                   		<tr>
+                   			<th>Cantidad</th>
+                   			<th>Descripcion</th>
+                   			<th>Precio</th>
+                   		</tr>
+                   		<tr>
+                   			<td>1</td>
+                   			<td>Montaner vs Vita General</td>
+                   			<td>$20</td>
+                   		</tr>
+                   	</table>
                    </div>
                     <p class="block">
                         <input type="submit" value="Comprar" class="button" id="botonA">
