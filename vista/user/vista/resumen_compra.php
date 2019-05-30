@@ -76,12 +76,12 @@
         <div class="contact-wrapper">
             <div class="contact-info">
                 <h3>Selecciona la cantidad de Tickets a comprar</h3>
-                <form onsubmit="return validar()" enctype="multipart/form-data">
+                <form onsubmit="return validar()" enctype="multipart/form-data" style="display:block;">
                    <p>
                    	 <label for="cant">Cantidad de Boletos </label>
                    	 <input type="number" name="cant" id="cant" min="0" max="3" step="1">
                    </p>
-                   <p style="text-align:center"> 
+                   <p style="text-align:center display:block;"> 
                    	 Te recordamos que solo puedes escoger hasta tres boletos ya que más de 3 es excederse del limite acordado, si deseas más tickets
                    	 genera otra compra y se te creara otra factura.
                    </p>
