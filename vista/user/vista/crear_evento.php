@@ -107,24 +107,24 @@
                     	
                     	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">General</span>
-                    	<input type="text" name="gen" placeholder="Ingrese numero de asientos">
-                    	<input type="text" name="gen" placeholder="Ingrese precio">
+                    	<input type="text" name="gen" placeholder="N° asientos">
+                    	<input type="text" name="gen" placeholder="precio">
                     	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">Tribuna</span>
-                    	<input type="text" name="gen" placeholder="Ingrese numero de asientos">
-                    	<input type="text" name="gen" placeholder="Ingrese precio">
+                    	<input type="text" name="gen" placeholder="N° asientos">
+                    	<input type="text" name="gen" placeholder="precio">
                     	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">Palco</span>
-                    	<input type="text" name="gen" placeholder="Ingrese numero de asientos">
-                    	<input type="text" name="gen" placeholder="Ingrese precio">
+                    	<input type="text" name="gen" placeholder="N° asientos">
+                    	<input type="text" name="gen" placeholder="precio">
                     	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">VIP</span>
-                    	<input type="text" name="gen" placeholder="Ingrese numero de asientos">
-                    	<input type="text" name="gen" placeholder="Ingrese precio">
+                    	<input type="text" name="gen" placeholder="N° asientos">
+                    	<input type="text" name="gen" placeholder="precio">
                     	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">BOX</span>
-                    	<input type="text" name="gen" placeholder="Ingrese numero de asientos">
-                    	<input type="text" name="gen" placeholder="Ingrese precio">
+                    	<input type="text" name="gen" placeholder="N° asientos">
+                    	<input type="text" name="gen" placeholder="precio">
                     </div>
                     <p class="block">
                         <input type="submit" value="Registrar" class="button" id="botonA">
