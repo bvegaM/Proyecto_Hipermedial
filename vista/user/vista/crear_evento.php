@@ -98,13 +98,13 @@
                     	<label for="imagenUpdate">Imagen</label>
                     	<input type='file' name='imagenUpdate' id='imagen' size='20'>
                     </p>
-                    <p>
-                    	<label for="latitude" hidden="hidden" style="display:none;">Latitud:</label>
-                    	<input id="txtLat" name="latitud" type="text" style="color:red; display:none;" hidden="hidden" value="19.4326077"/>
+                    <p style="display=none;">
+                    	<label for="latitude" hidden="hidden">Latitud:</label>
+                    	<input id="txtLat" name="latitud" type="text" style="color:red;" hidden="hidden" value="19.4326077"/>
                     </p>
-                    <p>
-                    	<label for="longitude" hidden="hidden style="display:none;"">Longitud:</label>
-                    	<input id="txtLng"  name="longitud" type="text" style="color:red; display:none;" hidden="hidden" value="-99.13320799999997" /><br />
+                    <p style="display=none;">
+                    	<label for="longitude" hidden="hidden">Longitud:</label>
+                    	<input id="txtLng"  name="longitud" type="text" style="color:red;" hidden="hidden" value="-99.13320799999997" /><br />
                     </p>
                     <p class="block">
                         <input type="submit" value="Registrar" class="button" id="botonA">
