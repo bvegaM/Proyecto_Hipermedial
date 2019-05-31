@@ -106,10 +106,19 @@
                     	<label for="longitude" hidden="hidden">Longitud:</label>
                     	<input id="txtLng"  name="longitud" type="text" style="color:red;" hidden="hidden" value="-99.13320799999997" /><br />
                     </p>
+                    <p>
+                    	<label for="">Escoge los tipos de asiento</label>
+                    	<input type="checkbox" name="general">
+                    	<input type="checkbox" name="tribuna">
+                    	<input type="checkbox" name="palco">
+                    	<input type="checkbox" name="vip">
+                        <input type="checkbox" name="box"> 	
+                    </p>
                     <p class="block">
                         <input type="submit" value="Registrar" class="button" id="botonA">
                         <input type="reset" value="Cancelar" class="button" id="botonB">
                     </p>
+                    
                 </form>
             </div>
             <div class="contact-info">
