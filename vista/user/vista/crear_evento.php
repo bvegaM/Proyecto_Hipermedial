@@ -98,21 +98,11 @@
                     	<label for="imagenUpdate">Selecciona una Imagen</label>
                     	<input type='file' name='imagenUpdate' id='imagen' size='10' style="font-size:10px;">
                     </p>
-                     <p style="display:block;">
-                    	<label for="">Escoge los tipos de asiento</label>
-                    	<p style="display:flex; justify-content:space-between;">
-							<input type="checkbox" name="general" value="gemeral">
-							<input type="checkbox" name="tribuna" value="tribuna">
-							<input type="checkbox" name="palco" value="palco">
-							<input type="checkbox" name="vip" value="vip">
-							<input type="checkbox" name="box" value="box"> 		
-                    	</p>
-					</p>
-                    <p style="display=none;">
+                    <p style="display=none;" hidden:"hidden">
                     	<label for="latitude" hidden="hidden">Latitud:</label>
                     	<input id="txtLat" name="latitud" type="text" style="color:red;" hidden="hidden" value="19.4326077"/>
                     </p>
-                    <p style="display=none;">
+                    <p style="display=none;" hidden:"hidden">
                     	<label for="longitude" hidden="hidden">Longitud:</label>
                     	<input id="txtLng"  name="longitud" type="text" style="color:red;" hidden="hidden" value="-99.13320799999997" /><br />
                     </p>
