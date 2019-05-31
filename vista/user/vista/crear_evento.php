@@ -98,7 +98,7 @@
                     	<label for="imagenUpdate">Selecciona una Imagen</label>
                     	<input type='file' name='imagenUpdate' id='imagen' size='10' style="font-size:10px;">
                     </p>
-                     <p>
+                     <p style="display:block;">
                     	<label for="">Escoge los tipos de asiento</label>
                     	<p style="display:flex; justify-content:space-between;">
 							<input type="checkbox" name="general">
@@ -116,7 +116,6 @@
                     	<label for="longitude" hidden="hidden">Longitud:</label>
                     	<input id="txtLng"  name="longitud" type="text" style="color:red;" hidden="hidden" value="-99.13320799999997" /><br />
                     </p>
-                   >
                     <p class="block">
                         <input type="submit" value="Registrar" class="button" id="botonA">
                         <input type="reset" value="Cancelar" class="button" id="botonB">
