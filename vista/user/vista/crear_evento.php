@@ -53,7 +53,7 @@
 			width: 1em;
 		}
 		.chkT{
-			width: 1em;
+			width: 1em;=
 		}
 	</style>
 </head>
@@ -113,15 +113,15 @@
                     </p>
                     <div class="block">
                     	
-                    	<input type="checkbox" value="general" class"check">
+                    	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">General</span>
-                    	<input type="checkbox" value="general" class"check">
+                    	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">Tribuna</span>
-                    	<input type="checkbox" value="general" class"check">
+                    	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">Palco</span>
-                    	<input type="checkbox" value="general" class"check">
+                    	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">VIP</span>
-                    	<input type="checkbox" value="general" class"check">
+                    	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">BOX</span>
                     </div>
                     <p class="block">
