@@ -48,14 +48,6 @@
             vMarker.setMap(map);
         }
     </script>
-    <style type="text/css">
-		.check{
-			width: 1em;
-		}
-		.chkT{
-			width: 1em;=
-		}
-	</style>
 </head>
 <body onload="initialize();">
    
