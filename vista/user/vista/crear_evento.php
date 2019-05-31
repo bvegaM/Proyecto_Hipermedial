@@ -95,8 +95,8 @@
                         <input type="text" name="direccion" id="direccion">
                     </p>
                     <p>
-                    	<label for="imagenUpdate">Imagen</label>
-                    	<input type='file' name='imagenUpdate' id='imagen' size='20'>
+                    	<label for="imagenUpdate">Selecciona una Imagen</label>
+                    	<input type='file' name='imagenUpdate' id='imagen' size='10' style="font-size:10px;">
                     </p>
                     <p style="display=none;">
                     	<label for="latitude" hidden="hidden">Latitud:</label>
