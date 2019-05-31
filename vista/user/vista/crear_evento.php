@@ -100,8 +100,11 @@
                     	<label for="imagenUpdate">Selecciona una Imagen</label>
                     	<input type='file' name='imagenUpdate' id='imagen' size='10' style="font-size:10px;">
                     </p>
-                    <div class="block">
+                    <p>
                     	<label for="asiento">Escoge tus asientos</label>
+                    </p>
+                    <div class="block">
+                    	
                     	<input type="checkbox" value="general">
                     	<span>General</span>
                     	<input type="checkbox" value="general">
