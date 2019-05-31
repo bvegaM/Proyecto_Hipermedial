@@ -79,49 +79,9 @@
         <h1 class="logo">Crear <span>Evento</span></h1>
         <div class="contact-wrapper">
             <div class="contact-form">
-                <h3>Paso 1: Crea tu Empresa u Organizador (Si ya lo registraste lo puedes encontrar)</h3>
+                <h3>Crea tu Evento de acuerdo a tus comodidades</h3>
                 <form action="../controladores/php/crear_empresa.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
-                    <p>
-                        <input type="text" name="id" id="id" value="<?php echo $codigo ?>" hidden="hidden">
-                        <label for="nombres">Nombre Empresa</label>
-                        <input type="text" name="nombres" id="nombres">
-                    </p>
-                    <p>
-                        <label for="ruc">RUC</label>
-                        <input type="text" name="ruc" id="ruc">
-                    </p>
-                    <p>
-                        <label for="direccion">Direccion</label>
-                        <input type="text" name="direccion" id="direccion">
-                    </p>
-                    <p>
-                        <label for="telefono">Telefono</label>
-                        <input type="text" name="telefono" id="telefono">
-                    </p>
-                    <p>
-                        <?php
-					    	$sql="SELECT * FROM T_CATEGORIAS";
-							$result = $conn->query($sql);
-						?>
-                        <label for="categoria">Categoria</label>
-                        <select name="cat" id="cat">
-                  			<?php
-								while($row = $result->fetch_assoc()){
-									echo "<option value=".$row['cat_id'].">".$row['cat_desc']."</option>";
-								}
-							?>
-                        </select>
-                    </p>
-                    <p class="block">
-                        <input type="submit" value="Registrar" class="button" id="botonA">
-                        <input type="reset" value="Cancelar" class="button" onclick="limpiar()" id="botonB">
-                    </p>
-                </form>
-            </div>
-            <div class="contact-info">
-                <h3>Paso 2: Crea tu Evento para que este disponible </h3>
-                <form action="../controladores/php/crear_evento.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
-                    <p>
+                 	<p>
                         <input type="text" name="id" id="id" value="<?php echo $codigo ?>" hidden="hidden">
                         <label for="nombres">Nombre del Evento</label>
                         <input type="text" name="nombres" id="nombres">
@@ -138,63 +98,8 @@
                     	<label for="imagenUpdate">Imagen</label>
                     	<input type='file' name='imagenUpdate' id='imagen' size='20'>
                     </p>
-                     <p>
-                    	<label for="asientos">Asientos</label>
-                    	 <input type="text" name="asientos" id="asientos">
-                   	 </p>
-                   	 <p>
-                    	<label for="asientos">Asientos General</label>
-                    	 <input type="text" name="asientosG" id="asientosG">
-                   	 </p>
-                   	 <p>
-                    	<label for="asientos">Asientos Tribuna</label>
-                    	 <input type="text" name="asientosT" id="asientosT">
-                   	 </p>
-                   	 <p>
-                    	<label for="asientos">Asientos VIP</label>
-                    	 <input type="text" name="asientosV" id="asientosV">
-                   	 </p>
-                   	 <p>
-                    	<label for="asientos">Asientos BOX</label>
-                    	 <input type="text" name="asientosB" id="asientosB">
-                   	 </p>
-                   	 <p>
-                    	<label for="precio">Precio $</label>
-                    	 <input type="text" name="precio" id="precio">
-                   	 </p>
-                   	 <p>
-                    	<label for="precio">Precio General $</label>
-                    	 <input type="text" name="precioG" id="precioG">
-                   	 </p>
-                   	 <p>
-                    	<label for="precio">Precio Tribuna $</label>
-                    	 <input type="text" name="precioT" id="precioT">
-                   	 </p>
-                   	 <p>
-                    	<label for="precio">Precio VIP $</label>
-                    	 <input type="text" name="precioV" id="precioV">
-                   	 </p>
-                   	 <p>
-                    	<label for="precio">Precio BOX $</label>
-                    	 <input type="text" name="precioB" id="precioB">
-                   	 </p>
-                   	 <p>
-                        <?php
-					    	$sql="SELECT * FROM T_EMPRESAS";
-							$result = $conn->query($sql);
-						?>
-                        <label for="empresa">Empresa</label>
-                        <select name="emp" id="emp">
-                  			<?php
-								while($row = $result->fetch_assoc()){
-									echo "<option value=".$row['emp_id'].">".$row['emp_nombre']."</option>";
-								}
-							?>
-                        </select>
-                    </p>
-                    <p>
-                    	
-                    </p>
+                      <div class="contact-info">
+                 <h3>Escoge la ubicación de tu evento</h3>    	
                     <p>
                     	<label for="latitude">Latitud:</label>
                     	<input id="txtLat" name="latitud" type="text" style="color:red" value="19.4326077" />
@@ -208,8 +113,10 @@
                         <input type="submit" value="Registrar" class="button" id="botonA">
                         <input type="reset" value="Cancelar" class="button" id="botonB">
                     </p>
+            </div>
                 </form>
             </div>
+          
         </div>
     </div>
     <footer class="footer">
