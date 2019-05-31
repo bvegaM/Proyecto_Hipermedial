@@ -114,10 +114,11 @@
 							?>
                         </select>
                     </p>
+                    <div style="display:block;">
+                    	<label for="asiento">Escoge tus asientos</label>
+                    </div>
                     <div class="block-ast">
-                    	<p style="display:block;">
-                    		<label for="asiento">Escoge tus asientos</label>
-                   		 </p>
+                    	
                     	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">General</span>
                     	<input type="text" name="gen" placeholder="N° asientos">
