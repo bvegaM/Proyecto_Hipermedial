@@ -113,10 +113,8 @@
 								}
 							?>
                         </select>
-                    </p>
-                    <div style="display:block;">
-                    	<label for="asiento">Escoge tus asientos</label>
-                    </div>
+                    </p>	
+                    <h4>Escoge tus asientos</h4>
                     <div class="block-ast">
                     	
                     	<input type="checkbox" value="general" class="check">
