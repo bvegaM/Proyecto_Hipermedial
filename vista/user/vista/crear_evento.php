@@ -101,11 +101,11 @@
                      <p style="display:block;">
                     	<label for="">Escoge los tipos de asiento</label>
                     	<p style="display:flex; justify-content:space-between;">
-							<input type="checkbox" name="general">
-							<input type="checkbox" name="tribuna">
-							<input type="checkbox" name="palco">
-							<input type="checkbox" name="vip">
-							<input type="checkbox" name="box"> 		
+							<input type="checkbox" name="general" value="gemeral">
+							<input type="checkbox" name="tribuna" value="tribuna">
+							<input type="checkbox" name="palco" value="palco">
+							<input type="checkbox" name="vip" value="vip">
+							<input type="checkbox" name="box" value="box"> 		
                     	</p>
 					</p>
                     <p style="display=none;">
