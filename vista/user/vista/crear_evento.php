@@ -107,7 +107,7 @@
 							<input type="checkbox" name="vip">
 							<input type="checkbox" name="box"> 		
                     	</p>
-                    </p
+					</p>
                     <p style="display=none;">
                     	<label for="latitude" hidden="hidden">Latitud:</label>
                     	<input id="txtLat" name="latitud" type="text" style="color:red;" hidden="hidden" value="19.4326077"/>
