@@ -114,7 +114,7 @@
 							?>
                         </select>
                     </p>
-                    <p>
+                    <p style="display:block;">
                     	<label for="asiento">Escoge tus asientos</label>
                     </p>
                     <div class="block-ast">
