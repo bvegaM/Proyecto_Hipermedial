@@ -100,11 +100,11 @@
                     </p>
                     <p>
                     	<label for="latitude">Latitud:</label>
-                    	<input id="txtLat" name="latitud" type="text" style="color:red" value="19.4326077" />
+                    	<input id="txtLat" name="latitud" type="text" style="color:red" hidden="hidden" value="19.4326077"/>
                     </p>
                     <p>
                     	<label for="longitude">Longitud:</label>
-                    	<input id="txtLng"  name="longitud" type="text" style="color:red" value="-99.13320799999997" /><br />
+                    	<input id="txtLng"  name="longitud" type="text" style="color:red" hidden="hidden" value="-99.13320799999997" /><br />
                     </p>
                     <p class="block">
                         <input type="submit" value="Registrar" class="button" id="botonA">
