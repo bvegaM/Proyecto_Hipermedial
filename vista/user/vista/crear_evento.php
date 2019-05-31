@@ -83,6 +83,8 @@
                 <form action="../controladores/php/crear_empresa.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
                  	<p>
                         <input type="text" name="id" id="id" value="<?php echo $codigo ?>" hidden="hidden">
+                        <input id="txtLat" name="latitud" type="text" style="color:red;" hidden="hidden" value="19.4326077"/>
+                    	<input id="txtLng"  name="longitud" type="text" style="color:red;" hidden="hidden" value="-99.13320799999997" />
                         <label for="nombres">Nombre del Evento</label>
                         <input type="text" name="nombres" id="nombres">
                     </p>
@@ -98,14 +100,19 @@
                     	<label for="imagenUpdate">Selecciona una Imagen</label>
                     	<input type='file' name='imagenUpdate' id='imagen' size='10' style="font-size:10px;">
                     </p>
-                    <p style="display=none;" hidden:"hidden">
-                    	<label for="latitude" hidden="hidden">Latitud:</label>
-                    	<input id="txtLat" name="latitud" type="text" style="color:red;" hidden="hidden" value="19.4326077"/>
-                    </p>
-                    <p style="display=none;" hidden:"hidden">
-                    	<label for="longitude" hidden="hidden">Longitud:</label>
-                    	<input id="txtLng"  name="longitud" type="text" style="color:red;" hidden="hidden" value="-99.13320799999997" /><br />
-                    </p>
+                    <div class="block">
+                    	<label for="asiento">Escoge tus asientos</label>
+                    	<input type="checkbox" value="general">
+                    	<span>General</span>
+                    	<input type="checkbox" value="general">
+                    	<span>Tribuna</span>
+                    	<input type="checkbox" value="general">
+                    	<span>Palco</span>
+                    	<input type="checkbox" value="general">
+                    	<span>VIP</span>
+                    	<input type="checkbox" value="general">
+                    	<span>BOX</span>
+                    </div>
                     <p class="block">
                         <input type="submit" value="Registrar" class="button" id="botonA">
                         <input type="reset" value="Cancelar" class="button" id="botonB">
