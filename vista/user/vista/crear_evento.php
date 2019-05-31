@@ -48,6 +48,14 @@
             vMarker.setMap(map);
         }
     </script>
+    <style type="text/css">
+		.check{
+			width: 1em;
+		}
+		.chkT{
+			width: 1em;
+		}
+	</style>
 </head>
 <body onload="initialize();">
    
@@ -105,16 +113,16 @@
                     </p>
                     <div class="block">
                     	
-                    	<input type="checkbox" value="general">
-                    	<span>General</span>
-                    	<input type="checkbox" value="general">
-                    	<span>Tribuna</span>
-                    	<input type="checkbox" value="general">
-                    	<span>Palco</span>
-                    	<input type="checkbox" value="general">
-                    	<span>VIP</span>
-                    	<input type="checkbox" value="general">
-                    	<span>BOX</span>
+                    	<input type="checkbox" value="general" class"check">
+                    	<span class="chkT">General</span>
+                    	<input type="checkbox" value="general" class"check">
+                    	<span class="chkT">Tribuna</span>
+                    	<input type="checkbox" value="general" class"check">
+                    	<span class="chkT">Palco</span>
+                    	<input type="checkbox" value="general" class"check">
+                    	<span class="chkT">VIP</span>
+                    	<input type="checkbox" value="general" class"check">
+                    	<span class="chkT">BOX</span>
                     </div>
                     <p class="block">
                         <input type="submit" value="Registrar" class="button" id="botonA">
