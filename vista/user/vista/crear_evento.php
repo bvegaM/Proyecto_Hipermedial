@@ -100,6 +100,20 @@
                     	<label for="imagenUpdate">Selecciona una Imagen</label>
                     	<input type='file' name='imagenUpdate' id='imagen' size='10' style="font-size:10px;">
                     </p>
+                     <p>
+                        <?php
+					    	$sql="SELECT * FROM T_EMPRESAS";
+							$result = $conn->query($sql);
+						?>
+                        <label for="mepresa">Empresa</label>
+                        <select name="emp" id="emp">
+                  			<?php
+								while($row = $result->fetch_assoc()){
+									echo "<option value=".$row['emp_id'].">".$row['emp_nombre']."</option>";
+								}
+							?>
+                        </select>
+                    </p>
                     <p>
                     	<label for="asiento">Escoge tus asientos</label>
                     </p>
