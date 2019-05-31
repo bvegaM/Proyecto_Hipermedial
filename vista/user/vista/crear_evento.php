@@ -103,7 +103,7 @@
                     <p>
                     	<label for="asiento">Escoge tus asientos</label>
                     </p>
-                    <div class="block">
+                    <div class="block-ast">
                     	
                     	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">General</span>

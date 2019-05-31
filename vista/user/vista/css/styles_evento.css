@@ -63,6 +63,12 @@ body{
     grid-column:1 / 3;
 }
 
+.contact-form .block-ast{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;   
+    grid-column:1 / 4;
+}
+
 .contact-form form .block_contact{
 	grid-column: 1 / 3;
 }
