@@ -117,24 +117,24 @@
                     <div class="block-ast">
                     	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">General</span>
-                    	<input type="text" name="gen" placeholder="N° asientos" style="display:none;">
-                    	<input type="text" name="gen" placeholder="precio" style="display:none;">
+                    	<input type="text" name="gen" placeholder="N° asientos" style="visibility=hidden;">
+                    	<input type="text" name="gen" placeholder="precio" style="visibility=hidden;">
                     	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">Tribuna</span>
-                    	<input type="text" name="gen" placeholder="N° asientos" style="display:none;">
-                    	<input type="text" name="gen" placeholder="precio" style="display:none;">
+                    	<input type="text" name="gen" placeholder="N° asientos" style="visibility=hidden;">
+                    	<input type="text" name="gen" placeholder="precio" style="visibility=hidden;">
                     	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">Palco</span>
-                    	<input type="text" name="gen" placeholder="N° asientos" style="display:none;">
-                    	<input type="text" name="gen" placeholder="precio" style="display:none;">
+                    	<input type="text" name="gen" placeholder="N° asientos" style="visibility=hidden;">
+                    	<input type="text" name="gen" placeholder="precio" style="visibility=hidden;">
                     	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">VIP</span>
-                    	<input type="text" name="gen" placeholder="N° asientos" style="display:none;">
-                    	<input type="text" name="gen" placeholder="precio" style="display:none;">
+                    	<input type="text" name="gen" placeholder="N° asientos" style="visibility=hidden;">
+                    	<input type="text" name="gen" placeholder="precio" style="visibility=hidden;">
                     	<input type="checkbox" value="general" class="check">
                     	<span class="chkT">BOX</span>
-                    	<input type="text" name="gen" placeholder="N° asientos" style="display:none;">
-                    	<input type="text" name="gen" placeholder="precio" style="display:none;">
+                    	<input type="text" name="gen" placeholder="N° asientos" style="visibility=hidden;">
+                    	<input type="text" name="gen" placeholder="precio" style="visibility=hidden;">
                     </div>
                     <p class="block">
                         <input type="submit" value="Registrar" class="button" id="botonA">
