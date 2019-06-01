@@ -163,10 +163,9 @@
 									echo "<td>$".$row1["eat_precio"]."</td>";
 								 	echo "<td id='p".$row1["ast_id"]."'>$".$row1["eat_precio"]."</td>";
 									echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
-								 	echo "<td>"."<input type='text' name='total' id='pU".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
-								 	echo "<td>"."<input type='text' name='total' id='pT".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
-								 	echo "<td>"."<input type='text' name='total' id='cF".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
-								 	echo 
+								 	echo "<td>"."<input type='text'  id='pU".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
+								 	echo "<td>"."<input type='text'  id='pT".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
+								 	echo "<td>"."<input type='text'  id='cF".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
 								echo "</tr>";
 
 							 }else{
@@ -176,9 +175,9 @@
 									echo "<td>$".$row1["eat_precio"]."</td>";
 								 	echo "<td id='p".$row1["ast_id"]."'>$".$row1["eat_precio"]."</td>";
 									echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
-								 	echo "<td>"."<input type='text' name='total' id='pU".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
-								 	echo "<td>"."<input type='text' name='total' id='pT".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
-								 	echo "<td>"."<input type='text' name='total' id='cF".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
+								 	echo "<td>"."<input type='text'  id='pU".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
+								 	echo "<td>"."<input type='text'  id='pT".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
+								 	echo "<td>"."<input type='text'  id='cF".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
 								echo "</tr>"; 
 							 }
 						}
