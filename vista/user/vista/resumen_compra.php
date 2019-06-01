@@ -136,6 +136,7 @@
                    		<tr>
                    			<th >Cantidad</th>
                    			<th>Descripcion</th>
+                   			<th>Precio U</th>
                    			<th>Precio</th>
                    			<th>Eliminar</th>
                    		</tr>
@@ -156,24 +157,27 @@
 						while($row1 = $result1->fetch_assoc()){
 							
 							 if($evtId == $row1["ast_id"]){
-								echo "<tr>";
-									echo "<td>1</td>";
+								echo "<tr id='d".$row1["ast_id"]."'>";
+									echo "<td id='c".$row1["ast_id"].">1</td>";
 									echo "<td style='font-size:13px;'>".$row1["evt_desc"]." ".$row1["ast_desc"]." </td>";
 									echo "<td>$".$row1["eat_precio"]."</td>";
+								 	echo "<td id='p".$row1["ast_id"]."'>$".$row1["eat_precio"]."</td>";
 									echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
 								echo "</tr>";
 
 							 }else{
-								echo "<tr >";
-									echo "<td>1</td>";
+								echo "<tr id='d".$row1["ast_id"]."'>";
+									echo "<td id='c".$row1["ast_id"].">1</td>";
 									echo "<td style='font-size:13px;'>".$row1["evt_desc"]." ".$row1["ast_desc"]." </td>";
 									echo "<td>$".$row1["eat_precio"]."</td>";
+								 	echo "<td id='p".$row1["ast_id"]."'>$".$row1["eat_precio"]."</td>";
 									echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
 								echo "</tr>"; 
 							 }
 						}
 						echo "<tr>";
                    				echo "<td></td>";
+								echo "<td></td>";
                    				echo "<td style='font-weight: bolder;'>Total:</td>";
                    				echo "<td id='total'>$".$row1["eat_precio"]."</td>";
                    		echo "</tr>";	
