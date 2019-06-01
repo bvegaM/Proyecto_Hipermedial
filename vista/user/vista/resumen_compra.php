@@ -108,7 +108,7 @@
 							$resulte = $conn->query($sqle);
 						?>
                         <label for="ast">Escoge el tipo de Asiento</label>
-                        <select name="ast" id="ast" onchange="reset();">
+                        <select name="ast" id="ast" onchange="cambio();">
                   			<?php
 								while($rowe = $resulte->fetch_assoc()){
 									echo "<option value=".$rowe['ast_id'].">".$rowe['ast_desc']."</option>";
