@@ -163,6 +163,10 @@
 									echo "<td>$".$row1["eat_precio"]."</td>";
 								 	echo "<td id='p".$row1["ast_id"]."'>$".$row1["eat_precio"]."</td>";
 									echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
+								 	echo "<td>"."<input type='text' name='total' id='pU".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
+								 	echo "<td>"."<input type='text' name='total' id='pT".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
+								 	echo "<td>"."<input type='text' name='total' id='cF".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
+								 	echo 
 								echo "</tr>";
 
 							 }else{
@@ -172,6 +176,9 @@
 									echo "<td>$".$row1["eat_precio"]."</td>";
 								 	echo "<td id='p".$row1["ast_id"]."'>$".$row1["eat_precio"]."</td>";
 									echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
+								 	echo "<td>"."<input type='text' name='total' id='pU".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
+								 	echo "<td>"."<input type='text' name='total' id='pT".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
+								 	echo "<td>"."<input type='text' name='total' id='cF".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
 								echo "</tr>"; 
 							 }
 						}
@@ -191,6 +198,7 @@
 								echo "<td></td>";
                    				echo "<td style='font-weight: bolder;'>Total:</td>";
                    				echo "<td id='total'>$".$row1["eat_precio"]."</td>";
+								echo "<td>"."<input type='text' name='total' id='totalI' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
                    		echo "</tr>";	
 						?>
                    		
