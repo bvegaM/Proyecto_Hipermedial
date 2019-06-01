@@ -166,7 +166,7 @@
 								echo "</tr>";
 
 							 }else{
-								echo "<tr id='d".$row1["ast_id"]."'>";
+								echo "<tr id='d".$row1["ast_id"]."' style='visibility:hidden;'>";
 									echo "<td id='c".$row1["ast_id"]."'>1</td>";
 									echo "<td style='font-size:13px;'>".$row1["evt_desc"]." ".$row1["ast_desc"]." </td>";
 									echo "<td>$".$row1["eat_precio"]."</td>";
