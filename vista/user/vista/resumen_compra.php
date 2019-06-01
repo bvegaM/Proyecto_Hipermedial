@@ -136,6 +136,7 @@
                    			<th >Cantidad</th>
                    			<th>Descripcion</th>
                    			<th>Precio</th>
+                   			<th>Eliminar</th>
                    		</tr>
                    		<br>
                    		<br>
@@ -146,6 +147,7 @@
                    				echo "<td id='cantidad'>1</td>";
                    				echo "<td>".$row1["evt_desc"]." General</td>";
                    				echo "<td>$".$row1["evt_gen_precio"]."</td>";
+							 	echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
 							 	echo "<input type='number' id='precio' name='precio' value='".$row1["evt_gen_precio"]."' hidden='hidden'></td>";
 							 	echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
                    			echo "</tr>";
@@ -160,6 +162,7 @@
                    				echo "<td id='cantidad'>1</td>";
                    				echo "<td>".$row1["evt_desc"]." Tribuna</td>";
                    				echo "<td>$".$row1["evt_trib_precio"]."</td>";
+								echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
 								echo "<input type='number' id='precio' name='precio' value='".$row1["evt_trib_precio"]."' hidden='hidden'></td>";
 								echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
                    			echo "</tr>";
@@ -174,6 +177,7 @@
                    				echo "<td id='cantidad'>1</td>";
                    				echo "<td>".$row1["evt_desc"]." VIP</td>";
                    				echo "<td>$".$row1["evt_vip_precio"]."</td>";
+								echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
 								echo "<input type='number' id='precio' name='precio' value='".$row1["evt_vip_precio"]."' hidden='hidden'></td>";
 								echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
                    			echo "</tr>";
@@ -188,6 +192,7 @@
                    				echo "<td id='cantidad'>1</td>";
                    				echo "<td>".$row1["evt_desc"]." BOX</td>";
                    				echo "<td>$".$row1["evt_box_precio"]."</td>";
+								echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
 								echo "<input type='number' id='precio' name='precio' value='".$row1["evt_box_precio"]."' hidden='hidden'></td>";
 								echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
                    			echo "</tr>";
