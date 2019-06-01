@@ -7,7 +7,6 @@ btnMenu.addEventListener('click',function(){
 function cambiarCantidad(){
 	var c = Number(document.getElementById("cant").value)
 	var a = Number(document.getElementById("ast").value)
-	var x = Number(document.getElementById("p").value)
 	alert(a)
 }
 	
