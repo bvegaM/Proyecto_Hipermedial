@@ -42,7 +42,12 @@
 	if($conn->query($sql) === TRUE){
 		if($aG!="" && $pG !=""){
 			$sql1="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$id,1)";
-			$result=$conn->query($sql1);
+			if($conn->query($sql1) ==TRUE){
+				echo "hola";
+			}else{
+				echo $sql1;
+				echo "error";
+			}
 		}
 	}else{
 		echo "error";
