@@ -155,11 +155,11 @@
                    		<?php 
 						 if($evtId == 1){
 							echo "<tr>";
-                   				echo "<td id='cantidad'>1</td>";
+                   				echo "<td id='cG'>1</td>";
                    				echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
                    				echo "<td>$".$row1["eat_precio"]."</td>";
 							 	echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
-							 	echo "<input type='number' id='precio' name='precio' value='".$row1["eat_precio"]."' hidden='hidden'></td>";
+							 	echo "<input type='number' id='pG' name='precio' value='".$row1["eat_precio"]."' hidden='hidden'></td>";
 							 	echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
                    			echo "</tr>";
                    			echo "<tr>";
@@ -170,11 +170,11 @@
 						 }
 						if($evtId == 2){
 							echo "<tr>";
-                   				echo "<td id='cantidad'>1</td>";
+                   				echo "<td id='cT'>1</td>";
                    				echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
                    				echo "<td>$".$row1["eat_precio"]."</td>";
 							 	echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
-							 	echo "<input type='number' id='precio' name='precio' value='".$row1["eat_precio"]."' hidden='hidden'></td>";
+							 	echo "<input type='number' id='pT' name='precio' value='".$row1["eat_precio"]."' hidden='hidden'></td>";
 							 	echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
                    			echo "</tr>";
                    			echo "<tr>";
@@ -185,11 +185,11 @@
 						 }
 						if($evtId == 3){
 							echo "<tr>";
-                   				echo "<td id='cantidad'>1</td>";
+                   				echo "<td id='cP'>1</td>";
                    				echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
                    				echo "<td>$".$row1["eat_precio"]."</td>";
 							 	echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
-							 	echo "<input type='number' id='precio' name='precio' value='".$row1["eat_precio"]."' hidden='hidden'></td>";
+							 	echo "<input type='number' id='pP' name='precio' value='".$row1["eat_precio"]."' hidden='hidden'></td>";
 							 	echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
                    			echo "</tr>";
                    			echo "<tr>";
@@ -200,11 +200,26 @@
 						 }
 						if($evtId == 4){
 							echo "<tr>";
-                   				echo "<td id='cantidad'>1</td>";
+                   				echo "<td id='cV'>1</td>";
                    				echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
                    				echo "<td>$".$row1["eat_precio"]."</td>";
 							 	echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
-							 	echo "<input type='number' id='precio' name='precio' value='".$row1["eat_precio"]."' hidden='hidden'></td>";
+							 	echo "<input type='number' id='pV' name='precio' value='".$row1["eat_precio"]."' hidden='hidden'></td>";
+							 	echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
+                   			echo "</tr>";
+                   			echo "<tr>";
+                   				echo "<td></td>";
+                   				echo "<td style='font-weight: bolder;'>Total:</td>";
+                   				echo "<td id='total'>$".$row1["eat_precio"]."</td>";
+                   			echo "</tr>";
+						}
+						if($evtId == 5){
+							echo "<tr>";
+                   				echo "<td id='cB'>1</td>";
+                   				echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
+                   				echo "<td>$".$row1["eat_precio"]."</td>";
+							 	echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
+							 	echo "<input type='number' id='pB' name='precio' value='".$row1["eat_precio"]."' hidden='hidden'></td>";
 							 	echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
                    			echo "</tr>";
                    			echo "<tr>";
