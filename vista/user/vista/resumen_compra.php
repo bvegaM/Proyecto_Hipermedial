@@ -96,14 +96,17 @@
                 <form enctype="multipart/form-data" style="display:block;">
                   <p>
                         <?php
-					    	$sqle="SELECT * FROM T_TIPO_ASIENTO";
+					    	$sqle="SELECT * 
+							       FROM T_TIPO_ASIENTO,
+								   		T_EVENTOS_ASIENTOS
+								   WHERE ast_id=";
 							$resulte = $conn->query($sqle);
 						?>
                         <label for="ast">Escoge el tipo de Asiento</label>
                         <select name="ast" id="ast">
                   			<?php
-								while($rowe = $resulte->fetch_assoc()){
-									echo "<option value=".$rowe['ast_id'].">".$rowe['ast_desc']."</option>";
+								while($row1 = $result1->fetch_assoc()){
+									echo "<option value=".$row1['ast_id'].">".$row1['ast_desc']."</option>";
 								}
 							?>
                         </select>
@@ -149,7 +152,7 @@
 						 if($evtId == 1){
 							echo "<tr>";
                    				echo "<td id='cantidad'>1</td>";
-                   				echo "<td style='font-size:13px;'>".$row1["evt_desc"]." General</td>";
+                   				echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
                    				echo "<td>$".$row1["eat_precio"]."</td>";
 							 	echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
 							 	echo "<input type='number' id='precio' name='precio' value='".$row1["eat_precio"]."' hidden='hidden'></td>";
@@ -158,54 +161,54 @@
                    			echo "<tr>";
                    				echo "<td></td>";
                    				echo "<td style='font-weight: bolder;'>Total:</td>";
-                   				echo "<td id='total'>$".$row1["evt_gen_precio"]."</td>";
+                   				echo "<td id='total'>$".$row1["eat_precio"]."</td>";
                    			echo "</tr>";
 						 }
 						if($evtId == 2){
 							echo "<tr>";
                    				echo "<td id='cantidad'>1</td>";
-                   				echo "<td>".$row1["evt_desc"]." Tribuna</td>";
-                   				echo "<td>$".$row1["evt_trib_precio"]."</td>";
-								echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
-								echo "<input type='number' id='precio' name='precio' value='".$row1["evt_trib_precio"]."' hidden='hidden'></td>";
-								echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
+                   				echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
+                   				echo "<td>$".$row1["eat_precio"]."</td>";
+							 	echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
+							 	echo "<input type='number' id='precio' name='precio' value='".$row1["eat_precio"]."' hidden='hidden'></td>";
+							 	echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
                    			echo "</tr>";
                    			echo "<tr>";
                    				echo "<td></td>";
                    				echo "<td style='font-weight: bolder;'>Total:</td>";
-                   				echo "<td id='total'>$".$row1["evt_trib_precio"]."</td>";
+                   				echo "<td id='total'>$".$row1["eat_precio"]."</td>";
                    			echo "</tr>";
 						 }
 						if($evtId == 3){
 							echo "<tr>";
                    				echo "<td id='cantidad'>1</td>";
-                   				echo "<td>".$row1["evt_desc"]." VIP</td>";
-                   				echo "<td>$".$row1["evt_vip_precio"]."</td>";
-								echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
-								echo "<input type='number' id='precio' name='precio' value='".$row1["evt_vip_precio"]."' hidden='hidden'></td>";
-								echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
+                   				echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
+                   				echo "<td>$".$row1["eat_precio"]."</td>";
+							 	echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
+							 	echo "<input type='number' id='precio' name='precio' value='".$row1["eat_precio"]."' hidden='hidden'></td>";
+							 	echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
                    			echo "</tr>";
                    			echo "<tr>";
                    				echo "<td></td>";
                    				echo "<td style='font-weight: bolder;'>Total:</td>";
-                   				echo "<td id='total'>$".$row1["evt_vip_precio"]."</td>";
+                   				echo "<td id='total'>$".$row1["eat_precio"]."</td>";
                    			echo "</tr>";
 						 }
 						if($evtId == 4){
 							echo "<tr>";
                    				echo "<td id='cantidad'>1</td>";
-                   				echo "<td>".$row1["evt_desc"]." BOX</td>";
-                   				echo "<td>$".$row1["evt_box_precio"]."</td>";
-								echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
-								echo "<input type='number' id='precio' name='precio' value='".$row1["evt_box_precio"]."' hidden='hidden'></td>";
-								echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
+                   				echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
+                   				echo "<td>$".$row1["eat_precio"]."</td>";
+							 	echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
+							 	echo "<input type='number' id='precio' name='precio' value='".$row1["eat_precio"]."' hidden='hidden'></td>";
+							 	echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
                    			echo "</tr>";
                    			echo "<tr>";
                    				echo "<td></td>";
                    				echo "<td style='font-weight: bolder;'>Total:</td>";
-                   				echo "<td id='total'>$".$row1["evt_box_precio"]."</td>";
+                   				echo "<td id='total'>$".$row1["eat_precio"]."</td>";
                    			echo "</tr>";
-						 }
+						}
 						?>
                    		
                    	</table>
