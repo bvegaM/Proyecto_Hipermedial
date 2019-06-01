@@ -185,7 +185,6 @@
                         <input type="submit" value="Registrar" class="button" id="botonA">
                         <input type="reset" value="Cancelar" class="button" id="botonB">
                     </p>
-                    
                 </form>
             </div>
             <div class="contact-info">
