@@ -125,7 +125,7 @@
         <div class="contact-wrapper">
             <div class="contact-form">
                 <h3>Crea tu Evento de acuerdo a tus comodidades</h3>
-                <form action="../controladores/php/crear_empresa.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
+                <form action="../controladores/php/crear_evento.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
                  	<p>
                         <input type="text" name="id" id="id" value="<?php echo $codigo ?>" hidden="hidden">
                         <input id="txtLat" name="latitud" type="text" style="color:red;" hidden="hidden" value="19.4326077"/>
