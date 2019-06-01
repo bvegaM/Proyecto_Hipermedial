@@ -151,7 +151,7 @@
 							$result = $conn->query($sql);
 						?>
                         <label for="mepresa">Empresa</label>
-                        <select name="emp" id="emp">
+                        <select name="emp" id="emp" onchange="reset();">
                   			<?php
 								while($row = $result->fetch_assoc()){
 									echo "<option value=".$row['emp_id'].">".$row['emp_nombre']."</option>";

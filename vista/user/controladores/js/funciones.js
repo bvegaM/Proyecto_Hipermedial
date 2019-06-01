@@ -9,4 +9,7 @@ function cambiarCantidad(){
 	var a = Number(document.getElementById("ast").value)
 	alert(a)
 }
+function reset(){
+	document.getElementById("cant").value=1;
 	
+}
