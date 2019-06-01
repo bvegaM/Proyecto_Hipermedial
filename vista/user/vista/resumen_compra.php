@@ -154,31 +154,29 @@
 		
 						$result1 = $conn->query($sql1);
 						while($row1 = $result1->fetch_assoc()){
-							if($evtId == $row1["ast_id"]){
-							echo "<tr>";
-                   				echo "<td>1</td>";
-                   				echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
-                   				echo "<td>$".$row1["eat_precio"]."</td>";
-							 	echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
-                   			echo "</tr>";
-                   		
-						 }else{
-							echo "<tr style='display:none;'>";
-                   				echo "<td>1</td>";
-                   				echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
-                   				echo "<td>$".$row1["eat_precio"]."</td>";
-							 	echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
-                   			echo "</tr>"; 
-						}	
+							
+							 if($evtId == $row1["ast_id"]){
+								echo "<tr>";
+									echo "<td>1</td>";
+									echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
+									echo "<td>$".$row1["eat_precio"]."</td>";
+									echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
+								echo "</tr>";
+
+							 }else{
+								echo "<tr style='display:none;'>";
+									echo "<td>1</td>";
+									echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
+									echo "<td>$".$row1["eat_precio"]."</td>";
+									echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
+								echo "</tr>"; 
+							 }
 						}
 						echo "<tr>";
-                   				echo "<td>1</td>";
-                   				echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
-                   				echo "<td>$".$row1["eat_precio"]."</td>";
-							 	echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
-                   		echo "</tr>";
-						 
-						
+                   				echo "<td></td>";
+                   				echo "<td style='font-weight: bolder;'>Total:</td>";
+                   				echo "<td id='total'>$".$row1["eat_precio"]."</td>";
+                   		echo "</tr>";	
 						?>
                    		
                    	</table>
