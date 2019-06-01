@@ -30,11 +30,5 @@
 
 	echo $aG;
 	echo $pG;
-	
-	if($conn->query($sql) == TRUE){
-		header("Location: ../../vista/crear_evento.php?codigo=".$id);
-	}else{
-		echo "<p>error</p>";
-	}
 
 ?>
