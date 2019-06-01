@@ -17,9 +17,13 @@
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
 		
-		$sql1="SELECT *
-			  FROM T_EVENTOS
-			  WHERE evt_id = $evt";
+		$sql1="SELECT * 
+			   FROM T_EVENTOS,
+			   T_EVENTOS_ASIENTOS,
+			   T_TIPO_ASIENTO
+			   WHERE evt_id=eat_evt_id AND
+			   		 ast_id = eat_ast_id AND
+					 eat_evt_id =$evt";
 		
 		$result1 = $conn->query($sql1);
 		$row1 = $result1->fetch_assoc();
@@ -146,9 +150,9 @@
 							echo "<tr>";
                    				echo "<td id='cantidad'>1</td>";
                    				echo "<td style='font-size:13px;'>".$row1["evt_desc"]." General</td>";
-                   				echo "<td>$".$row1["evt_gen_precio"]."</td>";
+                   				echo "<td>$".$row1["aet_precio"]."</td>";
 							 	echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
-							 	echo "<input type='number' id='precio' name='precio' value='".$row1["evt_gen_precio"]."' hidden='hidden'></td>";
+							 	echo "<input type='number' id='precio' name='precio' value='".$row1["aet_precio"]."' hidden='hidden'></td>";
 							 	echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
                    			echo "</tr>";
                    			echo "<tr>";
