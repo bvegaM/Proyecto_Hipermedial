@@ -152,42 +152,20 @@
 						</tr>
 						<?php
 							$sql = "SELECT * 
-									FROM T_EVENTOS
-									WHERE evt_id=$evento";
+									FROM T_EVENTOS,
+										 T_EVENTOS_ASIENTOS,
+										 T_TIPO_ASIENTO
+									WHERE evt_id=eat_evt_id AND
+										  ast_id = eat_ast_id AND
+										  eat_evt_id =$evento";
 
 							$result = $conn->query($sql);
-							$row = $result->fetch_assoc();
-
-							if($row["evt_gen"]>0){
+							while($row = $result->fetch_assoc()){
 								echo "<tr>";
-								echo "<td>GENERAL</td>";
-								echo "<td>$".$row["evt_gen_precio"]."</td>";
-								echo "<td>".$row["evt_gen"]."</td>";
-								echo "<td class='link_compra'><a href='resumen_compra.php?evt=".$evento."&evtId=1&codigo=".$codigo."'><i class='fas fa-ticket-alt'></i></a></td>";
-								echo "</tr>";
-							}
-							if($row["evt_trib"]>0){
-								echo "<tr>";
-								echo "<td>TRIBUNA</td>";
-								echo "<td>$".$row["evt_trib_precio"]."</td>";
-								echo "<td>".$row["evt_trib"]."</td>";
-								echo "<td class='link_compra'><a href='resumen_compra.php?evt=".$evento."&evtId=2&codigo=".$codigo."'><i class='fas fa-ticket-alt'></i></a></td>";
-								echo "</tr>";
-							}
-							if($row["evt_vip"]>0){
-								echo "<tr>";
-								echo "<td>VIP</td>";
-								echo "<td>$".$row["evt_vip_precio"]."</td>";
-								echo "<td>".$row["evt_vip"]."</td>";
-								echo "<td class='link_compra'><a href='resumen_compra.php?evt=".$evento."&evtId=3&codigo=".$codigo."'><i class='fas fa-ticket-alt'></i></a></td>";
-								echo "</tr>";
-							}
-							if($row["evt_box"]>0){
-								echo "<tr>";
-								echo "<td>BOX</td>";
-								echo "<td>$".$row["evt_box_precio"]."</td>";
-								echo "<td>".$row["evt_box"]."</td>";
-								echo "<td class='link_compra'><a href='resumen_compra.php?evt=".$evento."&evtId=4&codigo=".$codigo."'><i class='fas fa-ticket-alt'></i></a></td>";
+								echo "<td>".$row["ast_desc"]."</td>";
+								echo "<td>$".$row["eat_precio"]."</td>";
+								echo "<td>".$row["eat_num_asientos"]."</td>";
+								echo "<td class='link_compra'><a href='resumen_compra.php?evt=".$evento."&evtId=".$row["ast_id"]."&codigo=".$codigo."'><i class='fas fa-ticket-alt'></i></a></td>";
 								echo "</tr>";
 							}
 						?>
