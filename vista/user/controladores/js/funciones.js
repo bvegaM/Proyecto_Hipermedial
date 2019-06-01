@@ -9,5 +9,5 @@ function cambiarCantidad(){
 	var a = Number(document.getElementById("ast").value)
 }
 function cambio(){
-	document.getElementById("cant").innerHTML=1;
+	document.getElementById("cant").value=1
 }
