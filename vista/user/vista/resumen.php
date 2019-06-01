@@ -157,7 +157,8 @@
 										 T_TIPO_ASIENTO
 									WHERE evt_id=eat_evt_id AND
 										  ast_id = eat_ast_id AND
-										  eat_evt_id =$evento";
+										  eat_evt_id =$evento AND
+										  ast_num_asientos > 0";
 
 							$result = $conn->query($sql);
 							while($row = $result->fetch_assoc()){

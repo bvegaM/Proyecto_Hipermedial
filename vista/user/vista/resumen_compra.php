@@ -24,7 +24,8 @@
 			   WHERE evt_id=eat_evt_id AND
 			   		 ast_id = eat_ast_id AND
 					 eat_evt_id =$evt AND
-					 ast_id=$evtId";
+					 ast_id=$evtId AND
+					 ast_num_asientos > 0";
 		
 		$result1 = $conn->query($sql1);
 		$row1 = $result1->fetch_assoc();
