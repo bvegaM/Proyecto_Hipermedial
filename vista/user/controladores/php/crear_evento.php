@@ -36,6 +36,10 @@
 	echo $pV;
 	echo $aB;
 	echo $pB;
+
+	if($aT == ""){
+		echo "hola";
+	}
 	
 
 ?>
