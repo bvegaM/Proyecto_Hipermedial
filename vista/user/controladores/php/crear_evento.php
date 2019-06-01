@@ -30,5 +30,12 @@
 
 	echo $aG;
 	echo $pG;
+	echo $aT;
+	echo $pT;
+	echo $aV;
+	echo $pV;
+	echo $aB;
+	echo $pB;
+	
 
 ?>
