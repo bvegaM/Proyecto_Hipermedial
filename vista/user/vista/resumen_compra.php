@@ -23,7 +23,8 @@
 			   T_TIPO_ASIENTO
 			   WHERE evt_id=eat_evt_id AND
 			   		 ast_id = eat_ast_id AND
-					 eat_evt_id =$evt";
+					 eat_evt_id =$evt AND
+					 ast_id=$evtId";
 		
 		$result1 = $conn->query($sql1);
 		$row1 = $result1->fetch_assoc();
@@ -119,8 +120,7 @@
                    	 <input type="number" name="cant" id="cant" value="1" min="1" max="3" step="1" onclick="cambiarCantidad();" onchange="cambiarCantidad();" onkeyup="cambiarCantidad();">
                    </p>
                    <p style="text-align:center display:block;"> 
-                   	 Te recordamos que solo puedes escoger hasta tres boletos ya que más de 3 es excederse del limite acordado, si deseas más tickets
-                   	 genera otra compra y se te creara otra factura.
+                   	 Te recordamos que solo puedes escoger hasta tres boletos ya que más de 3 es excederse del limite acordado.
                    </p>
                 </form>
             </div>
