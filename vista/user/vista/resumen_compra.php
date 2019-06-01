@@ -145,7 +145,7 @@
 						 if($evtId == 1){
 							echo "<tr>";
                    				echo "<td id='cantidad'>1</td>";
-                   				echo "<td>".$row1["evt_desc"]." General</td>";
+                   				echo "<td style='font-size:13px;'>".$row1["evt_desc"]." General</td>";
                    				echo "<td>$".$row1["evt_gen_precio"]."</td>";
 							 	echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
 							 	echo "<input type='number' id='precio' name='precio' value='".$row1["evt_gen_precio"]."' hidden='hidden'></td>";
