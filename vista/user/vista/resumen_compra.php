@@ -175,6 +175,17 @@
 								echo "</tr>"; 
 							 }
 						}
+						$sql1="SELECT * 
+			   					FROM T_EVENTOS,
+								T_EVENTOS_ASIENTOS,
+								T_TIPO_ASIENTO
+								WHERE evt_id=eat_evt_id AND
+			   		 				  ast_id = eat_ast_id AND
+									  eat_evt_id =$evt AND
+									  ast_id = $evtId";
+		
+						$result1 = $conn->query($sql1);
+						$row1 = $result1->fetch_assoc()
 						echo "<tr>";
                    				echo "<td></td>";
 								echo "<td></td>";
