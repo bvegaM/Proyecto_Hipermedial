@@ -102,7 +102,7 @@
             </div>
             <div class="contact-form">
                 <h3>Vista Previa</h3>
-                <form action="../controladores/php/crear_factura.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
+                <form action="../controladores/php/crear_factura.php" method="post" onsubmit="return validar()" enctype="multipart/form-data" style="display:block;">
                   <input type="text" name="cnt" id="cnt" value="" hidden="hidden">
                   <input type="text" name="codigo" id="codigo" value="<?php echo $codigo;?>" hidden="hidden">
                   <input type="text" name="evento" id="evento" value="<?php echo $evt;?>" hidden="hidden">
