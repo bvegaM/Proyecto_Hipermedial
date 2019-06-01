@@ -35,9 +35,9 @@
     $contenido = addslashes($contenido);
     fclose($archivo_objetivo);
 
-	$sql = "INSERT INTO T_EVENTOS VALUES(0,'$nombres','$fecha','$direccion',$latitud,$longitud,'$contenido','$tipo_archivo','D',0,'admin','$fechaC',null,$empresa)";
+	$sql = "INSERT INTO T_EVENTOS VALUES(0,'$nombres',STR_TO_DATE(REPLACE('$fecha','/','.') ,GET_FORMAT(date,'EUR')),'$direccion',$latitud,$longitud,'$contenido','$tipo_archivo','D',0,'admin','$fechaC',null,$empresa)";
 	$id = $conn->insert_id;
-	if($conn->query($sql) === TRUE){
+
 	if($conn->query($sql) === TRUE){
 		if($aG!="" && $pG !=""){
 			$sql1="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$id,1)";
