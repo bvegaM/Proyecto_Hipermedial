@@ -158,7 +158,7 @@
 							 if($evtId == $row1["ast_id"]){
 								echo "<tr>";
 									echo "<td>1</td>";
-									echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
+									echo "<td style='font-size:13px;'>".$row1["evt_desc"]." ".$row1["ast_desc"]." </td>";
 									echo "<td>$".$row1["eat_precio"]."</td>";
 									echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
 								echo "</tr>";
@@ -166,7 +166,7 @@
 							 }else{
 								echo "<tr >";
 									echo "<td>1</td>";
-									echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
+									echo "<td style='font-size:13px;'>".$row1["evt_desc"]." ".$row1["ast_desc"]." </td>";
 									echo "<td>$".$row1["eat_precio"]."</td>";
 									echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
 								echo "</tr>"; 
