@@ -48,6 +48,51 @@
             vMarker.setMap(map);
         }
     </script>
+    <script type="text/javascript">
+		function mostrar(){
+			var g =document.getElementById("g");
+			var t =document.getElementById("t");
+			var p =document.getElementById("p");
+			var v =document.getElementById("v");
+			var b =document.getElementById("b");
+
+			if (g.checked == true){
+				document.getElementById("ga").style.visibility="visible";
+				document.getElementById("gp").style.visibility="visible";
+			} else {
+				document.getElementById("ga").style.visibility="hidden";
+				document.getElementById("gp").style.visibility="hidden";
+			}
+			if (t.checked == true){
+				document.getElementById("ta").style.visibility="visible";
+				document.getElementById("tp").style.visibility="visible";
+			} else {
+				document.getElementById("ta").style.visibility="hidden";
+				document.getElementById("tp").style.visibility="hidden";
+			}
+			if (p.checked == true){
+				document.getElementById("pa").style.visibility="visible";
+				document.getElementById("pp").style.visibility="visible";
+			} else {
+				document.getElementById("pa").style.visibility="hidden";
+				document.getElementById("pp").style.visibility="hidden";
+			}
+			if (v.checked == true){
+				document.getElementById("va").style.visibility="visible";
+				document.getElementById("vp").style.visibility="visible";
+			} else {
+				document.getElementById("va").style.visibility="hidden";
+				document.getElementById("vp").style.visibility="hidden";
+			}
+			if (b.checked == true){
+				document.getElementById("ba").style.visibility="visible";
+				document.getElementById("bp").style.visibility="visible";
+			} else {
+				document.getElementById("ba").style.visibility="hidden";
+				document.getElementById("bp").style.visibility="hidden";
+			}	
+		}
+	</script>
 </head>
 <body onload="initialize();">
    
@@ -115,26 +160,26 @@
                         </select>
                     </p>	
                     <div class="block-ast">
-                    	<input type="checkbox" value="general" class="check">
+                    	<input type="checkbox" value="general" class="check" id="g" onclick="mostrar();">
                     	<span class="chkT">General</span>
-                    	<input type="text" name="gen" placeholder="N° asientos" style="visibility:hidden;">
-                    	<input type="text" name="gen" placeholder="precio" style="visibility:hidden;">
-                    	<input type="checkbox" value="general" class="check">
+                    	<input type="text" name="genA" placeholder="N° asientos" style="visibility:hidden;" id="ga">
+                    	<input type="text" name="genP" placeholder="precio" style="visibility:hidden;" id="gp">
+                    	<input type="checkbox" value="general" class="check" id="t" onclick="mostrar();">
                     	<span class="chkT">Tribuna</span>
-                    	<input type="text" name="gen" placeholder="N° asientos" style="visibility:hidden;">
-                    	<input type="text" name="gen" placeholder="precio" style="visibility:hidden;">
-                    	<input type="checkbox" value="general" class="check">
+                    	<input type="text" name="tribA" placeholder="N° asientos" style="visibility:hidden;" id="ta">
+                    	<input type="text" name="tribP" placeholder="precio" style="visibility:hidden;" id="tp">
+                    	<input type="checkbox" value="general" class="check" id="p" onclick="mostrar();">
                     	<span class="chkT">Palco</span>
-                    	<input type="text" name="gen" placeholder="N° asientos" style="visibility:hidden;">
-                    	<input type="text" name="gen" placeholder="precio" style="visibility:hidden;">
-                    	<input type="checkbox" value="general" class="check">
+                    	<input type="text" name="palA" placeholder="N° asientos" style="visibility:hidden;" id="pa">
+                    	<input type="text" name="palP" placeholder="precio" style="visibility:hidden;" id="pp">
+                    	<input type="checkbox" value="general" class="check" id="v" onclick="mostrar();">
                     	<span class="chkT">VIP</span>
-                    	<input type="text" name="gen" placeholder="N° asientos" style="visibility:hidden;">
-                    	<input type="text" name="gen" placeholder="precio" style="visibility:hidden;">
-                    	<input type="checkbox" value="general" class="check">
+                    	<input type="text" name="vipA" placeholder="N° asientos" style="visibility:hidden;" id="va">
+                    	<input type="text" name="vipP" placeholder="precio" style="visibility:hidden;" id="vp">
+                    	<input type="checkbox" value="general" class="check" id="b" onclick="mostrar();">
                     	<span class="chkT">BOX</span>
-                    	<input type="text" name="gen" placeholder="N° asientos" style="visibility:hidden;">
-                    	<input type="text" name="gen" placeholder="precio" style="visibility:hidden;">
+                    	<input type="text" name="boxA" placeholder="N° asientos" style="visibility:hidden;" id="ba">
+                    	<input type="text" name="boxP" placeholder="precio" style="visibility:hidden;" id="bp">
                     </div>
                     <p class="block">
                         <input type="submit" value="Registrar" class="button" id="botonA">
