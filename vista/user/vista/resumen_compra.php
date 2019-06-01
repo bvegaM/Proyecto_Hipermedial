@@ -185,7 +185,7 @@
 									  ast_id = $evtId";
 		
 						$result1 = $conn->query($sql1);
-						$row1 = $result1->fetch_assoc()
+						$row1 = $result1->fetch_assoc();
 						echo "<tr>";
                    				echo "<td></td>";
 								echo "<td></td>";
