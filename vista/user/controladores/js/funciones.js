@@ -30,5 +30,5 @@ function cambiarCantidad(){
 	}
 }
 function cambio(){
-	document.getElementById("cant").value=1
+	document.getElementById("cant").value=0
 }
