@@ -164,7 +164,7 @@
 								echo "</tr>";
 
 							 }else{
-								echo "<tr style='display:none;'>";
+								echo "<tr >";
 									echo "<td>1</td>";
 									echo "<td style='font-size:13px;'>".$row1["evt_desc"].$row1["ast_desc"]." </td>";
 									echo "<td>$".$row1["eat_precio"]."</td>";
