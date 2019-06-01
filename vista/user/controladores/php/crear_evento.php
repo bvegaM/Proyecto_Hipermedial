@@ -8,11 +8,11 @@
 	$nombres =isset($_POST["nombres"]) ? mb_strtoupper(trim($_POST["nombres"]),"UTF-8"): null;
 	$direccion = isset($_POST["direccion"]) ? mb_strtoupper(trim($_POST["direccion"]),"UTF-8"):null;
 	$fecha = isset($_POST["fecha"])? trim($_POST["fecha"]): null;
-	$aG = isset($_POST["genAA"]) ? trim($_POST["genAA"]): null;
+	$aG = isset($_POST["genA"]) ? trim($_POST["genA"]): null;
 	$aT = isset($_POST["tribA"]) ? trim($_POST["tribA"]): null;
 	$aV = isset($_POST["vipA"]) ? trim($_POST["vipA"]): null;
 	$aB = isset($_POST["boxA"]) ? trim($_POST["boxA"]): null;
-	$pG = isset($_POST["genAP"]) ? trim($_POST["genAP"]): null;
+	$pG = isset($_POST["genP"]) ? trim($_POST["genP"]): null;
 	$pT = isset($_POST["tribP"]) ? trim($_POST["tribP"]): null;
 	$pV = isset($_POST["vipP"]) ? trim($_POST["vipP"]): null;
 	$pB = isset($_POST["boxP"]) ? trim($_POST["boxP"]): null;
