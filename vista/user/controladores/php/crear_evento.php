@@ -60,6 +60,7 @@
 			$sql1="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pB,$aB,$evt_id,5)";
 			$result1=$conn->query($sql1);
 		}
+		header("Location: ../../vista/crear_evento.php?codigo=".$id);
 	}else{
 		echo "error";
 	}
