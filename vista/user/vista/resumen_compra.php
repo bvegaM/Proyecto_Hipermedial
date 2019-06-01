@@ -90,9 +90,23 @@
             <div class="contact-info">
                 <h3>Selecciona la cantidad de Tickets a comprar</h3>
                 <form enctype="multipart/form-data" style="display:block;">
+                  <p>
+                        <?php
+					    	$sql="SELECT * FROM T_TIPO_ASIENTO";
+							$result = $conn->query($sql);
+						?>
+                        <label for="ast">Escoge el tipo de Asiento</label>
+                        <select name="ast" id="ast">
+                  			<?php
+								while($row = $result->fetch_assoc()){
+									echo "<option value=".$row['ast_id'].">".$row['ast_desc']."</option>";
+								}
+							?>
+                        </select>
+                    </p>	
                    <p>
                    	 <label for="cant">Cantidad de Boletos </label>
-                   	 <input type="number" name="cant" id="cant" min="1" max="3" step="1" onclick="cambiarCantidad();" onchange="cambiarCantidad();" onkeyup="cambiarCantidad();">
+                   	 <input type="number" name="cant" id="cant" value="1" min="1" max="3" step="1" onclick="cambiarCantidad();" onchange="cambiarCantidad();" onkeyup="cambiarCantidad();">
                    </p>
                    <p style="text-align:center display:block;"> 
                    	 Te recordamos que solo puedes escoger hasta tres boletos ya que más de 3 es excederse del limite acordado, si deseas más tickets
