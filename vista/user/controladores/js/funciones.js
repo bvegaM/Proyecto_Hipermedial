@@ -10,5 +10,6 @@ function cambiarCantidad(){
 	alert(a)
 }
 function reset(){
-	alert("hola")
+	document.getElementById("cant").innerHTML=1;
+	document.getElementById("cant").value=1;
 }
