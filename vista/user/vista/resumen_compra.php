@@ -97,16 +97,19 @@
                   <p>
                         <?php
 					    	$sqle="SELECT * 
-							       FROM T_TIPO_ASIENTO,
-								   		T_EVENTOS_ASIENTOS
-								   WHERE ast_id=";
+								   FROM T_EVENTOS,
+			   					   T_EVENTOS_ASIENTOS,
+			   					   T_TIPO_ASIENTO
+			   					   WHERE evt_id=eat_evt_id AND
+			   		 			      	 ast_id = eat_ast_id AND
+					 					 eat_evt_id =$evt";
 							$resulte = $conn->query($sqle);
 						?>
                         <label for="ast">Escoge el tipo de Asiento</label>
                         <select name="ast" id="ast">
                   			<?php
-								while($row1 = $result1->fetch_assoc()){
-									echo "<option value=".$row1['ast_id'].">".$row1['ast_desc']."</option>";
+								while($rowe = $resulte->fetch_assoc()){
+									echo "<option value=".$rowe['ast_id'].">".$rowe['ast_desc']."</option>";
 								}
 							?>
                         </select>
