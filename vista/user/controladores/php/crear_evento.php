@@ -42,12 +42,23 @@
 		$evt_id = $conn->insert_id;
 		if($aG!="" && $pG !=""){
 			$sql1="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$evt_id,1)";
-			if($conn->query($sql1) ==TRUE){
-				echo "hola";
-			}else{
-				echo $sql1;
-				echo "error";
-			}
+			$result1=$conn->query($sql1);
+		}
+		if($aT!="" && $pT !=""){
+			$sql1="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$evt_id,2)";
+			$result1=$conn->query($sql1);
+		}
+		if($aP!="" && $pP !=""){
+			$sql1="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$evt_id,3)";
+			$result1=$conn->query($sql1);
+		}
+		if($aV!="" && $pV !=""){
+			$sql1="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$evt_id,4)";
+			$result1=$conn->query($sql1);
+		}
+		if($aB!="" && $pB !=""){
+			$sql1="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$evt_id,5)";
+			$result1=$conn->query($sql1);
 		}
 	}else{
 		echo "error";
