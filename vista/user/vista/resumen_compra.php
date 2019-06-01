@@ -150,9 +150,9 @@
 							echo "<tr>";
                    				echo "<td id='cantidad'>1</td>";
                    				echo "<td style='font-size:13px;'>".$row1["evt_desc"]." General</td>";
-                   				echo "<td>$".$row1["aet_precio"]."</td>";
+                   				echo "<td>$".$row1["eat_precio"]."</td>";
 							 	echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
-							 	echo "<input type='number' id='precio' name='precio' value='".$row1["aet_precio"]."' hidden='hidden'></td>";
+							 	echo "<input type='number' id='precio' name='precio' value='".$row1["eat_precio"]."' hidden='hidden'></td>";
 							 	echo "<input type='number' id='totalI' name='total' value='' hidden='hidden'></td>";
                    			echo "</tr>";
                    			echo "<tr>";
