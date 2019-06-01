@@ -92,14 +92,14 @@
                 <form enctype="multipart/form-data" style="display:block;">
                   <p>
                         <?php
-					    	$sql="SELECT * FROM T_TIPO_ASIENTO";
-							$result = $conn->query($sql);
+					    	$sqle="SELECT * FROM T_TIPO_ASIENTO";
+							$resulte = $conn->query($sqle);
 						?>
                         <label for="ast">Escoge el tipo de Asiento</label>
                         <select name="ast" id="ast">
                   			<?php
-								while($row = $result->fetch_assoc()){
-									echo "<option value=".$row['ast_id'].">".$row['ast_desc']."</option>";
+								while($rowe = $resulte->fetch_assoc()){
+									echo "<option value=".$rowe['ast_id'].">".$rowe['ast_desc']."</option>";
 								}
 							?>
                         </select>
