@@ -15,6 +15,8 @@ function cambiarCantidad(){
 		t1 = pT
 		document.getElementById("c1").innerHTML=c
 		document.getElementById("p1").innerHTML="$"+pT
+		document.getElementById("pT1").value=pT
+		document.getElementById("cF1").value=c
 		document.getElementById("d1").style.visibility="visible";
 	}
 	if(a == 2){
@@ -23,6 +25,8 @@ function cambiarCantidad(){
 		t2 = pT
 		document.getElementById("p2").innerHTML="$"+pT
 		document.getElementById("c2").innerHTML=c
+		document.getElementById("pT2").value=pT
+		document.getElementById("cF2").value=c
 		document.getElementById("d2").style.visibility="visible";
 	}
 	if(a == 3){
@@ -31,6 +35,8 @@ function cambiarCantidad(){
 		t3=pT
 		document.getElementById("p3").innerHTML="$"+pT
 		document.getElementById("c3").innerHTML=c
+		document.getElementById("pT3").value=pT
+		document.getElementById("cF3").value=c
 		document.getElementById("d3").style.visibility="visible";
 	}
 	if(a == 4){
@@ -39,6 +45,8 @@ function cambiarCantidad(){
 		t4 = pT
 		document.getElementById("p4").innerHTML="$"+pT
 		document.getElementById("c4").innerHTML=c
+		document.getElementById("pT4").value=pT
+		document.getElementById("cF4").value=c
 		document.getElementById("d4").style.visibility="visible";
 	}
 	if(a == 5){
@@ -47,6 +55,8 @@ function cambiarCantidad(){
 		t5= pT
 		document.getElementById("p5").innerHTML="$"+pT
 		document.getElementById("c5").innerHTML=c
+		document.getElementById("pT5").value=pT
+		document.getElementById("cF5").value=c
 		document.getElementById("d5").style.visibility="visible";
 	}
 	

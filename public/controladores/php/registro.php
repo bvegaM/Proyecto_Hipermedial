@@ -26,6 +26,8 @@
 			$fechaC = date("y-m-d h:i:s",time());
 			
 			$sql = "INSERT INTO T_USUARIOS VALUES (0,STR_TO_DATE(REPLACE('$fecha','/','.') ,GET_FORMAT(date,'EUR')),'$cedula','$nombres','$apellidos','$telefono','$direccion','$correo',MD5('$contrasena'),null,null,'admin','$fechaC',null,null,null,null,'N',$rol)";
+	
+			echo $sql;
 		
 			if($conn->query($sql) == TRUE){
 				header("Location: ../../vista/login.html");
