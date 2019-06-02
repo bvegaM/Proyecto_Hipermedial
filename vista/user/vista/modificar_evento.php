@@ -12,10 +12,7 @@
 		$sql1="SELECT *
 			   FROM T_EVENTOS,
 			   		T_USUARIOS
-			   WHERE evt_usu_id = usu_id AND 
-			   evt_id =$evento AND
-			   evt_usu_id = $codigo AND
-			   evt_estado_elimina = 'N'";
+			   WHERE evt_id =$evento";
 	
 		$result1=$conn->query($sql1);
 		$row1=$result1->fetch_assoc();

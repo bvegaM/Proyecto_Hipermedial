@@ -18,7 +18,9 @@
 		$sql1="SELECT *
 			  FROM T_EVENTOS,
 			  	   T_USUARIOS
-			  WHERE usu_id = $codigo";
+			  WHERE evt_usu_id = usu_id AND
+			  		evt_usu_id = $codigo AND
+					evt_estado_elimina ='N'";
 		
 		$result1 = $conn->query($sql1);
 	?>
