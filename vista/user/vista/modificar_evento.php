@@ -224,8 +224,8 @@
 						?>
                     	<input type="checkbox" value="general" class="check" id="v" onclick="mostrar();">
                     	<span class="chkT">VIP</span>
-                    	<input type="text" name="vipA" placeholder="N° asientos" style="visibility:hidden;" id="va">
-                    	<input type="text" name="vipP" placeholder="precio" style="visibility:hidden;" id="vp">
+                    	<input type="text" name="vipA" placeholder="N° asientos" style="visibility:hidden;" id="va" value="<?php echo $rowg["eat_num_asientos"]?>">
+                    	<input type="text" name="vipP" placeholder="precio" style="visibility:hidden;" id="vp" value="<?php echo $rowg["eat_precio"]?>">
                     	<?php
 							$sqlg="SELECT *
 								   FROM T_EVENTOS_ASIENTOS,
@@ -237,8 +237,8 @@
 						?>
                     	<input type="checkbox" value="general" class="check" id="b" onclick="mostrar();">
                     	<span class="chkT">BOX</span>
-                    	<input type="text" name="boxA" placeholder="N° asientos" style="visibility:hidden;" id="ba">
-                    	<input type="text" name="boxP" placeholder="precio" style="visibility:hidden;" id="bp">
+                    	<input type="text" name="boxA" placeholder="N° asientos" style="visibility:hidden;" id="ba" value="<?php echo $rowg["eat_num_asientos"]?>">
+                    	<input type="text" name="boxP" placeholder="precio" style="visibility:hidden;" id="bp" value="<?php echo $rowg["eat_precio"]?>">
                     </div>
                     <p class="block">
                         <input type="submit" value="Modificar" class="button" id="botonA">
