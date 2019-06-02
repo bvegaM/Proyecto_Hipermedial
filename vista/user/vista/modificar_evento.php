@@ -179,7 +179,8 @@
 								   FROM T_EVENTOS_ASIENTOS,
 								        T_TIPO_ASIENTO
 								   WHERE ast_id = eat_ast_id AND
-								         eat_id=1";
+								         eat_id=1 AND
+										 eat_evt_id = $evento";
 							$resultg = $conn->query($sqlg);
 							$rowg = $resultg->fetch_assoc();
 						?>
@@ -192,7 +193,8 @@
 								   FROM T_EVENTOS_ASIENTOS,
 								        T_TIPO_ASIENTO
 								   WHERE ast_id = eat_ast_id AND
-								         eat_id=2";
+								         eat_id=2 AND
+										 eat_evt_id = $evento";
 							$resultg = $conn->query($sqlg);
 							$rowg = $resultg->fetch_assoc();
 						?>
@@ -205,7 +207,8 @@
 								   FROM T_EVENTOS_ASIENTOS,
 								        T_TIPO_ASIENTO
 								   WHERE ast_id = eat_ast_id AND
-								         eat_id=3";
+								         eat_id=3 AND
+										 eat_evt_id = $evento";
 							$resultg = $conn->query($sqlg);
 							$rowg = $resultg->fetch_assoc();
 						?>
@@ -218,7 +221,8 @@
 								   FROM T_EVENTOS_ASIENTOS,
 								        T_TIPO_ASIENTO
 								   WHERE ast_id = eat_ast_id AND
-								         eat_id=4";
+								         eat_id=4 AND
+										 eat_evt_id = $evento";
 							$resultg = $conn->query($sqlg);
 							$rowg = $resultg->fetch_assoc();
 						?>
@@ -231,7 +235,8 @@
 								   FROM T_EVENTOS_ASIENTOS,
 								        T_TIPO_ASIENTO
 								   WHERE ast_id = eat_ast_id AND
-								         eat_id=5";
+								         eat_id=5 AND
+										 eat_evt_id = $evento";
 							$resultg = $conn->query($sqlg);
 							$rowg = $resultg->fetch_assoc();
 						?>
