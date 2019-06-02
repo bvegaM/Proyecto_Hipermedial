@@ -4,8 +4,6 @@
         header("Location: ../../../public/vista/login.html");
     }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,7 +56,7 @@
 				<li class="menu__item"><a href="perfil.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-user-edit"><span>Mi Perfil</span></i></a></li>
 				<li class="menu__item"><a href="evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-ticket-alt"><span>Comprar</span></i></a></li>
 				<li class="menu__item"><a href="crear_evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Crear Evento</span></i></a></li>
-				<li class="menu__item"><a href="eventos_creados.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Eventos Creados</span></i></a></li>
+				<li class="menu__item"><a href="modificar_evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Modificar Evento</span></i></a></li>
 				<li class="menu__item"><a href="mis_compras.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-money-check-alt"><span>Mis Compras</span></i></a></li>
 			</ul>
 		</div>
@@ -97,7 +95,7 @@
 						echo "<img class='img_event' src='data:".$row['evt_img_tipo']."; base64,".base64_encode($row['evt_img'])."'>";
 					 	echo "<h4 class='title_event'>".$row["evt_desc"]."</h4>";
 					 	echo "<p>".$row['evt_fec_evento']."</p>";
-					 	echo "<a href='resumen.php?evt=".$row["evt_id"]."&codigo=".$codigo."' class='link_event'>Ir al Evento</a>";
+					 	echo "<a href='modificar_evento.php?evt=".$row["evt_id"]."&codigo=".$codigo."' class='link_event'>Modificar</a>";
 					echo "</div>";
 				 }
 				
