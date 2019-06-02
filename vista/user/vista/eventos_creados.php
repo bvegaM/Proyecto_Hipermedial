@@ -99,7 +99,7 @@
 									echo "<td>".$row1["evt_desc"]."</td>";
 									echo "<td>".$row1["evt_fec_evento"]."</td>";
 									echo "<td>".$row1["evt_direccion"]."</td>";
-									echo "<td class='link_compra'><a href='modificar_evento.php?evt=".$row1["usu_id"]."&codigo=".$codigo."'><i class='fas fa-user-edit' style='color:greenyellow;'></i></a></td>";
+									echo "<td class='link_compra'><a href='modificar_evento.php?evt=".$row1["evt_id"]."&codigo=".$codigo."'><i class='fas fa-user-edit' style='color:greenyellow;'></i></a></td>";
 									echo "<td class='link_compra'><a href='../controladores/php/anular_factura.php?fc=".$row1["fc_id"]."&fd=".$row1["fd_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
 								echo "</tr>";
 							}
