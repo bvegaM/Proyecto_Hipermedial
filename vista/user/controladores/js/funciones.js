@@ -7,8 +7,8 @@ btnMenu.addEventListener('click',function(){
 function cambiarCantidad(){
 	var c = Number(document.getElementById("cant").value)
 	var a = Number(document.getElementById("ast").value)
-	var t=  0
-	var t1=0,t2=0,t3=0,t4=0,t5=0
+	var t=  0;
+	var t1=0,t2=0,t3=0,t4=0,t5=0;
 	if(a == 1){
 		var pu = Number(document.getElementById("pU1").value)
 		var pT = pu*c
@@ -53,6 +53,7 @@ function cambiarCantidad(){
 	var tI=Number(document.getElementById("totalI").value);
 	t=tI+t1+t2+t3+t4+t5
 	tI.value=tI
+	document.getElementById("totalI").value=t;
 	document.getElementById("total").innerHTML="$"+t;
 }
 function cambio(){
