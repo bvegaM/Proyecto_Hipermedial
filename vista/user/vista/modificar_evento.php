@@ -153,7 +153,7 @@
                     <?php
                        
                        
-                        $sql= "SELECT * FROM t_eventos WHERE evt_id=$evento;";
+                        $sql= "SELECT * FROM T_EVENTOS WHERE evt_id=$evento;";
                         
 
                         $result = $conn->query($sql);
