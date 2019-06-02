@@ -57,5 +57,5 @@ function cambiarCantidad(){
 	document.getElementById("total").innerHTML="$"+t;
 }
 function cambio(){
-	document.getElementById("cant").value=0
+	document.getElementById("cant").value=1
 }
