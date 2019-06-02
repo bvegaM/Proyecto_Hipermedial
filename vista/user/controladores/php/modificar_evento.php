@@ -31,7 +31,6 @@
             evt_direccion = '$direccion',
             evt_latitud = '$latitud',
             evt_longitud = '$longitud'
-           
          WHERE evt_id = $codigoEvento";
     }else{
         $carpeta_destino = $_SERVER['DOCUMENT_ROOT'] .'/Proyecto_Hipermedial/images';

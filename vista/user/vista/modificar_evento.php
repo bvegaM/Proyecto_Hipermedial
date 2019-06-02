@@ -10,8 +10,12 @@
 		$evento = $_GET["evt"];
 		
 		$sql1="SELECT *
-			   FROM T_EVENTOS
-			   WHERE evt_id =$evento";
+			   FROM T_EVENTOS,
+			   		T_USUARIOS
+			   WHERE evt_usu_id = usu_id AND 
+			   evt_id =$evento AND
+			   evt_usu_id = $codigo AND
+			   evt_estado_elimina = 'N'";
 	
 		$result1=$conn->query($sql1);
 		$row1=$result1->fetch_assoc();
