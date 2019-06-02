@@ -18,7 +18,7 @@
 		$sql1="SELECT *
 			  FROM T_EVENTOS,
 			  	   T_USUARIOS
-			  WHERE usu_id = $codigo;
+			  WHERE usu_id = $codigo";
 		
 		$result1 = $conn->query($sql1);
 	?>
