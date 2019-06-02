@@ -103,9 +103,9 @@
 									echo "<td>".$row1["usu_apelidos"]."</td>";
 									echo "<td>".$row1["usu_cedula"]."</td>";
 									echo "<td>".$row1["usu_correo"]."</td>";
-									echo "<td class='link_compra'><a href='perfil.php?evt=".$row1["evt_id"]."&codigo=".$codigo."'><i class='fas fa-user-edit' style='color:greenyellow;'></i></a></td>";
+									echo "<td class='link_compra'><a href='perfil.php?usu=".$row1["usu_id"]."&codigo=".$codigo."'><i class='fas fa-user-edit' style='color:greenyellow;'></i></a></td>";
 									if($row1["usu_estado_elimina"] == 'N'){
-										echo "<td class='link_compra'><a href='../controladores/php/eliminar_usuario.php?evt=".$row1["usu_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
+										echo "<td class='link_compra'><a href='../controladores/php/eliminar_usuario.php?usu=".$row1["usu_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
 									}else{
 										echo "<td>ELIMINADO</td>";
 									}
