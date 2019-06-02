@@ -174,29 +174,74 @@
                         </select>
                     </p>	
                     <div class="block-ast">
+                    	<?php
+							$sqlg="SELECT *
+								   FROM T_EVENTOS_ASIENTOS,
+								        T_TIPO_ASIENTO
+								   WHERE ast_id = eat_ast_id AND
+								         eat_id=1";
+							$resultg = $conn->query($sqlg);
+							$rowg = $resultg->fetch_assoc();
+						?>
                     	<input type="checkbox" value="general" class="check" id="g" onclick="mostrar();">
                     	<span class="chkT">General</span>
-                    	<input type="text" name="genA" placeholder="N° asientos" style="visibility:hidden;" id="ga">
-                    	<input type="text" name="genP" placeholder="precio" style="visibility:hidden;" id="gp">
+                    	<input type="text" name="genA" placeholder="N° asientos" style="visibility:hidden;" id="ga" value="<?php echo $rowg["eat_num_asientos"]?>">
+                    	<input type="text" name="genP" placeholder="precio" style="visibility:hidden;" id="gp" value="<?php echo $rowg["eat_precio"]?>">
+                    	<?php
+							$sqlg="SELECT *
+								   FROM T_EVENTOS_ASIENTOS,
+								        T_TIPO_ASIENTO
+								   WHERE ast_id = eat_ast_id AND
+								         eat_id=2";
+							$resultg = $conn->query($sqlg);
+							$rowg = $resultg->fetch_assoc();
+						?>
                     	<input type="checkbox" value="general" class="check" id="t" onclick="mostrar();">
                     	<span class="chkT">Tribuna</span>
-                    	<input type="text" name="tribA" placeholder="N° asientos" style="visibility:hidden;" id="ta">
-                    	<input type="text" name="tribP" placeholder="precio" style="visibility:hidden;" id="tp">
+                    	<input type="text" name="tribA" placeholder="N° asientos" style="visibility:hidden;" id="ta" value="<?php echo $rowg["eat_num_asientos"]?>">
+                    	<input type="text" name="tribP" placeholder="precio" style="visibility:hidden;" id="tp" value="<?php echo $rowg["eat_precio"]?>">
+                    	<?php
+							$sqlg="SELECT *
+								   FROM T_EVENTOS_ASIENTOS,
+								        T_TIPO_ASIENTO
+								   WHERE ast_id = eat_ast_id AND
+								         eat_id=3";
+							$resultg = $conn->query($sqlg);
+							$rowg = $resultg->fetch_assoc();
+						?>
                     	<input type="checkbox" value="general" class="check" id="p" onclick="mostrar();">
                     	<span class="chkT">Palco</span>
-                    	<input type="text" name="palA" placeholder="N° asientos" style="visibility:hidden;" id="pa">
-                    	<input type="text" name="palP" placeholder="precio" style="visibility:hidden;" id="pp">
+                    	<input type="text" name="palA" placeholder="N° asientos" style="visibility:hidden;" id="pa" value="<?php echo $rowg["eat_num_asientos"]?>">
+                    	<input type="text" name="palP" placeholder="precio" style="visibility:hidden;" id="pp" value="<?php echo $rowg["eat_precio"]?>">
+                    	<?php
+							$sqlg="SELECT *
+								   FROM T_EVENTOS_ASIENTOS,
+								        T_TIPO_ASIENTO
+								   WHERE ast_id = eat_ast_id AND
+								         eat_id=4";
+							$resultg = $conn->query($sqlg);
+							$rowg = $resultg->fetch_assoc();
+						?>
                     	<input type="checkbox" value="general" class="check" id="v" onclick="mostrar();">
                     	<span class="chkT">VIP</span>
                     	<input type="text" name="vipA" placeholder="N° asientos" style="visibility:hidden;" id="va">
                     	<input type="text" name="vipP" placeholder="precio" style="visibility:hidden;" id="vp">
+                    	<?php
+							$sqlg="SELECT *
+								   FROM T_EVENTOS_ASIENTOS,
+								        T_TIPO_ASIENTO
+								   WHERE ast_id = eat_ast_id AND
+								         eat_id=5";
+							$resultg = $conn->query($sqlg);
+							$rowg = $resultg->fetch_assoc();
+						?>
                     	<input type="checkbox" value="general" class="check" id="b" onclick="mostrar();">
                     	<span class="chkT">BOX</span>
                     	<input type="text" name="boxA" placeholder="N° asientos" style="visibility:hidden;" id="ba">
                     	<input type="text" name="boxP" placeholder="precio" style="visibility:hidden;" id="bp">
                     </div>
                     <p class="block">
-                        <input type="submit" value="Registrar" class="button" id="botonA">
+                        <input type="submit" value="Modificar" class="button" id="botonA">
                         <input type="reset" value="Cancelar" class="button" id="botonB">
                     </p>
                 </form>
