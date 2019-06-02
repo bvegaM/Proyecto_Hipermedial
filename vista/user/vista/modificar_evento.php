@@ -128,7 +128,7 @@
 			   FROM T_EVENTOS
 			   WHERE evt_id =$evento";
 	
-		$result1=$conn->query($sql1)
+		$result1=$conn->query($sql1);
 		$row1=$result1->fetch_assoc();
 	
 	?>
