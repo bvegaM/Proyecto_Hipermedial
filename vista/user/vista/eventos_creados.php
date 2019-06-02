@@ -66,17 +66,10 @@
 		</div>
 	</nav>
 	<section class="banner">
-		<div class="banner__content">Tu mejor elección al momento de divertirte</div>
+		<div class="banner__content">Eventos Creados</div>
 	</section>
 	<main class="main">
-		<section class="grupo_eventos">
-			<div class="intro">
-				<h2 class="intro_titulo">Tu Mejor Experiencia</h2>
-				<p class="intro_txt">Brindamos nuestro servicio a los empresarios que realicen todos tipo de eventos públicos o privados; entre ellos: conciertos, monólogos, obras de teatro, partidos de fútbol, eventos corporativos, eventos culturales y sociales.</p>
-			</div>
-		</section>
 		<section class="grupo_eventos grupo_event">
-			<h3 class="titulo_event">¡¡¡Nuestros Ultimos Eventos!!!</h3>
 			<div class="eventos">
 				<?php		
 				 $sql = "SELECT *

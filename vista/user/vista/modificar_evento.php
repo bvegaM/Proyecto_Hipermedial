@@ -113,65 +113,9 @@
     }
     </script>
 
-
-    <script type="text/javascript">
-        function cargarDatos() {
-            <?php  
-            while ($row = $result->fetch_assoc()){ 
-            ?>
-
-            if(("<?php echo $row['eat_ast_id']; ?>")==1){
-            document.getElementById("ga").style.visibility = "visible";
-            document.getElementById("gp").style.visibility = "visible";
-            document.getElementById("ga").value = "<?php echo $row['eat_num_asientos']; ?>";
-            document.getElementById("gp").value = "<?php echo $row['eat_precio']; ?>";
-            }
-            if(("<?php echo $row['eat_ast_id']; ?>")==2){
-            document.getElementById("ta").style.visibility = "visible";
-            document.getElementById("tp").style.visibility = "visible";
-            document.getElementById("ta").value = "<?php echo $row['eat_num_asientos']; ?>";
-            document.getElementById("tp").value = "<?php echo $row['eat_precio']; ?>";
-            }
-            if(("<?php echo $row['eat_ast_id']; ?>")==3){
-            document.getElementById("pa").style.visibility = "visible";
-            document.getElementById("pp").style.visibility = "visible";
-            document.getElementById("pa").value = "<?php echo $row['eat_num_asientos']; ?>";
-            document.getElementById("pp").value = "<?php echo $row['eat_precio']; ?>";
-            }
-            if(("<?php echo $row['eat_ast_id']; ?>")==4){
-            document.getElementById("va").style.visibility = "visible";
-            document.getElementById("vp").style.visibility = "visible";
-            document.getElementById("va").value = "<?php echo $row['eat_num_asientos']; ?>";
-            document.getElementById("vp").value = "<?php echo $row['eat_precio']; ?>";
-            }
-            if(("<?php echo $row['eat_ast_id']; ?>")==5){
-            document.getElementById("ba").style.visibility = "visible";
-            document.getElementById("bp").style.visibility = "visible";
-            document.getElementById("ba").value = "<?php echo $row['eat_num_asientos']; ?>";
-            document.getElementById("bp").value = "<?php echo $row['eat_precio']; ?>";
-            }
-                
-            <?
-            } 
-            ?>
-        }
-    </script>
-
-    <script type="text/javascript">
-
-        function lanzadera(){
-            mostrar();
-            cargarDatos();
-    }
-    
-    </script>
-
-
 </head>
 
-
-
-<body onload="lanzadera();">
+<body onload="mostrar();">
 
     <?php
 		$codigo = $_GET["codigo"];
@@ -198,10 +142,9 @@
 			}
   		?>
     <div class="content">
-        <h1 class="logo">Crear <span>Evento</span></h1>
+        <h1 class="logo">Modificar <span>Evento</span></h1>
         <div class="contact-wrapper">
             <div class="contact-form">
-                <h3>Crea tu Evento de acuerdo a tus comodidades</h3>
                 <form action="../controladores/php/modificar_evento.php" method="post" onsubmit="return validar()"
                     enctype="multipart/form-data">
 
@@ -241,26 +184,26 @@
                         </select>
                     </p>
                     <div class="block-ast">
-                        <input type="checkbox" value="general" class="check" id="g" onclick="mostrar();">
+                        <!-- <input type="checkbox" value="general" class="check" id="g" onclick="mostrar();"> -->
                         <span class="chkT">General</span>
-                        <input type="text" name="genA" placeholder="N° asientos" style="visibility:hidden;" id="ga">
-                        <input type="text" name="genP" placeholder="precio" style="visibility:hidden;" id="gp">
-                        <input type="checkbox" value="general" class="check" id="t" onclick="mostrar();">
+                        <input type="text" name="genA" placeholder="N° asientos" value="" id="ga">
+                        <input type="text" name="genP" placeholder="precio" value="" id="gp">
+                        <!-- <input type="checkbox" value="general" class="check" id="t" onclick="mostrar();"> -->
                         <span class="chkT">Tribuna</span>
-                        <input type="text" name="tribA" placeholder="N° asientos" style="visibility:hidden;" id="ta">
-                        <input type="text" name="tribP" placeholder="precio" style="visibility:hidden;" id="tp">
-                        <input type="checkbox" value="general" class="check" id="p" onclick="mostrar();">
+                        <input type="text" name="tribA" placeholder="N° asientos" value="" id="ta">
+                        <input type="text" name="tribP" placeholder="precio" value="" id="tp">
+                        <!-- <input type="checkbox" value="general" class="check" id="p" onclick="mostrar();"> -->
                         <span class="chkT">Palco</span>
-                        <input type="text" name="palA" placeholder="N° asientos" style="visibility:hidden;" id="pa">
-                        <input type="text" name="palP" placeholder="precio" style="visibility:hidden;" id="pp">
-                        <input type="checkbox" value="general" class="check" id="v" onclick="mostrar();">
+                        <input type="text" name="palA" placeholder="N° asientos" value="" id="pa">
+                        <input type="text" name="palP" placeholder="precio" value="" id="pp">
+                        <!-- <input type="checkbox" value="general" class="check" id="v" onclick="mostrar();"> -->
                         <span class="chkT">VIP</span>
-                        <input type="text" name="vipA" placeholder="N° asientos" style="visibility:hidden;" id="va">
-                        <input type="text" name="vipP" placeholder="precio" style="visibility:hidden;" id="vp">
-                        <input type="checkbox" value="general" class="check" id="b" onclick="mostrar();">
+                        <input type="text" name="vipA" placeholder="N° asientos" value="" id="va">
+                        <input type="text" name="vipP" placeholder="precio" value="" id="vp">
+                        <!-- <input type="checkbox" value="general" class="check" id="b" onclick="mostrar();"> -->
                         <span class="chkT">BOX</span>
-                        <input type="text" name="boxA" placeholder="N° asientos" style="visibility:hidden;" id="ba">
-                        <input type="text" name="boxP" placeholder="precio" style="visibility:hidden;" id="bp">
+                        <input type="text" name="boxA" placeholder="N° asientos" value="" id="ba">
+                        <input type="text" name="boxP" placeholder="precio" value="" id="bp">
                     </div>
                     <p class="block">
                         <input type="submit" value="Registrar" class="button" id="botonA">
