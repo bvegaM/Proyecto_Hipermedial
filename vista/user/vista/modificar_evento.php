@@ -9,6 +9,7 @@
 <?php
         $codigo = $_GET["codigo"];
         $evento = $_GET["evt"];
+        $_SESSION['codigoEvento']=$evento;
 		include '../../../config/conexion.php';
 		
 		$sql="SELECT *
@@ -36,6 +37,8 @@
     <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoJ3ujl8XgJZMJ3H8Hfu4wXa41tY_Eozc"></script>
     <script type="text/javascript">
+
+    
     function initialize() {
         // Creating map object
         var map = new google.maps.Map(document.getElementById('map_canvas'), {
@@ -147,59 +150,83 @@
             <div class="contact-form">
                 <form action="../controladores/php/modificar_evento.php" method="post" onsubmit="return validar()"
                     enctype="multipart/form-data">
+                    <?php
+                       
+                       
+                        $sql= "SELECT * FROM t_eventos WHERE evt_id=$evento;";
+                        
 
-                    <p>
-                        <input type="text" name="id" id="id" value="<?php echo $evento ?>" hidden="hidden">
-                        <input id="txtLat" name="latitud" type="text" style="color:red;" hidden="hidden"
-                            value="<?php echo $row['evt_latitud'] ?>" />
-                        <input id="txtLng" name="longitud" type="text" style="color:red;" hidden="hidden"
-                            value="<?php echo $row['evt_longitud'] ?>" />
-                        <label for="nombres">Nombre del Evento</label>
-                        <input type="text" name="nombres" id="nombres" value="<?php echo $row['evt_desc'] ?>">
-                    </p>
-                    <p>
-                        <label for="fecha">Fecha del Evento</label>
-                        <input type="text" name="fecha" id="fecha" value="<?php echo $row['evt_fec_evento'] ?>">
-                    </p>
-                    <p>
-                        <label for="direccion">Dirección</label>
-                        <input type="text" name="direccion" id="direccion" value="<?php echo $row['evt_direccion'] ?>">
-                    </p>
-                    <p>
-                        <label for="imagenUpdate">Selecciona una Imagen</label>
-                        <input type='file' name='imagenUpdate' id='imagen' size='10' style="font-size:10px;">
-                    </p>
-                    <p>
-                        <?php
-					    	$sql="SELECT * FROM T_EMPRESAS";
-							$result = $conn->query($sql);
-						?>
-                        <label for="mepresa">Empresa</label>
-                        <select name="emp" id="emp">
-                            <?php
-								while($row = $result->fetch_assoc()){
-									echo "<option value=".$row['emp_id'].">".$row['emp_nombre']."</option>";
-								}
-							?>
-                        </select>
-                    </p>
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+
+                            while($row = $result->fetch_assoc()) {
+                            ?>
+                                <p>
+                                    <input type="text" name="id" id="id" value="<?php echo $evento ?>" hidden="hidden">
+                                    <input id="txtLat" name="latitud" type="text" style="color:red;" hidden="hidden"
+                                        value="<?php echo $row['evt_latitud'] ?>" />
+                                    <input id="txtLng" name="longitud" type="text" style="color:red;" hidden="hidden"
+                                        value="<?php echo $row['evt_longitud'] ?>" />
+                                    <label for="nombres">Nombre del Evento</label>
+                                    <input type="text" name="nombres" id="nombres" value="<?php echo $row['evt_desc'] ?>">
+                                </p>
+                                <p>
+                                    <label for="fecha">Fecha del Evento</label>
+                                    <input type="text" name="fecha" id="fecha" value="<?php echo $row['evt_fec_evento'] ?>">
+                                </p>
+                                <p>
+                                    <label for="direccion">Dirección</label>
+                                    <input type="text" name="direccion" id="direccion" value="<?php echo $row['evt_direccion'] ?>">
+                                </p>
+                                <p>
+                                    <label for="imagenUpdate">Selecciona una Imagen</label>
+                                    <input type='file' name='imagenUpdate' id='imagen' size='10' style="font-size:10px;">
+                                </p>
+                                <p>
+                                    <?php
+                                        $sql="SELECT * FROM T_EMPRESAS";
+                                        $result = $conn->query($sql);
+                                    ?>
+                                    <label for="mepresa">Empresa</label>
+                                    <select name="emp" id="emp">
+                                        <?php
+                                            while($row = $result->fetch_assoc()){
+                                                echo "<option value=".$row['emp_id'].">".$row['emp_nombre']."</option>";
+                                            }
+                                        ?>
+                                    </select>
+                                </p>
+                                <?php
+                            }
+                        } else {
+                            echo "<p>Ha ocurrido un error inesperado !</p>";
+                            echo "<p>" . mysqli_error($conn) . "</p>";
+                        }
+                        $conn->close();
+                        ?> 
+                               
                     <div class="block-ast">
                         <!-- <input type="checkbox" value="general" class="check" id="g" onclick="mostrar();"> -->
                         <span class="chkT">General</span>
                         <input type="text" name="genA" placeholder="N° asientos" value="" id="ga">
                         <input type="text" name="genP" placeholder="precio" value="" id="gp">
+                        <br>
                         <!-- <input type="checkbox" value="general" class="check" id="t" onclick="mostrar();"> -->
                         <span class="chkT">Tribuna</span>
                         <input type="text" name="tribA" placeholder="N° asientos" value="" id="ta">
                         <input type="text" name="tribP" placeholder="precio" value="" id="tp">
+                        <br>
                         <!-- <input type="checkbox" value="general" class="check" id="p" onclick="mostrar();"> -->
                         <span class="chkT">Palco</span>
                         <input type="text" name="palA" placeholder="N° asientos" value="" id="pa">
                         <input type="text" name="palP" placeholder="precio" value="" id="pp">
+                        <br>
                         <!-- <input type="checkbox" value="general" class="check" id="v" onclick="mostrar();"> -->
                         <span class="chkT">VIP</span>
                         <input type="text" name="vipA" placeholder="N° asientos" value="" id="va">
                         <input type="text" name="vipP" placeholder="precio" value="" id="vp">
+                        <br>
                         <!-- <input type="checkbox" value="general" class="check" id="b" onclick="mostrar();"> -->
                         <span class="chkT">BOX</span>
                         <input type="text" name="boxA" placeholder="N° asientos" value="" id="ba">
