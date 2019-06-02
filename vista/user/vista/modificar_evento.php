@@ -134,7 +134,7 @@
 			}
   	?>
     <div class="content">
-        <h1 class="logo">Crear <span>Evento</span></h1>
+        <h1 class="logo">Edita Tu <span>Evento</span></h1>
         <div class="contact-wrapper">
             <div class="contact-form">
                 <h3>Crea tu Evento de acuerdo a tus comodidades</h3>
