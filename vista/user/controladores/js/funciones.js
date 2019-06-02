@@ -52,6 +52,7 @@ function cambiarCantidad(){
 	
 	var tI=Number(document.getElementById("totalI").value);
 	t=tI+t1+t2+t3+t4+t5
+	alert(t)
 	tI.value=t
 	document.getElementById("totalI").value=t;
 	document.getElementById("total").innerHTML="$"+t;
