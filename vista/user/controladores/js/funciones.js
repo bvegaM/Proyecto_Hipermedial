@@ -50,7 +50,7 @@ function cambiarCantidad(){
 		document.getElementById("d5").style.visibility="visible";
 	}
 	t=t1+t2+t3+t4+t5
-	document.getElementById("total").innetHTML="$"+t;
+	document.getElementById("total").innerHTML="$"+t;
 }
 function cambio(){
 	document.getElementById("cant").value=0
