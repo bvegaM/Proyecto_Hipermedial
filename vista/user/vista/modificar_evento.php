@@ -4,6 +4,19 @@
         header("Location: ../../../public/vista/login.html");
     }
 ?>
+<?php
+		include '../../../config/conexion.php';
+		$codigo = $_GET["codigo"];
+		$evento = $_GET["evt"];
+		
+		$sql1="SELECT *
+			   FROM T_EVENTOS
+			   WHERE evt_id =$evento";
+	
+		$result1=$conn->query($sql1);
+		$row1=$result1->fetch_assoc();
+	
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,13 +34,13 @@
             // Creating map object
             var map = new google.maps.Map(document.getElementById('map_canvas'), {
                 zoom: 12,
-                center: new google.maps.LatLng(-2.897583, -78.997963),
+                center: new google.maps.LatLng(<?php echo $row1["evt_latitud"] ?>, <?php echo $row1["evt_longitud"] ?>),
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             });
 
             // creates a draggable marker to the given coords
             var vMarker = new google.maps.Marker({
-                position: new google.maps.LatLng(-2.897583, -78.997963),
+                position: new google.maps.LatLng(<?php echo $row1["evt_latitud"] ?>, <?php echo $row1["evt_longitud"] ?>),
                 draggable: true
             });
 
@@ -120,18 +133,6 @@
 			   header("Location: ../../../public/vista/blanco.html"); 
 			}
   	?>
-  	<?php
-		$codigo = $_GET["codigo"];
-		$evento = $_GET["evt"];
-		
-		$sql1="SELECT *
-			   FROM T_EVENTOS
-			   WHERE evt_id =$evento";
-	
-		$result1=$conn->query($sql1);
-		$row1=$result1->fetch_assoc();
-	
-	?>
     <div class="content">
         <h1 class="logo">Crear <span>Evento</span></h1>
         <div class="contact-wrapper">
