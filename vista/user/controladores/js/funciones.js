@@ -49,7 +49,10 @@ function cambiarCantidad(){
 		document.getElementById("c5").innerHTML=c
 		document.getElementById("d5").style.visibility="visible";
 	}
-	t=t1+t2+t3+t4+t5
+	
+	var tI=Number(document.getElementById("totalI").value);
+	t=tI+t1+t2+t3+t4+t5
+	tI.value=tI
 	document.getElementById("total").innerHTML="$"+t;
 }
 function cambio(){
