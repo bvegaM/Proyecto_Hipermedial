@@ -28,8 +28,6 @@
 				   usu_telefono = '$telefono',
 				   usu_correo = '$correo',
 				   usu_fec_nac = '$fecha',
-				   usu_modifica = 'admin',
-				   usu_fec_modifica = '$fechaC'
 				WHERE usu_id = $id";
 		}else{
 		$carpeta_destino = $_SERVER['DOCUMENT_ROOT'] .'/Proyecto_Hipermedial/images';
@@ -46,9 +44,7 @@
 				   usu_correo = '$correo',
 				   usu_fec_nac = '$fecha',
 				   usu_img = '$contenido',
-				   usu_img_tipo = '$tipo_archivo',
-				   usu_modifica = 'admin',
-				   usu_fec_modifica = '$fechaC'
+				   usu_img_tipo = '$tipo_archivo'
 				WHERE usu_id = $id";
 		};
 		if($conn->query($sql) === TRUE){
