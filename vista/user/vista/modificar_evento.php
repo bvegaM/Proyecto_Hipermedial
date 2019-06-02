@@ -4,8 +4,6 @@
         header("Location: ../../../public/vista/login.html");
     }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
