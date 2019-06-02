@@ -79,7 +79,7 @@
 		</div>
 	</nav> 
     <div class="content">
-        <h1 class="logo">Tus <span>Compra</span></h1>
+        <h1 class="logo">Tus <span>Eventos</span></h1>
         <div class="contact-wrapper-compras">               
             <div class="contact-form-compras">
                 <h3>Mis Compras</h3>
