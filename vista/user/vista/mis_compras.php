@@ -104,7 +104,7 @@
 									if($row1["fc_estado_entrega"] == 'ES'){
 										echo "<td>EN ESPERA</td>";
 									}
-									if($row1["fc_estado_entrega"] == 'NP'){
+									if($row1["fc_estado_entrega"] == 'EP'){
 										echo "<td>EN PROGRESO</td>";
 									}
 									if($row1["fc_estado_entrega"] == 'R'){
