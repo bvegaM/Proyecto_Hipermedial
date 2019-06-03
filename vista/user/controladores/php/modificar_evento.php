@@ -67,59 +67,60 @@
 			$result1=$conn->query($sql1);
 			$row1=$result1->fetch_assoc();
 			if($row1["count"] == 1){
-				echo "hola";
+				echo "General";
 			}else{
 				echo "chao";
 			}
 		}
 		if($aT!="" && $pT !=""){
-			$sql1="SELECT COUNT(*) as count 
+			$sql2="SELECT COUNT(*) as count 
 				   FROM T_EVENTOS_ASIENTOS
 				   WHERE eat_evt_id = $evt AND
 	  					 eat_ast_id = 2";
-			$result1=$conn->query($sql1);
-			$row1=$result1->fetch_assoc();
-				if($row1["count"] == 1){
-					echo "hola";
-				}else{
-					echo "chao";
-				}
-		}
-		if($aP!="" && $pP !=""){
-			$sql1="SELECT COUNT(*) as count 
-				   FROM T_EVENTOS_ASIENTOS
-				   WHERE eat_evt_id = $evt AND
-	  					 eat_ast_id = 4";
-			$result1=$conn->query($sql1);
-			$row1=$result1->fetch_assoc();
-				if($row1["count"] == 1){
-					echo "hola";
+			$result2=$conn->query($sql2);
+			$row2=$result2->fetch_assoc();
+				if($row2["count"] == 1){
+					echo "Tribuna";
 				}else{
 					echo "chao";
 				}
 		}
 		if($aV!="" && $pV !=""){
-			$sql1="SELECT COUNT(*) as count 
+			$sql3="SELECT COUNT(*) as count 
 				   FROM T_EVENTOS_ASIENTOS
 				   WHERE eat_evt_id = $evt AND
 	  					 eat_ast_id = 3";
-			$result1=$conn->query($sql1);
-			$row1=$result1->fetch_assoc();
-				if($row1["count"] == 1){
-					echo "hola";
+			$resul3=$conn->query($sql3);
+			$row3=$result3->fetch_assoc();
+				if($row3["count"] == 1){
+					echo "VIP";
 				}else{
 					echo "chao";
 				}
 		}
+		if($aP!="" && $pP !=""){
+			$sql4="SELECT COUNT(*) as count 
+				   FROM T_EVENTOS_ASIENTOS
+				   WHERE eat_evt_id = $evt AND
+	  					 eat_ast_id = 4";
+			$result4=$conn->query($sql4);
+			$row4=$result4->fetch_assoc();
+				if($row4["count"] == 1){
+					echo "Palco";
+				}else{
+					echo "chao";
+				}
+		}
+		
 		if($aB!="" && $pB !=""){
-			$sql1="SELECT COUNT(*) as count 
+			$sql5="SELECT COUNT(*) as count 
 				   FROM T_EVENTOS_ASIENTOS
 				   WHERE eat_evt_id = $evt AND
 	  					 eat_ast_id = 5";
-			$result1=$conn->query($sql1);
-			$row1=$result1->fetch_assoc();
-				if($row1["count"] == 1){
-					echo "hola";
+			$result5=$conn->query($sql5);
+			$row5=$result5->fetch_assoc();
+				if($row5["count"] == 1){
+					echo "BOX";
 				}else{
 					echo "chao";
 				}
