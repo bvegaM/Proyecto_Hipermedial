@@ -49,11 +49,11 @@
 			$result1=$conn->query($sql1);
 		}
 		if($aP!="" && $pP !=""){
-			$sql1="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pP,$aP,$evt_id,4)";
+			$sql1="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pP,$aP,$evt_id,3)";
 			$result1=$conn->query($sql1);
 		}
 		if($aV!="" && $pV !=""){
-			$sql1="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pV,$aV,$evt_id,3)";
+			$sql1="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pV,$aV,$evt_id,4)";
 			$result1=$conn->query($sql1);
 		}
 		if($aB!="" && $pB !=""){
