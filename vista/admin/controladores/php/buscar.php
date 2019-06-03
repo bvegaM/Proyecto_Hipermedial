@@ -49,10 +49,8 @@
 		$row = $result->fetch_assoc();
 		
 		$sql1="SELECT *
-			  FROM T_FACTURA_CABECERA,
-			  	   T_FACTURA_DETALLE,
-				   T_EVENTOS
-			  WHERE fc_id = $evento'";
+			  FROM T_FACTURA_CABECERA
+			  WHERE fc_id = $evento";
 		
 		$result1 = $conn->query($sql1);
 ?>
