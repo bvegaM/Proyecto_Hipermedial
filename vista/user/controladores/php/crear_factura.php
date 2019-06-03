@@ -22,6 +22,8 @@
 	echo $cf5;
 
 	echo $cf1;
+	echo $cf2;
+	echo $cf3;
 	if($cf4 ==""){
 		echo "hola";
 	}
