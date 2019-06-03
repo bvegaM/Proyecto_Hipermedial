@@ -110,7 +110,12 @@
 										echo "<td>RECIBIDO</td>";
 									}
 									echo "<td>"."<a href='ver_factura.php?fc=".$row1["fc_id"]."&codigo=".$row1["fc_usu_id"]."'>"."<i class='far fa-eye' style='color:greenyellow;'></i>"."</a>"."</td>";
-									echo "<td class='link_compra'><a href='../controladores/php/anular_factura.php?fc=".$row1["fc_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
+									if($row1["fc_estado_elimina"] == 'N'){
+										echo "<td class='link_compra'><a href='../controladores/php/anular_factura.php?fc=".$row1["fc_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
+									}else{
+										echo "<td>ANULADA</td>"
+									}
+									
 								echo "</tr>";
 							}
 						?>
