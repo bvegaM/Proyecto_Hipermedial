@@ -169,11 +169,11 @@
                     	<input type="text" name="tribA" placeholder="N° asientos" style="visibility:hidden;" id="ta">
                     	<input type="text" name="tribP" placeholder="precio" style="visibility:hidden;" id="tp">
                     	<input type="checkbox" value="general" class="check" id="p" onclick="mostrar();">
-                    	<span class="chkT">Palco</span>
+                    	<span class="chkT">VIP</span>
                     	<input type="text" name="palA" placeholder="N° asientos" style="visibility:hidden;" id="pa">
                     	<input type="text" name="palP" placeholder="precio" style="visibility:hidden;" id="pp">
                     	<input type="checkbox" value="general" class="check" id="v" onclick="mostrar();">
-                    	<span class="chkT">VIP</span>
+                    	<span class="chkT">Palco</span>
                     	<input type="text" name="vipA" placeholder="N° asientos" style="visibility:hidden;" id="va">
                     	<input type="text" name="vipP" placeholder="precio" style="visibility:hidden;" id="vp">
                     	<input type="checkbox" value="general" class="check" id="b" onclick="mostrar();">
