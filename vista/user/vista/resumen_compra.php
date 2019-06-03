@@ -109,7 +109,7 @@
                     </p>	
                    <p>
                    	 <label for="cant">Cantidad de Boletos </label>
-                   	 <input type="number" name="cant" id="cant" value="0" min="0" max="3" step="1" onclick="cambiarCantidad();" onkeyup="cambiarCantidad();">
+                   	 <input type="number" name="cant" id="cant" value="0" min="0" max="3" step="1" onchange="cambiarCantidad();" onkeyup="cambiarCantidad();">
                    </p>
                    <p style="text-align:center display:block;"> 
                    	 Te recordamos que solo puedes escoger hasta tres boletos ya que más de 3 es excederse del limite acordado.

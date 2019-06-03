@@ -59,9 +59,8 @@ function cambiarCantidad(){
 	
 	var tI=Number(document.getElementById("totalI").value);
 	t=pT1+pT2+pT3
-	alert()
 	document.getElementById("total").innerHTML="$"+t;
 }
 function cambio(){
-	document.getElementById("cant").value=0
+	document.getElementById("cant").value=1
 }
