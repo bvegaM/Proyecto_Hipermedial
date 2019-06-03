@@ -18,12 +18,9 @@
 		
 		$sql1="SELECT *
 			  FROM T_FACTURA_CABECERA,
-			  	   T_FACTURA_DETALLE,
-				   T_EVENTOS
-			  WHERE fc_id = fd_fc_id AND
-			  		evt_id = fd_evt_id AND
-					fc_usu_id=$codigo AND
-					fc_estado_elimina ='N'";
+			  	   T_USUARIOS
+			  WHERE fc_usu_id = usu_id AND
+			  		fc_usu_id=$codigo";
 		
 		$result1 = $conn->query($sql1);
 	?>
@@ -95,7 +92,6 @@
                    			<th style="border-bottom:1px solid black;">N° Factura</th>
                    			<th style="border-bottom:1px solid black;">fecha de Emisión</th>
                    			<th style="border-bottom:1px solid black;">Estado</th>
-                   			<th style="border-bottom:1px solid black;">Nombre del Evento</th>
                    			<th style="border-bottom:1px solid black;">Ver</th>
                    			<th style="border-bottom:1px solid black;">Anular Factura</th>
                    		</tr>
@@ -105,7 +101,6 @@
 									echo "<td>".$row1["fc_id"]."</td>";
 									echo "<td>".$row1["evt_fecha"]."</td>";
 									echo "<td>".$row1["fd_estado_entrega"]."</td>";
-									echo "<td>".$row1["evt_desc"]."</td>";
 									echo "<td>Ver</td>";
 									echo "<td class='link_compra'><a href='../controladores/php/anular_factura.php?fc=".$row1["fc_id"]."&fd=".$row1["fd_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
 								echo "</tr>";
