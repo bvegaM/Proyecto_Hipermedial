@@ -8,18 +8,10 @@ function cambiarCantidad(){
 	var c = Number(document.getElementById("cant").value)
 	var a = Number(document.getElementById("ast").value)
 	var t=  0;
-	var pT1 =Number(document.getElementById("pT1").value)
-	var pT2 =Number(document.getElementById("pT2").value)
-	var pT3 =Number(document.getElementById("pT3").value)
-	var pT4 =Number(document.getElementById("pT4").value)
-	var pT5 =Number(document.getElementById("pT5").value)
-	alert(pT1.value)
-	alert(pT2.value)
-	alert(pT3.value)
-	alert(pT4.value)
-	alert(pT5.value)
+	var pT1=0,pT2=0,pT3=0,pT4=0,pT5=0;
 	if(a == 1){
 		var pu = Number(document.getElementById("pU1").value)
+		pT1 =Number(document.getElementById("pT1").value)
 		var pT = pu*c
 		document.getElementById("c1").innerHTML=c
 		document.getElementById("p1").innerHTML="$"+pT
@@ -29,6 +21,7 @@ function cambiarCantidad(){
 	}
 	if(a == 2){
 		var pu = Number(document.getElementById("pU2").value)
+		pT2 =Number(document.getElementById("pT2").value)
 		var pT = pu*c
 		document.getElementById("p2").innerHTML="$"+pT
 		document.getElementById("c2").innerHTML=c
@@ -38,6 +31,7 @@ function cambiarCantidad(){
 	}
 	if(a == 3){
 		var pu = Number(document.getElementById("pU3").value)
+		pT3 =Number(document.getElementById("pT3").value)
 		var pT = pu*c
 		document.getElementById("p3").innerHTML="$"+pT
 		document.getElementById("c3").innerHTML=c
@@ -47,6 +41,7 @@ function cambiarCantidad(){
 	}
 	if(a == 4){
 		var pu = Number(document.getElementById("pU4").value)
+		pT4 =Number(document.getElementById("pT4").value)
 		var pT = pu*c
 		document.getElementById("p4").innerHTML="$"+pT
 		document.getElementById("c4").innerHTML=c
@@ -56,6 +51,7 @@ function cambiarCantidad(){
 	}
 	if(a == 5){
 		var pu = Number(document.getElementById("pU5").value)
+		pT5 =Number(document.getElementById("pT5").value)
 		var pT = pu*c
 		document.getElementById("p5").innerHTML="$"+pT
 		document.getElementById("c5").innerHTML=c
@@ -63,7 +59,6 @@ function cambiarCantidad(){
 		document.getElementById("cF5").value=c
 		document.getElementById("d5").style.visibility="visible";
 	}
-	
 	var tI=Number(document.getElementById("totalI").value);
 	t=pT1+pT2+pT3+pT4+pT5
 	document.getElementById("total").innerHTML="$"+t;
