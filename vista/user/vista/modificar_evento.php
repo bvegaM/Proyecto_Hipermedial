@@ -215,8 +215,8 @@
 						?>
                     	<input type="checkbox" value="general" class="check" id="p" onclick="mostrar();">
                     	<span class="chkT">VIP</span>
-                    	<input type="text" name="palA" placeholder="N° asientos" style="visibility:hidden;" id="pa" value="<?php echo $rowg["eat_num_asientos"]?>">
-                    	<input type="text" name="palP" placeholder="precio" style="visibility:hidden;" id="pp" value="<?php echo $rowg["eat_precio"]?>">
+                    	<input type="text" name="vipA" placeholder="N° asientos" style="visibility:hidden;" id="pa" value="<?php echo $rowg["eat_num_asientos"]?>">
+                    	<input type="text" name="vipP" placeholder="precio" style="visibility:hidden;" id="pp" value="<?php echo $rowg["eat_precio"]?>">
                     	<?php
 							$sqlg="SELECT *
 								   FROM T_EVENTOS_ASIENTOS,
@@ -229,8 +229,8 @@
 						?>
                     	<input type="checkbox" value="general" class="check" id="v" onclick="mostrar();">
                     	<span class="chkT">Palco</span>
-                    	<input type="text" name="vipA" placeholder="N° asientos" style="visibility:hidden;" id="va" value="<?php echo $rowg["eat_num_asientos"]?>">
-                    	<input type="text" name="vipP" placeholder="precio" style="visibility:hidden;" id="vp" value="<?php echo $rowg["eat_precio"]?>">
+                    	<input type="text" name="palA" placeholder="N° asientos" style="visibility:hidden;" id="va" value="<?php echo $rowg["eat_num_asientos"]?>">
+                    	<input type="text" name="palP" placeholder="precio" style="visibility:hidden;" id="vp" value="<?php echo $rowg["eat_precio"]?>">
                     	<?php
 							$sqlg="SELECT *
 								   FROM T_EVENTOS_ASIENTOS,
