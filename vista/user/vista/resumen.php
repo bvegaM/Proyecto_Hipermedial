@@ -137,7 +137,17 @@
 			<article style="display:block; margin: 0 auto;">
 				<h1 style="color:red; font-size:40px; margin:0;"><?php echo $row1["evt_desc"]?></h1>
 				<h2>Fecha: <?php echo $row1["evt_fec_evento"]?></h2>
-				<h2>Direccion: <?php echo $row1["evt_direccion"]?></h2>	
+				<h2>Direccion: <?php echo $row1["evt_direccion"]?></h2>
+				<p>
+					<h2>Calificar</h2>
+					<select name="cal" id="cal">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>	
+				</p>
 			</article>
 			<?php echo "<img class='img_event' src='data:".$row1['evt_img_tipo']."; base64,".base64_encode($row1['evt_img'])."'>"; ?>
 		</section>
