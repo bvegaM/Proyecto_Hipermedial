@@ -26,24 +26,22 @@
 
 	//insertamos la factura cabecera
 	$sql = "INSERT INTO T_FACTURA_CABECERA(0,'$fecha',-79.45,29.48,'ES','N',$codigo)";
-
-	echo $pt1;
-	echo $pt2;
-	echo $pt3;
-
-	if($cf1 ==""){
+	$result=$conn->query($sql);
+	$evt_id = $conn->insert_id;
+	
+	if($cf1 !=""){
+		
+	}
+	if($cf2 !=""){
 		echo "hola";
 	}
-	if($cf2 ==""){
+	if($cf3 !=""){
 		echo "hola";
 	}
-	if($cf3 ==""){
+	if($cf4 !=""){
 		echo "hola";
 	}
-	if($cf4 ==""){
-		echo "hola";
-	}
-	if($cf5 ==""){
+	if($cf5 !=""){
 		echo "hola";
 	}
 	
