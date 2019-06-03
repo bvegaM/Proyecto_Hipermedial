@@ -4,7 +4,7 @@
 	$cali = isset($_POST["cali"]) ? trim($_POST["cali"]): null;
 	$idcal = isset($_POST["idcal"]) ? trim($_POST["idcal"]): null;
 	$codigo = isset($_POST["user"]) ? trim($_POST["user"]): null;
-	$promedio = ($cali+$estado)/2;
+	$promedio = round(($cali+$estado)/2);
 	$sql = "UPDATE T_EVENTOS
 			SET evt_calificacion = $promedio
 			WHERE evt_id = $idcal";
