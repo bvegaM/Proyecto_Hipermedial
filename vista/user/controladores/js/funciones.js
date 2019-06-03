@@ -13,11 +13,11 @@ function cambiarCantidad(){
 	var pT3 =Number(document.getElementById("pT3").value)
 	var pT4 =Number(document.getElementById("pT4").value)
 	var pT5 =Number(document.getElementById("pT5").value)
-	alert(pT1)
-	alert(pT2)
-	alert(pT3)
-	alert(pT4)
-	alert(pT5)
+	alert(pT1.value)
+	alert(pT2.value)
+	alert(pT3.value)
+	alert(pT4.value)
+	alert(pT5.value)
 	if(a == 1){
 		var pu = Number(document.getElementById("pU1").value)
 		var pT = pu*c
@@ -69,5 +69,5 @@ function cambiarCantidad(){
 	document.getElementById("total").innerHTML="$"+t;
 }
 function cambio(){
-	document.getElementById("cant").value=1
+	document.getElementById("cant").value=0
 }
