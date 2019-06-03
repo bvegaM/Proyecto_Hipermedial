@@ -145,8 +145,6 @@
 								echo "<td></td>";
                    				echo "<td style='font-weight: bolder;'>Iva:</td>";
                    				echo "<td id='iva'>0.12%</td>";
-								echo "<td>"."<input type='text' name='total' id='totalI' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
-								echo "<td>"."<input type='text' name='total' id='totalR' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
                    		echo "</tr>";
 						echo "<tr>";
                    				echo "<td></td>";
@@ -154,10 +152,18 @@
                    				echo "<td style='font-weight: bolder;'>Total:</td>";
                    				echo "<td id='totalTo'>$".($row1["sub"]+$row1["sub"]*0.12)."</td>";
                    		echo "</tr>";
-						
+						$sql1="SELECT *
+							   FROM T_FACTURA_CABECERA,
+	 								T_FACTURA_DETALLE
+									WHERE fd_fc_id = fc_id AND
+										  fd_fc_id = $fc";
+		
+						$result1 = $conn->query($sql1);
+						$row1 = $result1->fetch_assoc();
+						echo "<input type='text' value='".$row1["fc_latitud"]."'>";
+                  		echo "<input type='text' value='".$row1["fc_longitud"]."'>";
 						?>
-                  		<input type="text" value=" <?php echo $row1["fc_latitud"];?>">
-                  		<input type="text" value="<?php echo $row1["fc_longitud"];?>">
+                  		
                    	</table>   
             	</div>
 			  </form>
