@@ -12,7 +12,7 @@
 
 		$sql = "ISNERT INTO T_EMPRESAS VALUES(0,'$cedula','$nombres','$direccion','$telefono','N',$estado)";
 
-		$result=$conn->query($sql);
+		//$result=$conn->query($sql);
 
-		header("Location: ../../vista/empresa.php?codigo=".$codigo);
+		//header("Location: ../../vista/empresa.php?codigo=".$codigo);
 ?>
