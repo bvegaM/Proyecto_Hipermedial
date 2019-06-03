@@ -160,8 +160,6 @@
 		
 						$result1 = $conn->query($sql1);
 						$row1 = $result1->fetch_assoc();
-						echo "<input type='text' value='".$row1["fc_latitud"]."'>";
-                  		echo "<input type='text' value='".$row1["fc_longitud"]."'>";
 						?>
                   		
                    	</table>   
@@ -169,7 +167,6 @@
 			  </form>
 			</div>
        	<div id="map" style="width: 100%; height: 500px;"></div>
-
 		<script async defer
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoJ3ujl8XgJZMJ3H8Hfu4wXa41tY_Eozc&callback=initMap">
 		</script>
@@ -188,7 +185,7 @@
 		  function calculateAndDisplayRoute(directionsService, directionsDisplay) {
 			directionsService.route({
 			  origin: {lat: -2.919045 , lng: -79.014853 },  // Haight.
-			  destination: {lat:, lng: },  // Ocean Beach.
+			  destination: {lat:<?php echo $row1["fc_latitud"]?>, lng:<?php echo $row1["fc_longitud"]?> },  // Ocean Beach.
 			  // Note that Javascript allows us to access the constant
 			  // using square brackets and a string value as its
 			  // "property."
