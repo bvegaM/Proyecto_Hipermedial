@@ -16,8 +16,10 @@
 		$row = $result->fetch_assoc();
 		
 		$sql1="SELECT *
-			  FROM T_EVENTOS where
-			  evt_estado_elimina = 'N'";
+			  FROM T_EVENTOS,
+			  	   T_USUARIOS
+			  where evt_estado_elimina = 'N' AND
+			  		evt_usu_id = usu_id";
 		
 		$result1 = $conn->query($sql1);
 	?>
@@ -92,9 +94,8 @@
                    		<tr>
                    			<th style="border-bottom:1px solid black;">Nombre del Evento</th>
                    			<th style="border-bottom:1px solid black;">Fecha del Evento</th>
-                   			<th style="border-bottom:1px solid black;">Asientos</th>
-                   			<th style="border-bottom:1px solid black;">Precio</th>
-                   			<th style="border-bottom:1px solid black;">Vendidos</th>
+                   			<th style="border-bottom:1px solid black;">Creador</th>
+                   			<th style="border-bottom:1px solid black;">Calificación</th>
                    			<th style="border-bottom:1px solid black;">Eliminar Evento</th>
                    		</tr>
                    		<?php
@@ -102,9 +103,8 @@
 								echo "<tr class='datos'>";
 									echo "<td>".$row1["evt_desc"]."</td>";
 									echo "<td>".$row1["evt_fec_evento"]."</td>";
-									echo "<td>".$row1["evt_asientos"]."</td>";
-									echo "<td>$".$row1["evt_precio"]."</td>";
-									echo "<td>".$row1["evt_vendidos"]."</td>";
+									echo "<td>".$row1["usu_nombres"]."</td>";
+									echo "<td>$".$row1["evt_calificacion"]."</td>";
 									if($row1["evt_estado_elimina"] == 'N'){
 										echo "<td class='link_compra'><a href='../controladores/php/eliminar_evento.php?evt=".$row1["evt_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
 									}else{
