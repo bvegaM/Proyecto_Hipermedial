@@ -38,7 +38,7 @@
 				evt_longitud=$longitud,
 				evt_emp_id = $empresa
 			WHERE evt_id = $evt";
-		echo $sql;
+		$result = $conn->query($sql);
 	}else{
 		//IMAGEN
     $archivo_objetivo = fopen($_FILES['imagenUpdate']['tmp_name'],'r');
@@ -56,5 +56,6 @@
 				evt_img = '$contenido',
 				evt_img_tipo = '$tipo_archivo'
 			WHERE evt_id = $evt";	
+		$result = $conn->query($sql);
 	}
 ?>
