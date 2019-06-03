@@ -138,7 +138,7 @@
 				<h1 style="color:red; font-size:40px; margin:0;"><?php echo $row1["evt_desc"]?></h1>
 				<h2>Fecha: <?php echo $row1["evt_fec_evento"]?></h2>
 				<h2>Direccion: <?php echo $row1["evt_direccion"]?></h2>
-				<form action="../controladores/php/califcar.php" method="post" style="display:grid;  grid-template-columns: 1fr 1fr 1fr; margin-bottom:10px;">
+				<form action="../controladores/php/calificar.php" method="post" style="display:grid;  grid-template-columns: 1fr 1fr 1fr; margin-bottom:10px;">
 					<h2 style="margin:0;">Calificar</h2>
 					<input type="text" name="cali" value="<?php echo $row1["evt_calificacion"] ?>" hidden="hidden">
 					<input type="text" name="idcal" value="<?php echo $row1["evt_id"] ?>" hidden="hidden">
