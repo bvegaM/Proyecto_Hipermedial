@@ -72,6 +72,7 @@
 					   	   eat_precio = $pG
 					   WHERE eat_evt_id = $evt AND
 					   		 eat_ast_id = 1";
+				$result1=$conn->query($sql1);
 			}else{
 				$sql1="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$evt_id,1)";
 				$result1=$conn->query($sql1);
@@ -86,13 +87,13 @@
 			$row2=$result2->fetch_assoc();
 				if($row2["count"] == 1){
 					$sql2="UPDATE T_EVENTOS_ASIENTOS
-					   SET eat_num_asientos = $aG,
-					   	   eat_precio = $pG
+					   SET eat_num_asientos = $aT,
+					   	   eat_precio = $pT
 					   WHERE eat_evt_id = $evt AND
 					   		 eat_ast_id = 2";
 					$result2=$conn->query($sql2);
 				}else{
-					$sql2="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$evt_id,1)";
+					$sql2="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pT,$aT,$evt_id,1)";
 					$result2=$conn->query($sql2);
 				}
 		}
@@ -105,13 +106,13 @@
 			$row3=$result3->fetch_assoc();
 				if($row3["count"] == 1){
 					$sql3="UPDATE T_EVENTOS_ASIENTOS
-					   SET eat_num_asientos = $aG,
-					   	   eat_precio = $pG
+					   SET eat_num_asientos = $av,
+					   	   eat_precio = $pv
 					   WHERE eat_evt_id = $evt AND
 					   		 eat_ast_id = 3";
 					$result3=$conn->query($sql3);
 				}else{
-					$sql3="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$evt_id,1)";
+					$sql3="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pV,$aV,$evt_id,1)";
 					$result3=$conn->query($sql3);
 				}
 		}
@@ -124,13 +125,13 @@
 			$row4=$result4->fetch_assoc();
 				if($row4["count"] == 1){
 					$sql4="UPDATE T_EVENTOS_ASIENTOS
-					   SET eat_num_asientos = $aG,
-					   	   eat_precio = $pG
+					   SET eat_num_asientos = $aP,
+					   	   eat_precio = $pP
 					   WHERE eat_evt_id = $evt AND
 					   		 eat_ast_id = 4";
 					$result4=$conn->query($sql4);
 				}else{
-					$sql4="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$evt_id,1)";
+					$sql4="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pP,$aP,$evt_id,1)";
 					$result4=$conn->query($sql4);
 				}
 		}
@@ -144,13 +145,13 @@
 			$row5=$result5->fetch_assoc();
 				if($row5["count"] == 1){
 					$sql5="UPDATE T_EVENTOS_ASIENTOS
-					   SET eat_num_asientos = $aG,
-					   	   eat_precio = $pG
+					   SET eat_num_asientos = $aB,
+					   	   eat_precio = $pB
 					   WHERE eat_evt_id = $evt AND
 					   		 eat_ast_id = 5";
 					$result5=$conn->query($sql5);
 				}else{
-					$sql5="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$evt_id,1)";
+					$sql5="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pB,$aB,$evt_id,1)";
 					$result5=$conn->query($sql5);
 				}
 		}
