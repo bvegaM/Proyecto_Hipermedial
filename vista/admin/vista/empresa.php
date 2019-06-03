@@ -103,7 +103,7 @@
 									echo "<td>".$row1["emp_ruc"]."</td>";
 									echo "<td>".$row1["emp_direccion"]."</td>";
 									echo "<td>".$row1["emp_telefono"]."</td>";
-									echo "<td class='link_compra'><a href='../controladores/php/eliminar_empresa.php?emp=".$row1["emp_id"]."&codigo=".$codigo."'><i class='fas fa-edit' style='color:greenyellow;'></i></a></td>";
+									echo "<td class='link_compra'><a href='../controladores/php/update_empresa.php?emp=".$row1["emp_id"]."&codigo=".$codigo."'><i class='fas fa-edit' style='color:greenyellow;'></i></a></td>";
 									if($row1["emp_estado_elimina"] == 'N'){
 										echo "<td class='link_compra'><a href='../controladores/php/eliminar_empresa.php?emp=".$row1["emp_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
 									}else{
