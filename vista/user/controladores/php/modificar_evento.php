@@ -155,5 +155,5 @@
 					$result5=$conn->query($sql5);
 				}
 		}
-		header("Location: ../../vista/eventos_creadoV.php?codigo=".$id);
+		header("Location: ../../vista/eventos_creados.php?codigo=".$id);
 ?>
