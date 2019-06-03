@@ -88,7 +88,7 @@
         }
     </script>
 </head>
-<body>  
+<body onload="initialize();">  
  	<header class="header">
 		<div class="cabecera">
 			<h1 class="logo"><i class="fas fa-ticket-alt"></i>Ticket Home</h1>
