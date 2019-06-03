@@ -4,10 +4,11 @@ btnMenu.addEventListener('click',function(){
 	'use strict';
 	menu.classList.toggle('mostrar');
 });
+var t1=0,t2=0,t3=0,t4=0,t5=0;
 function cambiarCantidad(){
 	var c = Number(document.getElementById("cant").value)
 	var a = Number(document.getElementById("ast").value)
-	var t=  0,t1=0,t2=0,t3=0,t4=0,t5=0;
+	var t=  0
 	if(a == 1){
 		var pT1 =Number(document.getElementById("pT1").value)
 		var pu = Number(document.getElementById("pU1").value)
