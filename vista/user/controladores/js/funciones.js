@@ -18,7 +18,7 @@ function cambiarCantidad(){
 		document.getElementById("c1").innerHTML=c
 		document.getElementById("p1").innerHTML="$"+pT1
 		document.getElementById("cF1").value=c
-		alert(pT1.value)
+		alert(document.getElementById("pT1").value)
 		document.getElementById("d1").style.visibility="visible";
 	}
 	if(a == 2){
