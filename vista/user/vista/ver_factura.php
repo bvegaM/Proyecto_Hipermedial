@@ -126,55 +126,7 @@
 						}
 						?>
                    		
-                   	</table>
-                   </div>
-                </form>>
-                <h3>Tu Factura</h3>
-                <form action="../controladores/php/crear_factura.php" method="post" onsubmit="return validar()" enctype="multipart/form-data" style="display:block;">
-                   <div class="cabecera" style="background: white;">
-                   	<i class="fas fa-ticket-alt" style="font-size:35px; color:red;"></i>
-                   	<h2 style="margin:0; font-size:20px; color:black;">TIcket Home</h2>
-                   	<article class="datos">
-                   		<p class="datos-info"><?php echo $row["usu_nombres"]?></p>
-                   		<p class="datos-info"><?php echo $row["usu_cedula"]?></p>
-                   		<p class="datos-info"><?php echo $row["usu_direccion"]?></p>
-                   	</article>
-                   </div>
-                   <div class="detalle" style="background:white;">
-                   	<table style="width:100%; color:black; text-align:center;">
-                   		<tr>
-                   			<th >Cantidad</th>
-                   			<th>Descripcion</th>
-                   			<th>Precio U</th>
-                   			<th>Precio</th>
-                   		</tr>
-                   		<br>
-                   		<br>
-                   		<br>
-                   		<?php
-	
-						 $sql1="SELECT * 
-			   					FROM T_EVENTOS,
-								T_FACTURA_CABECERA,
-								T_FACTURA_DETALLE
-								WHERE fc_id = fd_fc_id AND
-									  evt_id = fc_evt_id AND
-									  fd_cd_id =$fc";
-		
-						$result1 = $conn->query($sql1);
-						while($row1 = $result1->fetch_assoc()){
-								echo "<tr>";
-									echo "<td>".$row1["fd_cantidad"]."</td>";
-									echo "<td style='font-size:13px;'>."$row1["fd_desc"] ".</td>";
-									echo "<td>$".$row1["fd_precio"]."</td>";
-									echo "<td>$".$row1["fd_total"]."</td>";
-								echo "</tr>";
-						}
-						?>
-                   		
-                   	</table>
-                   </div>
-                </form>
+                   	</table>   
             </div>
         </div>
     </div>
