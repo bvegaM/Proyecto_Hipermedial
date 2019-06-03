@@ -148,6 +148,16 @@
 						<option value="5">5</option>
 					</select>	
 				</div>
+				<?php
+					$count =0;
+					for ($i = 1; $i <= 5; $i++) {
+						if($i < $row1["evt_calificacion"]){
+							echo "<i class='fas fa-star' style='color:yellow'></i>";
+						}else{
+							echo "<i class='fas fa-star' style='color:white'></i>";
+						}
+					}
+				?>
 			</article>
 			<?php echo "<img class='img_event' src='data:".$row1['evt_img_tipo']."; base64,".base64_encode($row1['evt_img'])."'>"; ?>
 		</section>
