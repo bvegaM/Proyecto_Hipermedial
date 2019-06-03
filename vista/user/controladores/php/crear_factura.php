@@ -8,6 +8,7 @@
 	$fecha = date("y-m-d h:i:s",time());
 	$codigo = isset($_POST["codigo"]) ? trim($_POST["codigo"]): null;
 	$evento = isset($_POST["evento"]) ? trim($_POST["evento"]): null;
+	$nombre =isset($_POST["nombreE"]) ? mb_strtoupper(trim($_POST["nombreE"]),"UTF-8"): null;
 
 	//precios totales
 	$pt1 =  isset($_POST["pT1"])?trim($_POST["pT1"]):null; 
@@ -27,22 +28,27 @@
 	//insertamos la factura cabecera
 	$sql = "INSERT INTO T_FACTURA_CABECERA VALUES(0,'$fecha',-79.45,29.48,'ES','N',$codigo)";
 	$result=$conn->query($sql);
-	$evt_id = $conn->insert_id;
+	$fc_id = $conn->insert_id;
 	
 	if($cf1 !=""){
-		
+		$sql1= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre'.' '.'General',$cf1,$pt1,$fc_id,$evento)";
+		$result1=$conn->query($sql1);
 	}
 	if($cf2 !=""){
-		echo "hola";
+		$sql2= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre'.' '.'General',$cf1,$pt1,$fc_id,$evento)";
+		$result2=$conn->query($sql2);
 	}
 	if($cf3 !=""){
-		echo "hola";
+		$sql3= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre'.' '.'General',$cf1,$pt1,$fc_id,$evento)";
+		$result3=$conn->query($sql3);
 	}
 	if($cf4 !=""){
-		echo "hola";
+		$sql4= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre'.' '.'General',$cf1,$pt1,$fc_id,$evento)";
+		$result4=$conn->query($sql4);
 	}
 	if($cf5 !=""){
-		echo "hola";
+		$sql5= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre'.' '.'General',$cf1,$pt1,$fc_id,$evento)";
+		$result5=$conn->query($sql5);
 	}
 	
 ?>

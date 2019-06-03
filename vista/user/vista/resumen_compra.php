@@ -220,7 +220,14 @@
                    				echo "<td id='totalTo'>$".($row1["eat_precio"]+$row1["eat_precio"]*0.12)."</td>";
                    		echo "</tr>";	
 						?>
-                   		
+                   		<?php
+							$sqlN="SELECT *
+								   FROM T_EVENTOS
+								   WHERE evt_id = $evt";
+							$resultN=$conn->query($sqlN);
+							$rowN=$resultN->fecth_assoc();
+						?>
+                  		<input type="text" name="nombreE" value="<?php echo $rowN["evt_desc"]?>" hidden="hidden">
                    	</table>
                    </div>
                     <p class="block">
