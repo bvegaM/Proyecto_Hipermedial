@@ -32,7 +32,7 @@
 	if($nombre_archivo == ""){
 		$sql = "UPDATE T_EVENTOS
 			SET evt_desc='$nombres',
-				evt_fecha='$fecha',
+				evt_fec_evento='$fecha',
 				evt_direccion='$direccion',
 				evt_latitud=$latitud,
 				evt_longitud=$longitud,
@@ -48,7 +48,7 @@
 
 	$sql = "UPDATE T_EVENTOS
 			SET evt_desc='$nombres',
-				evt_fecha='$fecha',
+				evt_fec_evento='$fecha',
 				evt_direccion='$direccion',
 				evt_latitud=$latitud,
 				evt_longitud=$longitud,
