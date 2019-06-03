@@ -12,50 +12,55 @@ function cambiarCantidad(){
 	if(a == 1){
 		var pu = Number(document.getElementById("pU1").value)
 		pT1 =Number(document.getElementById("pT1").value)
-		var pT = pu*c
+		var pTg = pu*c
+		pT1.value = pTg
 		document.getElementById("c1").innerHTML=c
-		document.getElementById("p1").innerHTML="$"+pT
-		document.getElementById("pT1").value=pT
+		document.getElementById("p1").innerHTML="$"+pTg
+		document.getElementById("pT1").value=pTg
 		document.getElementById("cF1").value=c
 		document.getElementById("d1").style.visibility="visible";
 	}
 	if(a == 2){
 		var pu = Number(document.getElementById("pU2").value)
 		pT2 =Number(document.getElementById("pT2").value)
-		var pT = pu*c
-		document.getElementById("p2").innerHTML="$"+pT
+		var pTt = pu*c
+		pT2.value = pTt
+		document.getElementById("p2").innerHTML="$"+pTt
 		document.getElementById("c2").innerHTML=c
-		document.getElementById("pT2").value=pT
+		document.getElementById("pT2").value=pTt
 		document.getElementById("cF2").value=c
 		document.getElementById("d2").style.visibility="visible";
 	}
 	if(a == 3){
 		var pu = Number(document.getElementById("pU3").value)
 		pT3 =Number(document.getElementById("pT3").value)
-		var pT = pu*c
-		document.getElementById("p3").innerHTML="$"+pT
+		var pTp = pu*c
+		pT3.value = pTp
+		document.getElementById("p3").innerHTML="$"+pTp
 		document.getElementById("c3").innerHTML=c
-		document.getElementById("pT3").value=pT
+		document.getElementById("pT3").value=pTp
 		document.getElementById("cF3").value=c
 		document.getElementById("d3").style.visibility="visible";
 	}
 	if(a == 4){
 		var pu = Number(document.getElementById("pU4").value)
 		pT4 =Number(document.getElementById("pT4").value)
-		var pT = pu*c
-		document.getElementById("p4").innerHTML="$"+pT
+		var pTv = pu*c
+		pT4.value = pTv
+		document.getElementById("p4").innerHTML="$"+pTv
 		document.getElementById("c4").innerHTML=c
-		document.getElementById("pT4").value=pT
+		document.getElementById("pT4").value=pTv
 		document.getElementById("cF4").value=c
 		document.getElementById("d4").style.visibility="visible";
 	}
 	if(a == 5){
 		var pu = Number(document.getElementById("pU5").value)
 		pT5 =Number(document.getElementById("pT5").value)
-		var pT = pu*c
-		document.getElementById("p5").innerHTML="$"+pT
+		var pTb = pu*c
+		pT5.value = pTb
+		document.getElementById("p5").innerHTML="$"+pTb
 		document.getElementById("c5").innerHTML=c
-		document.getElementById("pT5").value=pT
+		document.getElementById("pT5").value=pTb
 		document.getElementById("cF5").value=c
 		document.getElementById("d5").style.visibility="visible";
 	}
