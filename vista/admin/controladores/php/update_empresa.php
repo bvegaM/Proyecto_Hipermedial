@@ -18,8 +18,8 @@
 					emp_telefono = '$telefono',
 					emp_cat_id = $estado
 				WHERE emp_id = $id";
+		echo $sql;
+		//$result=$conn->query($sql);
 
-		$result=$conn->query($sql);
-
-		header("Location: ../../vista/empresa.php?codigo=".$codigo);
+		//header("Location: ../../vista/empresa.php?codigo=".$codigo);
 ?>
