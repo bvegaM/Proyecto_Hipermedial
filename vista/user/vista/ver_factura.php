@@ -119,7 +119,7 @@
 						while($row1 = $result1->fetch_assoc()){
 								echo "<tr>";
 									echo "<td>".$row1["fd_cantidad"]."</td>";
-									echo "<td style='font-size:13px;'>."$row1["fd_desc"] ".</td>";
+									echo "<td style='font-size:13px;'>".$row1["fd_desc"] ".</td>";
 									echo "<td>$".$row1["fd_precio"]."</td>";
 									echo "<td>$".$row1["fd_total"]."</td>";
 								echo "</tr>";
