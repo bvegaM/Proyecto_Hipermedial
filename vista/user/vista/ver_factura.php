@@ -140,7 +140,22 @@
                    				echo "<td style='font-weight: bolder;'>Subtotal:</td>";
                    				echo "<td id='total'>$".$row1["sub"]."</td>";
                    		echo "</tr>";
+						echo "<tr>";
+                   				echo "<td></td>";
+								echo "<td></td>";
+                   				echo "<td style='font-weight: bolder;'>Iva:</td>";
+                   				echo "<td id='iva'>0.12%</td>";
+								echo "<td>"."<input type='text' name='total' id='totalI' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
+								echo "<td>"."<input type='text' name='total' id='totalR' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
+                   		echo "</tr>";
+						echo "<tr>";
+                   				echo "<td></td>";
+								echo "<td></td>";
+                   				echo "<td style='font-weight: bolder;'>Total:</td>";
+                   				echo "<td id='totalTo'>$".($row1["sub"]+$row1["sub"]*0.12)."</td>";
+                   		echo "</tr>";	
 						?>
+                  		
                    	</table>   
             	</div>
 			  </form>
