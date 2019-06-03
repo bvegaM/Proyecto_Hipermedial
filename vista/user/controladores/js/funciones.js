@@ -18,7 +18,7 @@ function cambiarCantidad(){
 		var pT = pu*c
 		document.getElementById("c1").innerHTML=c
 		document.getElementById("p1").innerHTML="$"+pT
-		pT1.value=pT
+		pT1.value=pT.value
 		alert(pT1)
 		document.getElementById("cF1").value=c
 		document.getElementById("d1").style.visibility="visible";
