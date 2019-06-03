@@ -95,7 +95,7 @@
 				if($row3["count"] == 1){
 					echo "VIP";
 				}else{
-					echo "chao";
+					echo "chao v";
 				}
 		}
 		if($aP!="" && $pP !=""){
@@ -108,7 +108,7 @@
 				if($row4["count"] == 1){
 					echo "Palco";
 				}else{
-					echo "chao";
+					echo "chao p";
 				}
 		}
 		
@@ -122,7 +122,7 @@
 				if($row5["count"] == 1){
 					echo "BOX";
 				}else{
-					echo "chao";
+					echo "chao b";
 				}
 		}
 ?>
