@@ -33,7 +33,7 @@
 		include '../../../config/conexion.php';
 		
 		$sql="SELECT *
-			  FROM T_EMPRESA
+			  FROM T_EMPRESAS
 			  WHERE emp_id = $emp";
 	
 		$sql1="SELECT *
