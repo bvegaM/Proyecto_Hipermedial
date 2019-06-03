@@ -132,7 +132,7 @@
 					$result4=$conn->query($sql4);
 				}else{
 					$sql4="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pP,$aP,$evt_id,4)";
-					echo $sql4
+					echo $sql4;
 					$result4=$conn->query($sql4);
 				}
 		}
