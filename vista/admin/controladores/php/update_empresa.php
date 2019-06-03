@@ -8,7 +8,7 @@
 		$cedula = isset($_POST["cedula"]) ? trim($_POST["cedula"]): null;
 		$direccion = isset($_POST["direccion"]) ? mb_strtoupper(trim($_POST["direccion"]),"UTF-8"):null;
 		$telefono = isset($_POST["telefono"]) ? trim($_POST["telefono"]):null;
-		$estado = isset($_POST["estado"]) ? mb_strtoupper(trim($_POST["estado"]),"UTF-8"):null;
+		$estado = isset($_POST["ast"]) ? mb_strtoupper(trim($_POST["ast"]),"UTF-8"):null;
 
 
 		$sql = "UPDATE T_EMPRESAS
