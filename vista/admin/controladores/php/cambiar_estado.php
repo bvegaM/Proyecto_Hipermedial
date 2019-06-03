@@ -10,9 +10,8 @@
 		  SET fc_estado_entrega ='$estado'
 		  WHERE fc_id=$fc";
 	
-	echo $sql;
-	//$result=$conn->query($sql);
+	$result=$conn->query($sql);
 
-	//header("Location: ../../vista/facturas.php?codigo=".$codigo);
+	header("Location: ../../vista/facturas.php?codigo=".$codigo);
 
 ?>
