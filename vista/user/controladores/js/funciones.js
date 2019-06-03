@@ -19,6 +19,7 @@ function cambiarCantidad(){
 		document.getElementById("c1").innerHTML=c
 		document.getElementById("p1").innerHTML="$"+pT
 		pT1.value=pT
+		alert(pT1)
 		document.getElementById("cF1").value=c
 		document.getElementById("d1").style.visibility="visible";
 	}
@@ -60,9 +61,6 @@ function cambiarCantidad(){
 	}
 	
 	var tI=Number(document.getElementById("totalI").value);
-	alert(pT1)
-	alert(pT2)
-	alert(pT3)
 	t=pT1+pT2+pT3
 	document.getElementById("total").innerHTML="$"+t;
 }
