@@ -75,10 +75,10 @@
 		</div>
 	</nav>
     <div class="content">
-        <h1 class="logo">Mi <span>Perfil</span></h1>
+        <h1 class="logo"><span>Empresa</span></h1>
         <div class="contact-wrapper" style="display:block;">
             <div class="contact-form">
-                <h3>Este es tu perfil</h3>
+                <h3>Esta es la Empresa Seleccionada</h3>
                 <form action="../controladores/php/update_empresa.php" method="post" enctype="multipart/form-data">
                     <p>
                         <input type="text" name="id" id="id" value="<?php echo $row["emp_id"] ?>" hidden="hidden">
@@ -92,11 +92,11 @@
                     </p>
                     <p>
                         <label for="telefono">Telefono</label>
-                        <input type="text" name="telefono" id="telefono" value="<?php echo $row["usu_telefono"]?>" onkeyup="validarTelefono();validarNumeros(this,'telefono')">
+                        <input type="text" name="telefono" id="telefono" value="<?php echo $row["emp_telefono"]?>" onkeyup="validarTelefono();validarNumeros(this,'telefono')">
                     </p>
                     <p>
                         <label for="direccion">Dirección</label>
-                        <input type="text" name="direccion" id="direccion" value="<?php echo $row["usu_direccion"]?>" onkeyup="validarLetras(this,'direccion')">
+                        <input type="text" name="direccion" id="direccion" value="<?php echo $row["emp_direccion"]?>" onkeyup="validarLetras(this,'direccion')">
                     </p>
                     <p>
                         <?php
