@@ -180,7 +180,7 @@
 		  function calculateAndDisplayRoute(directionsService, directionsDisplay) {
 			directionsService.route({
 			  origin: {lat: -2.919045 , lng: -79.014853 },  // Haight.
-			  destination: {lat: <?php echo $row1["fc_latitud"]?>, lng: <?php echo $row1["fc_longitud"]?>},  // Ocean Beach.
+			  destination: {lat: <?php echo $row1["fc_latitud"];?>, lng: <?php echo $row1["fc_longitud"];?>},  // Ocean Beach.
 			  // Note that Javascript allows us to access the constant
 			  // using square brackets and a string value as its
 			  // "property."
