@@ -83,7 +83,7 @@
     <div class="content">
         <h1 class="logo">Tu<span>Factura</span></h1>
         <div class="contact-wrapper-compras">
-            <div class="contact-form-compras"<h3>Tu Factura</h3>
+            <div class="contact-form-compras">
                 <form action="../controladores/php/crear_factura.php" method="post" onsubmit="return validar()" enctype="multipart/form-data" style="display:block;">
                    <div class="cabecera" style="background: white;">
                    	<i class="fas fa-ticket-alt" style="font-size:35px; color:red;"></i>
@@ -142,7 +142,9 @@
                    		echo "</tr>";
 						?>
                    	</table>   
-            </div>
+            	</div>
+			  </form>
+			</div>
         </div>
     </div>
     <footer class="footer">
