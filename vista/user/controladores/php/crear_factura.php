@@ -31,24 +31,24 @@
 	$fc_id = $conn->insert_id;
 	
 	if($cf1 !=""){
-		$sql1= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre'.' '.'General',$cf1,$pt1,$fc_id,$evento)";
+		$sql1= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre General',$cf1,$pt1,$fc_id,$evento)";
 		echo $sql1;
 		$result1=$conn->query($sql1);
 	}
 	if($cf2 !=""){
-		$sql2= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre'.' '.'General',$cf1,$pt1,$fc_id,$evento)";
+		$sql2= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre Tribuna',$cf1,$pt1,$fc_id,$evento)";
 		$result2=$conn->query($sql2);
 	}
 	if($cf3 !=""){
-		$sql3= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre'.' '.'General',$cf1,$pt1,$fc_id,$evento)";
+		$sql3= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre VIP',$cf1,$pt1,$fc_id,$evento)";
 		$result3=$conn->query($sql3);
 	}
 	if($cf4 !=""){
-		$sql4= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre'.' '.'General',$cf1,$pt1,$fc_id,$evento)";
+		$sql4= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre Palco',$cf1,$pt1,$fc_id,$evento)";
 		$result4=$conn->query($sql4);
 	}
 	if($cf5 !=""){
-		$sql5= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre'.' '.'General',$cf1,$pt1,$fc_id,$evento)";
+		$sql5= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre BOX',$cf1,$pt1,$fc_id,$evento)";
 		$result5=$conn->query($sql5);
 	}
 	
