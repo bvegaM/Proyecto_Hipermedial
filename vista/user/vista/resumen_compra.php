@@ -81,7 +81,7 @@
 		</div>
 	</nav> 
     <div class="content">
-        <h1 class="logo">Revisa TU <span>Compra</span></h1>
+        <h1 class="logo">Revisa Tu <span>Compra</span></h1>
         <div class="contact-wrapper">
             <div class="contact-info">
                 <h3>Selecciona la cantidad de Tickets a comprar</h3>
