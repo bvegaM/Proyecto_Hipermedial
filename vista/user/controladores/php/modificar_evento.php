@@ -71,7 +71,7 @@
 					   SET eat_num_asientos = $aG,
 					   	   eat_precio = $pG
 					   WHERE eat_evt_id = $evt AND
-					   		 eat_ast_id = 1"
+					   		 eat_ast_id = 1";
 			}else{
 				$sql1="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$evt_id,1)";
 				$result1=$conn->query($sql1);
@@ -89,7 +89,7 @@
 					   SET eat_num_asientos = $aG,
 					   	   eat_precio = $pG
 					   WHERE eat_evt_id = $evt AND
-					   		 eat_ast_id = 2"
+					   		 eat_ast_id = 2";
 					$result2=$conn->query($sql2);
 				}else{
 					$sql2="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$evt_id,1)";
@@ -108,7 +108,7 @@
 					   SET eat_num_asientos = $aG,
 					   	   eat_precio = $pG
 					   WHERE eat_evt_id = $evt AND
-					   		 eat_ast_id = 3"
+					   		 eat_ast_id = 3";
 					$result3=$conn->query($sql3);
 				}else{
 					$sql3="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$evt_id,1)";
@@ -127,7 +127,7 @@
 					   SET eat_num_asientos = $aG,
 					   	   eat_precio = $pG
 					   WHERE eat_evt_id = $evt AND
-					   		 eat_ast_id = 4"
+					   		 eat_ast_id = 4";
 					$result4=$conn->query($sql4);
 				}else{
 					$sql4="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$evt_id,1)";
@@ -147,7 +147,7 @@
 					   SET eat_num_asientos = $aG,
 					   	   eat_precio = $pG
 					   WHERE eat_evt_id = $evt AND
-					   		 eat_ast_id = 5"
+					   		 eat_ast_id = 5";
 					$result5=$conn->query($sql5);
 				}else{
 					$sql5="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pG,$aG,$evt_id,1)";
