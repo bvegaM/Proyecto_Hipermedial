@@ -197,7 +197,7 @@
 		
 						$result1 = $conn->query($sql1);
 						$row1 = $result1->fetch_assoc();
-						echo "<input type='text'  name='nombreDesc' value='".$row1["evt_desc"]."' hidden='hidden'>"
+						echo "<input type='text'  name='nombreDesc' value='".$row1["evt_desc"]."' hidden='hidden'>";
 						echo "<tr>";
                    				echo "<td></td>";
 								echo "<td></td>";
