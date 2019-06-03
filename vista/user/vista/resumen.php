@@ -149,12 +149,11 @@
 					</select>	
 				</div>
 				<?php
-					$count =0;
 					for ($i = 1; $i <= 5; $i++) {
 						if($i < $row1["evt_calificacion"]){
-							echo "<i class='fas fa-star' style='color:yellow margin:0 5px;'></i>";
+							echo "<i class='fas fa-star' style='color:yellow; margin:0 5px;'></i>";
 						}else{
-							echo "<i class='fas fa-star' style='color:white margin:0 5px;'></i>";
+							echo "<i class='fas fa-star' style='color:white; margin:0 5px;'></i>";
 						}
 					}
 				?>
