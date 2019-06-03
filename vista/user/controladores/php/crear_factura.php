@@ -41,22 +41,47 @@
 	if($cf1 !=0){
 		$sql1= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre General',$cf1,$pu1,$pt1,$fc_id,$evento)";
 		$result1=$conn->query($sql1);
+		$sqlU="UPDATE T_EVENTOS_ASIENTOS
+			   SET eat_num_asientos = eat_num_asientos - $cf1
+			   WHERE eat_evt_id = $evento AND
+			   		 eat_ast_id = 1";
+		$resultU=$conn->query($sqlU);
 	}
 	if($cf2 !=0){
 		$sql2= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre Tribuna',$cf2,$pu2,$pt2,$fc_id,$evento)";
 		$result2=$conn->query($sql2);
+		$sqlU="UPDATE T_EVENTOS_ASIENTOS
+			   SET eat_num_asientos = eat_num_asientos - $cf2
+			   WHERE eat_evt_id = $evento AND
+			   		 eat_ast_id = 2";
+		$resultU=$conn->query($sqlU);
 	}
 	if($cf3 !=0){
 		$sql3= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre VIP',$cf3,$pu3,$pt3,$fc_id,$evento)";
 		$result3=$conn->query($sql3);
+		$sqlU="UPDATE T_EVENTOS_ASIENTOS
+			   SET eat_num_asientos = eat_num_asientos - $cf3
+			   WHERE eat_evt_id = $evento AND
+			   		 eat_ast_id = 3";
+		$resultU=$conn->query($sqlU);
 	}
 	if($cf4 !=0){
 		$sql4= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre Palco',$cf4,$pu4,$pt4,$fc_id,$evento)";
 		$result4=$conn->query($sql4);
+		$sqlU="UPDATE T_EVENTOS_ASIENTOS
+			   SET eat_num_asientos = eat_num_asientos - $cf4
+			   WHERE eat_evt_id = $evento AND
+			   		 eat_ast_id = 4";
+		$resultU=$conn->query($sqlU);
 	}
 	if($cf5 !=0){
 		$sql5= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre BOX',$cf5,$pu5,$pt5,$fc_id,$evento)";
 		$result5=$conn->query($sql5);
+		$sqlU="UPDATE T_EVENTOS_ASIENTOS
+			   SET eat_num_asientos = eat_num_asientos - $cf5
+			   WHERE eat_evt_id = $evento AND
+			   		 eat_ast_id = 5";
+		$resultU=$conn->query($sqlU);
 	}
 	header("Location: ../../vista/evento.php?codigo=".$codigo);
 ?>
