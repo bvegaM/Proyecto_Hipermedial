@@ -93,7 +93,7 @@
 					   		 eat_ast_id = 2";
 					$result2=$conn->query($sql2);
 				}else{
-					$sql2="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pT,$aT,$evt_id,1)";
+					$sql2="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pT,$aT,$evt_id,2)";
 					$result2=$conn->query($sql2);
 				}
 		}
@@ -112,7 +112,7 @@
 					   		 eat_ast_id = 3";
 					$result3=$conn->query($sql3);
 				}else{
-					$sql3="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pV,$aV,$evt_id,1)";
+					$sql3="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pV,$aV,$evt_id,3)";
 					$result3=$conn->query($sql3);
 				}
 		}
@@ -131,7 +131,8 @@
 					   		 eat_ast_id = 4";
 					$result4=$conn->query($sql4);
 				}else{
-					$sql4="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pP,$aP,$evt_id,1)";
+					$sql4="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pP,$aP,$evt_id,4)";
+					echo $sql4
 					$result4=$conn->query($sql4);
 				}
 		}
@@ -151,9 +152,9 @@
 					   		 eat_ast_id = 5";
 					$result5=$conn->query($sql5);
 				}else{
-					$sql5="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pB,$aB,$evt_id,1)";
+					$sql5="INSERT INTO T_EVENTOS_ASIENTOS VALUES(0,$pB,$aB,$evt_id,5)";
 					$result5=$conn->query($sql5);
 				}
 		}
-		header("Location: ../../vista/eventos_creados.php?codigo=".$id);
+		//ader("Location: ../../vista/eventos_creados.php?codigo=".$id);
 ?>
