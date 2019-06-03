@@ -106,8 +106,8 @@
 			$row3=$result3->fetch_assoc();
 				if($row3["count"] == 1){
 					$sql3="UPDATE T_EVENTOS_ASIENTOS
-					   SET eat_num_asientos = $av,
-					   	   eat_precio = $pv
+					   SET eat_num_asientos = $aV,
+					   	   eat_precio = $pV
 					   WHERE eat_evt_id = $evt AND
 					   		 eat_ast_id = 3";
 					$result3=$conn->query($sql3);
@@ -155,5 +155,5 @@
 					$result5=$conn->query($sql5);
 				}
 		}
-		header("Location: ../../vista/eventos_creados.php?codigo=".$id);
+		header("Location: ../../vista/eventos_creadoV.php?codigo=".$id);
 ?>
