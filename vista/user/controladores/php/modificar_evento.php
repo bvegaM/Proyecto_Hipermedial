@@ -97,6 +97,8 @@
 				}else{
 					echo "chao v";
 				}
+		}else{
+			echo "nada";
 		}
 		if($aP!="" && $pP !=""){
 			$sql4="SELECT COUNT(*) as count 
