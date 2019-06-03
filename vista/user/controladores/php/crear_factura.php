@@ -18,6 +18,7 @@
 	$cf4 =  isset($_POST["cF4"])?trim($_POST["cF4"]):null;
 	$cf5 =  isset($_POST["cF5"])?trim($_POST["cF5"]):null;
 
-	
+	echo $cf4;
+	echo $cf5;
 	
 ?>
