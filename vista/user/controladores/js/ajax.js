@@ -17,3 +17,4 @@ function buscarPorEvento(){
         xmlhttp.open("GET","../controladores/php/buscar.php?evt="+evento+"&usu="+usuario,true);
         xmlhttp.send();
     }
+}
