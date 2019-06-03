@@ -43,19 +43,19 @@
 		$result1=$conn->query($sql1);
 	}
 	if($cf2 !=0){
-		$sql2= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre Tribuna',$cf1,$pu2,$pt2,$fc_id,$evento)";
+		$sql2= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre Tribuna',$cf2,$pu2,$pt2,$fc_id,$evento)";
 		$result2=$conn->query($sql2);
 	}
 	if($cf3 !=0){
-		$sql3= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre VIP',$cf1,$pu3,$pt3,$fc_id,$evento)";
+		$sql3= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre VIP',$cf3,$pu3,$pt3,$fc_id,$evento)";
 		$result3=$conn->query($sql3);
 	}
 	if($cf4 !=0){
-		$sql4= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre Palco',$cf1,$pu4,$pt4,$fc_id,$evento)";
+		$sql4= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre Palco',$cf4,$pu4,$pt4,$fc_id,$evento)";
 		$result4=$conn->query($sql4);
 	}
 	if($cf5 !=0){
-		$sql5= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre BOX',$cf1,$pu5,$pt5,$fc_id,$evento)";
+		$sql5= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre BOX',$cf5,$pu5,$pt5,$fc_id,$evento)";
 		$result5=$conn->query($sql5);
 	}
 	header("Location: ../../vista/evento.php?codigo=".$codigo);
