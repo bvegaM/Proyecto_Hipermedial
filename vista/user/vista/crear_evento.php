@@ -147,7 +147,8 @@
                     </p>
                      <p>
                         <?php
-					    	$sql="SELECT * FROM T_EMPRESAS";
+					    	$sql="SELECT * FROM T_EMPRESAS
+								  WHERE emp_estado_elimina = 'S'";
 							$result = $conn->query($sql);
 						?>
                         <label for="mepresa">Empresa</label>
