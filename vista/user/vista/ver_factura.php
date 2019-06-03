@@ -113,7 +113,7 @@
 								T_FACTURA_DETALLE
 								WHERE fc_id = fd_fc_id AND
 									  evt_id = fd_evt_id AND
-									  fd_cd_id =$fc";
+									  fd_fc_id =$fc";
 		
 						$result1 = $conn->query($sql1);
 						while($row1 = $result1->fetch_assoc()){
