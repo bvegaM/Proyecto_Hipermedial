@@ -3,62 +3,21 @@
 	
 	include '../../../../config/conexion.php';
 	
-	date_default_timezone_set("America/Guayaquil");	
-
-	$evento=isset($_POST["evento"])?trim($_POST["evento"]):null;
-	$codigo =isset($_POST["codigo"])?trim($_POST["codigo"]):null;
-	$eventoId=isset($_POST["eventoId"])?trim($_POST["eventoId"]):null;
-	$precio=isset($_POST["total"])?trim($_POST["total"]):null;
-	$cantidad=isset($_POST["cnt"])?trim($_POST["cnt"]):null;
-	$fechaC = date("y-m-d h:i:s",time());
-
-	$sql="INSERT INTO T_FACTURA_CABECERA VALUES(0,'$fechaC','N',$codigo)";
-	$result =$conn->query($sql);
-	if($eventoId == 1){
-		$id = $conn->insert_id;
-		$facturaD = "INSERT INTO T_FACTURA_DETALLE VALUES(0,'BOLETO PARA GENERAL',$cantidad,$precio,'N',$id,$evento)";
-		$resultFD = $conn->query($facturaD);
-		$update= "UPDATE T_EVENTOS
-				  SET evt_gen =evt_gen-$cantidad,
-				  	  evt_vendidos = evt_vendidos+$cantidad
-				  WHERE evt_id=$evento";
-		$rup=$conn->query($update);
-		header("Location: ../../vista/mis_compras.php?codigo=".$codigo);
-	}
-	if($eventoId == 2){
-		$id = $conn->insert_id;
-		$facturaD = "INSERT INTO T_FACTURA_DETALLE VALUES(0,'BOLETO PARA TRIBUNA',$cantidad,$precio,'N',$id,$evento)";
-		$resultFD = $conn->query($facturaD);
-		$update= "UPDATE T_EVENTOS
-				  SET evt_trib =evt_trib-$cantidad,
-				      evt_vendidos = evt_vendidos+$cantidad
-				  WHERE evt_id=$evento";
-		$rup=$conn->query($update);
-		header("Location: ../../vista/mis_compras.php?codigo=".$codigo);
-	}
-	if($eventoId == 3){
-		$id = $conn->insert_id;
-		$facturaD = "INSERT INTO T_FACTURA_DETALLE VALUES(0,'BOLETO PARA VIP',$cantidad,$precio,'N',$id,$evento)";
-		$resultFD = $conn->query($facturaD);
-		$update= "UPDATE T_EVENTOS
-				  SET evt_vip =evt_vip-$cantidad,
-				  	  evt_vendidos = evt_vendidos+$cantidad
-				  WHERE evt_id=$evento";
-		$rup=$conn->query($update);
-		header("Location: ../../vista/mis_compras.php?codigo=".$codigo);
-	}
-	if($eventoId == 4){
-		$id = $conn->insert_id;
-		$facturaD = "INSERT INTO T_FACTURA_DETALLE VALUES(0,'BOLETO PARA BOX',$cantidad,$precio,'N',$id,$evento)";
-		$resultFD = $conn->query($facturaD);
-		$update= "UPDATE T_EVENTOS
-				  SET evt_box =evt_box-$cantidad,
-				  	  evt_vendidos = evt_vendidos+$cantidad
-				  WHERE evt_id=$evento";
-		$rup=$conn->query($update);
-		header("Location: ../../vista/mis_compras.php?codigo=".$codigo);
-	}
+	//precios totales
+	$pt1 =  isset($_POST["pT1"])?trim($_POST["pT1"]):null; 
+	$pt2 =  isset($_POST["pT2"])?trim($_POST["pT2"]):null;
+	$pt3 =  isset($_POST["pT3"])?trim($_POST["pT3"]):null;
+	$pt4 =  isset($_POST["pT4"])?trim($_POST["pT4"]):null;
+	$pt5 =  isset($_POST["pT5"])?trim($_POST["pT5"]):null;
 	
+	//cantidades
+
+	$cf1 =  isset($_POST["cF1"])?trim($_POST["cF1"]):null;
+	$cf2 =  isset($_POST["cF2"])?trim($_POST["cF2"]):null;
+	$cf3 =  isset($_POST["cF3"])?trim($_POST["cF3"]):null;
+	$cf4 =  isset($_POST["cF4"])?trim($_POST["cF4"]):null;
+	$cf5 =  isset($_POST["cF5"])?trim($_POST["cF5"]):null;
+
 	
 	
 ?>
