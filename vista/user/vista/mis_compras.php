@@ -22,8 +22,8 @@
 			  WHERE fc_id = fd_fc_id AND
 			  		evt_id = fd_evt_id AND
 					fc_usu_id=$codigo AND
-					fc_estado ='N' AND
-					fd_estado = 'N'";
+					fc_estado_elimina ='N' AND
+					fd_estado_elimina = 'N'";
 		
 		$result1 = $conn->query($sql1);
 	?>
@@ -92,21 +92,21 @@
                    <div class="detalle" style="background:white;">
                    	<table style="width:100%; color:black; text-align:center;">
                    		<tr>
+                   			<th style="border-bottom:1px solid black;">N° Factura</th>
+                   			<th style="border-bottom:1px solid black;">fecha de Emisión</th>
+                   			<th style="border-bottom:1px solid black;">Estado</th>
                    			<th style="border-bottom:1px solid black;">Nombre del Evento</th>
-                   			<th style="border-bottom:1px solid black;">Fecha del Evento</th>
-                   			<th style="border-bottom:1px solid black;">Descripcion</th>
-                   			<th style="border-bottom:1px solid black;">Cantidad</th>
-                   			<th style="border-bottom:1px solid black;">Total</th>
+                   			<th style="border-bottom:1px solid black;">Ver</th>
                    			<th style="border-bottom:1px solid black;">Anular Factura</th>
                    		</tr>
                    		<?php
 							while($row1 = $result1->fetch_assoc()){
 								echo "<tr class='datos'>";
+									echo "<td>".$row1["fc_id"]."</td>";
+									echo "<td>".$row1["evt_fecha"]."</td>";
+									echo "<td>".$row1["fd_estado_entrega"]."</td>";
 									echo "<td>".$row1["evt_desc"]."</td>";
-									echo "<td>".$row1["evt_fec_evento"]."</td>";
-									echo "<td>".$row1["fd_desc"]."</td>";
-									echo "<td>".$row1["fd_cantidad"]."</td>";
-									echo "<td>$".$row1["fd_precio"]."</td>";
+									echo "<td>Ver</td>";
 									echo "<td class='link_compra'><a href='../controladores/php/anular_factura.php?fc=".$row1["fc_id"]."&fd=".$row1["fd_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
 								echo "</tr>";
 							}
