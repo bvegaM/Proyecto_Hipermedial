@@ -102,7 +102,12 @@
                         <select name="ast" id="ast" onchange="cambio();">
                   			<?php
 								while($rowe = $resulte->fetch_assoc()){
-									echo "<option value=".$rowe['ast_id'].">".$rowe['ast_desc']."</option>";
+									if($rowe["ast_id"] == $evtId){
+										echo "<option value=".$rowe['ast_id']." selected>".$rowe['ast_desc']."</option>";
+									}else{
+										echo "<option value=".$rowe['ast_id'].">".$rowe['ast_desc']."</option>";
+									}
+									
 								}
 							?>
                         </select>

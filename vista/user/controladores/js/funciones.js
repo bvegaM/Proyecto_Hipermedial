@@ -12,6 +12,7 @@ function cambiarCantidad(){
 	var pT2 =Number(document.getElementById("pT2").value)
 	var pT3 =Number(document.getElementById("pT3").value)
 	alert(c)
+	alert(a)
 	if(a == 1){
 		var pu = Number(document.getElementById("pU1").value)
 		var pT = pu*c
