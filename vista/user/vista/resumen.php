@@ -138,7 +138,7 @@
 				<h1 style="color:red; font-size:40px; margin:0;"><?php echo $row1["evt_desc"]?></h1>
 				<h2>Fecha: <?php echo $row1["evt_fec_evento"]?></h2>
 				<h2>Direccion: <?php echo $row1["evt_direccion"]?></h2>
-				<div style="display:grid;  grid-template-columns: 1fr 1fr; margin-bottom:10px;">
+				<form action="../controladores/php/califcacion.php" method="post" style="display:grid;  grid-template-columns: 1fr 1fr; margin-bottom:10px;">
 					<h2 style="margin:0;">Calificar</h2>
 					<select name="cal" id="cal">
 						<option value="1">1</option>
@@ -147,8 +147,8 @@
 						<option value="4">4</option>
 						<option value="5">5</option>
 					</select>	
-					<a href="">Calificar</a>
-				</div>
+                    <input type="submit" value="Calificar" class="button" id="botonA">
+				</form>
 				<?php
 					for ($i = 1; $i <= 5; $i++) {
 						if($i <= $row1["evt_calificacion"]){
