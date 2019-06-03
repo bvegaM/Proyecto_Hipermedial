@@ -8,7 +8,12 @@ function cambiarCantidad(){
 	var c = Number(document.getElementById("cant").value)
 	var a = Number(document.getElementById("ast").value)
 	var t=  0;
-	var t1=0,t2=0,t3=0,t4=0,t5=0;
+	var pT1 =Number(document.getElementById("pT1").value)
+	var pT2 =Number(document.getElementById("pT2").value)
+	var pT3 =Number(document.getElementById("pT3").value)
+	var pT4 =Number(document.getElementById("pT4").value)
+	var pT5 =Number(document.getElementById("pT5").value)
+	
 	if(a == 1){
 		var pu = Number(document.getElementById("pU1").value)
 		var pT = pu*c
@@ -61,7 +66,7 @@ function cambiarCantidad(){
 	}
 	
 	var tI=Number(document.getElementById("totalI").value);
-	t=tI+t1+t2+t3+t4+t5
+	t=pT1+pT2+pT3+pT4+pT5
 	document.getElementById("total").innerHTML="$"+t;
 }
 function cambio(){

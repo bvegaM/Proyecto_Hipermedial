@@ -176,7 +176,7 @@
 								 	echo "<td id='p".$row1["ast_id"]."'>$".$row1["eat_precio"]."</td>";
 									echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
 								 	echo "<td>"."<input type='text'  id='pU".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
-								 	echo "<td>"."<input type='text'  id='pT".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
+								 	echo "<td>"."<input type='text'  id='pT".$row1["ast_id"]."' value='0' hidden='hidden'>"."</td>";
 								 	echo "<td>"."<input type='text'  id='cF".$row1["ast_id"]."' value='0' hidden='hidden'>"."</td>";
 								echo "</tr>"; 
 							 }
