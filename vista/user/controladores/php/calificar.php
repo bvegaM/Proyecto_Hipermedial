@@ -9,5 +9,5 @@
 			SET evt_calificacion = $promedio
 			WHERE evt_id = $idcal";
 	$result = $conn->query($sql);
-	header("location: ../../vista/resumen.php?codigo=".$id."&evt=".$idcal);
+	header("location: ../../vista/resumen.php?codigo=".$codigo."&evt=".$idcal);
 ?>
