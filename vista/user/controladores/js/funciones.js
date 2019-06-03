@@ -76,29 +76,40 @@ function cambio(){
 
 function elimina(){
 	var i =  Number(document.getElementById("el").value)
+	var t = 0
+	var ti = 0
 	if (i == 1){
+		t1=0
 		document.getElementById("c1").innerHTML=0
 		document.getElementById("cF1").value=0
 		document.getElementById("d1").style.visibility="hidden";
 	}
 	if (i == 2){
+		t2=0
 		document.getElementById("c2").innerHTML=0
 		document.getElementById("cF2").value=0
 		document.getElementById("d2").style.visibility="hidden";
 	}
 	if (i == 3){
+		t3=0
 		document.getElementById("c3").innerHTML=0
 		document.getElementById("cF3").value=0
 		document.getElementById("d3").style.visibility="hidden";
 	}
 	if (i == 4){
+		t4=0
 		document.getElementById("c4").innerHTML=0
 		document.getElementById("cF4").value=0
 		document.getElementById("d4").style.visibility="hidden";
 	}
 	if (i == 5){
+		t5=0
 		document.getElementById("c5").innerHTML=0
 		document.getElementById("cF5").value=0
 		document.getElementById("d5").style.visibility="hidden";
 	}
+	t=t1+t2+t3+t4+t5
+	ti=(t*0.12)+t
+	document.getElementById("total").innerHTML="$"+t;
+	document.getElementById("totalTo").innerHTML="$"+ti;
 }
