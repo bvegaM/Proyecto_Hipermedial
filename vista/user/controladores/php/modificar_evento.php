@@ -4,7 +4,7 @@
 	date_default_timezone_set("America/Guayaquil");	
 
 	$id = isset($_POST["id"]) ? trim($_POST["id"]): null;
-
+	$evt = isset($_POST["event"]) ? trim($_POST["event"]): null;
 	//DATOS PARA CREAR EVENTO
 	$fechaC = date("y-m-d h:i:s",time());
 	$nombres =isset($_POST["nombres"]) ? mb_strtoupper(trim($_POST["nombres"]),"UTF-8"): null;
@@ -28,8 +28,19 @@
 	$pP = isset($_POST["palP"]) ? trim($_POST["palP"]): null;
 	$pV = isset($_POST["vipP"]) ? trim($_POST["vipP"]): null;
 	$pB = isset($_POST["boxP"]) ? trim($_POST["boxP"]): null;
-	
-	//IMAGEN
+
+	if($nombre_archivo == ""){
+		$sql = "UPDATE T_EVENTOS
+			SET evt_desc='$nombres',
+				evt_fecha='$fecha',
+				evt_direccion='$direccion',
+				evt_latitud=$latitud,
+				evt_longitud=$longitud,
+				evt_emp_id = $empresa
+			WHERE evt_id = $evt";
+		echo $sql;
+	}else{
+		//IMAGEN
     $archivo_objetivo = fopen($_FILES['imagenUpdate']['tmp_name'],'r');
     $contenido=fread($archivo_objetivo,$tamano_archivo);
     $contenido = addslashes($contenido);
@@ -40,5 +51,10 @@
 				evt_fecha='$fecha',
 				evt_direccion='$direccion',
 				evt_latitud=$latitud,
-				evt_longitud=$longitud";
+				evt_longitud=$longitud,
+				evt_emp_id = $empresa,
+				evt_img = '$contenido',
+				evt_img_tipo = '$tipo_archivo'
+			WHERE evt_id = $evt";	
+	}
 ?>

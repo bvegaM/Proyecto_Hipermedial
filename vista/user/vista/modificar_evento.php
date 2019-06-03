@@ -142,6 +142,7 @@
                 <form action="../controladores/php/crear_evento.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
                  	<p>
                         <input type="text" name="id" id="id" value="<?php echo $codigo ?>" hidden="hidden">
+                        <input type="text" name="event" id="id" value="<?php echo $evento ?>" hidden="hidden">
                         <input id="txtLat" name="latitud" type="text" style="color:red;" hidden="hidden" value="<?php echo $row1["evt_latitud"] ?>"/>
                     	<input id="txtLng"  name="longitud" type="text" style="color:red;" hidden="hidden" value="<?php echo $row1["evt_longitud"] ?>" />
                         <label for="nombres">Nombre del Evento</label>
