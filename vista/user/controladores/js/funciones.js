@@ -58,6 +58,9 @@ function cambiarCantidad(){
 	}
 	
 	var tI=Number(document.getElementById("totalI").value);
+	alert(pT1)
+	alert(pT2)
+	alert(pT3)
 	t=pT1+pT2+pT3
 	document.getElementById("total").innerHTML="$"+t;
 }
