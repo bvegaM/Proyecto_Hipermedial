@@ -147,6 +147,7 @@
 						<option value="4">4</option>
 						<option value="5">5</option>
 					</select>	
+					<a href="">Calificar</a>
 				</div>
 				<?php
 					for ($i = 1; $i <= 5; $i++) {
