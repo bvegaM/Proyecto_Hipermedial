@@ -25,7 +25,7 @@
 	$cf5 =  isset($_POST["cF5"])?trim($_POST["cF5"]):null;
 
 	//insertamos la factura cabecera
-	$sql = "INSERT INTO T_FACTURA_CABECERA(0,'$fecha',-79.45,29.48,'ES','N',$codigo)";
+	$sql = "INSERT INTO T_FACTURA_CABECERA VALUES(0,'$fecha',-79.45,29.48,'ES','N',$codigo)";
 	$result=$conn->query($sql);
 	$evt_id = $conn->insert_id;
 	
