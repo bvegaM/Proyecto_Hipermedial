@@ -138,7 +138,7 @@
 				<h1 style="color:red; font-size:40px; margin:0;"><?php echo $row1["evt_desc"]?></h1>
 				<h2>Fecha: <?php echo $row1["evt_fec_evento"]?></h2>
 				<h2>Direccion: <?php echo $row1["evt_direccion"]?></h2>
-				<div style="display:grid;  grid-template-columns: 1fr 1fr;">
+				<div style="display:grid;  grid-template-columns: 1fr 1fr; margin-bottom:10px;">
 					<h2 style="margin:0;">Calificar</h2>
 					<select name="cal" id="cal">
 						<option value="1">1</option>
@@ -152,9 +152,9 @@
 					$count =0;
 					for ($i = 1; $i <= 5; $i++) {
 						if($i < $row1["evt_calificacion"]){
-							echo "<i class='fas fa-star' style='color:yellow'></i>";
+							echo "<i class='fas fa-star' style='color:yellow margin:0 5px;'></i>";
 						}else{
-							echo "<i class='fas fa-star' style='color:white'></i>";
+							echo "<i class='fas fa-star' style='color:white margin:0 5px;'></i>";
 						}
 					}
 				?>
