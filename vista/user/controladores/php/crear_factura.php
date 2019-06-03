@@ -9,6 +9,8 @@
 	$codigo = isset($_POST["codigo"]) ? trim($_POST["codigo"]): null;
 	$evento = isset($_POST["evento"]) ? trim($_POST["evento"]): null;
 	$nombre =isset($_POST["nombreDesc"]) ? mb_strtoupper(trim($_POST["nombreDesc"]),"UTF-8"): null;
+	$latitud =  isset($_POST["latitud"])?trim($_POST["latitud"]):null;
+	$longitud =  isset($_POST["longitud"])?trim($_POST["longitud"]):null;
 
 	//precios Unitarios
 	$pu1 =  isset($_POST["pU1"])?trim($_POST["pU1"]):null; 
@@ -33,7 +35,7 @@
 	$cf5 =  isset($_POST["cF5"])?trim($_POST["cF5"]):null;
 
 	//insertamos la factura cabecera
-	$sql = "INSERT INTO T_FACTURA_CABECERA VALUES(0,'$fecha',-79.45,29.48,'ES','N',$codigo)";
+	$sql = "INSERT INTO T_FACTURA_CABECERA VALUES(0,'$fecha',$latitd,$longitud,'ES','N',$codigo)";
 	$result=$conn->query($sql);
 	$fc_id = $conn->insert_id;
 	
