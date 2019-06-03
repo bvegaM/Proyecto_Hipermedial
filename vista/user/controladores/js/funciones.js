@@ -53,7 +53,7 @@ function cambiarCantidad(){
 		t4=pT4
 		document.getElementById("p4").innerHTML="$"+pT4
 		document.getElementById("c4").innerHTML=c
-		document.getElementById("pT4").value=pT
+		document.getElementById("pT4").value=t4
 		document.getElementById("cF4").value=c
 		document.getElementById("d4").style.visibility="visible";
 	}
@@ -64,7 +64,7 @@ function cambiarCantidad(){
 		t5=pT5
 		document.getElementById("p5").innerHTML="$"+pT5
 		document.getElementById("c5").innerHTML=c
-		document.getElementById("pT5").value=pT
+		document.getElementById("pT5").value=t5
 		document.getElementById("cF5").value=c
 		document.getElementById("d5").style.visibility="visible";
 	}
@@ -75,4 +75,8 @@ function cambiarCantidad(){
 }
 function cambio(){
 	document.getElementById("cant").value=0
+}
+
+function elimina(){
+	
 }
