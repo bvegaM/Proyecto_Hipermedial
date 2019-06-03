@@ -130,8 +130,7 @@
 								   WHERE evt_id = $evt";
 							$resultN=$conn->query($sqlN);
 							$rowN=$resultN->fecth_assoc();
-						?>
-                  <input type="text" name="nombreE" value="<?php echo $rowN["evt_desc"]?>" hidden="hidden">
+					?>
                   <input type="text" name="cnt" id="cnt" value="" hidden="hidden">
                   <input type="text" name="codigo" id="codigo" value="<?php echo $codigo;?>" hidden="hidden">
                   <input type="text" name="evento" id="evento" value="<?php echo $evt;?>" hidden="hidden">
