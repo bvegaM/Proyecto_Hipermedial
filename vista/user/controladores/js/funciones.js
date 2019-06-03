@@ -12,6 +12,7 @@ function cambiarCantidad(){
 		var pT1 =Number(document.getElementById("pT1").value)
 		var pu = Number(document.getElementById("pU1").value)
 		pT1 = pu*c
+		t=t+pT1
 		document.getElementById("c1").innerHTML=c
 		document.getElementById("p1").innerHTML="$"+pT1
 		document.getElementById("cF1").value=c
@@ -21,6 +22,7 @@ function cambiarCantidad(){
 		var pT2 =Number(document.getElementById("pT2").value)
 		var pu = Number(document.getElementById("pU2").value)
 		pT2 = pu*c
+		t=t+pT2
 		document.getElementById("p2").innerHTML="$"+pT2
 		document.getElementById("c2").innerHTML=c
 		document.getElementById("cF2").value=c
@@ -30,6 +32,7 @@ function cambiarCantidad(){
 		var pT3 =Number(document.getElementById("pT3").value)
 		var pu = Number(document.getElementById("pU3").value)
 		pT3 = pu*c
+		t=t+pT3
 		document.getElementById("p3").innerHTML="$"+pT3
 		document.getElementById("c3").innerHTML=c
 		document.getElementById("cF3").value=c
@@ -39,6 +42,7 @@ function cambiarCantidad(){
 		var pT4 =Number(document.getElementById("pT3").value)
 		var pu = Number(document.getElementById("pU4").value)
 		pT4 = pu*c
+		t=t+pT4
 		document.getElementById("p4").innerHTML="$"+pT4
 		document.getElementById("c4").innerHTML=c
 		document.getElementById("pT4").value=pT
@@ -49,6 +53,7 @@ function cambiarCantidad(){
 		var pT5 =Number(document.getElementById("pT3").value)
 		var pu = Number(document.getElementById("pU5").value)
 		pT5 = pu*c
+		t=t+pT5
 		document.getElementById("p5").innerHTML="$"+pT5
 		document.getElementById("c5").innerHTML=c
 		document.getElementById("pT5").value=pT
@@ -57,7 +62,6 @@ function cambiarCantidad(){
 	}
 	
 	var tI=Number(document.getElementById("totalI").value);
-	t=pT1+pT2+pT3+pT4+pT5
 	document.getElementById("total").innerHTML="$"+t;
 }
 function cambio(){
