@@ -18,6 +18,7 @@ function cambiarCantidad(){
 		document.getElementById("c1").innerHTML=c
 		document.getElementById("p1").innerHTML="$"+pT1
 		document.getElementById("cF1").value=c
+		document.getElementById("pT1").value=t1
 		alert(document.getElementById("pT1").value)
 		document.getElementById("d1").style.visibility="visible";
 	}
@@ -29,7 +30,7 @@ function cambiarCantidad(){
 		document.getElementById("p2").innerHTML="$"+pT2
 		document.getElementById("c2").innerHTML=c
 		document.getElementById("cF2").value=c
-		alert(pT2.value)
+		document.getElementById("pT1").value=t2
 		document.getElementById("d2").style.visibility="visible";
 	}
 	if(a == 3){
@@ -40,7 +41,7 @@ function cambiarCantidad(){
 		document.getElementById("p3").innerHTML="$"+pT3
 		document.getElementById("c3").innerHTML=c
 		document.getElementById("cF3").value=c
-		alert(pT3.value)
+		document.getElementById("pT1").value=t3
 		document.getElementById("d3").style.visibility="visible";
 	}
 	if(a == 4){
