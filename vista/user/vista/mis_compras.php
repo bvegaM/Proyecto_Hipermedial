@@ -5,8 +5,9 @@
     }
 ?>
  <?php
-		$codigo = $_GET["codigo"];
-		include '../../../config/conexion.php';
+	include '../../../config/conexion.php';	
+	$codigo = $_GET["codigo"];
+		
 		
 		$sql="SELECT *
 			  FROM T_USUARIOS
@@ -22,8 +23,7 @@
 			  WHERE fc_id = fd_fc_id AND
 			  		evt_id = fd_evt_id AND
 					fc_usu_id=$codigo AND
-					fc_estado_elimina ='N' AND
-					fd_estado_elimina = 'N'";
+					fc_estado_elimina ='N'";
 		
 		$result1 = $conn->query($sql1);
 	?>
