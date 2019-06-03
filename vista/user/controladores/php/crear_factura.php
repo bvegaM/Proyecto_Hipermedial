@@ -32,6 +32,9 @@
 	$cf4 =  isset($_POST["cF4"])?trim($_POST["cF4"]):null;
 	$cf5 =  isset($_POST["cF5"])?trim($_POST["cF5"]):null;
 
+	echo "hola";
+	echo $pu1;
+
 	//insertamos la factura cabecera
 	$sql = "INSERT INTO T_FACTURA_CABECERA VALUES(0,'$fecha',-79.45,29.48,'ES','N',$codigo)";
 	$result=$conn->query($sql);
