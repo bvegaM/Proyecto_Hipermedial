@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Perfil</title>
+    <title>Crear Empresa</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles_perfil.css">
 </head>
@@ -29,14 +29,9 @@
   		?>
    <?php
 		$codigo = $_GET["codigo"];
-		$emp = $_GET["emp"];
 		include '../../../config/conexion.php';
 		
 		$sql="SELECT *
-			  FROM T_EMPRESAS
-			  WHERE emp_id = $emp";
-	
-		$sql1="SELECT *
 			  FROM T_USUARIOS
 			  WHERE usu_id = $codigo";
 		
@@ -44,9 +39,6 @@
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
 	
-		$result1 = $conn->query($sql1);
-		$row1 = $result1->fetch_assoc();
-
 	?>
    <header class="header">
 		<div class="cabecera">
@@ -65,7 +57,6 @@
 				<li class="menu__item"><a href="index.php?codigo=<?php echo $codigo?>" class="menu__link menu__link--select"><i class="fas fa-home"><span>Home</span></i></a></li>
 				<li class="menu__item"><a href="facturas.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-ticket-alt"><span>Facturas</span></i></a></li>
 				<li class="menu__item"><a href="evento.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Eventos</span></i></a></li>
-				<li class="menu__item"><a href="crear_empresa.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Crear Empresa</span></i></a></li>
 				<li class="menu__item"><a href="empresa.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="far fa-plus-square"><span>Empresa</span></i></a></li>
 				<li class="menu__item"><a href="usuario.php?codigo=<?php echo $codigo?>" class="menu__link"><i class="fas fa-money-check-alt"><span>Usuarios</span></i></a></li>
 			</ul>
@@ -79,25 +70,24 @@
         <h1 class="logo"><span>Empresa</span></h1>
         <div class="contact-wrapper" style="display:block;">
             <div class="contact-form">
-                <h3>Esta es la Empresa Seleccionada</h3>
+                <h3>Crea tu Empresa aquí</h3>
                 <form action="../controladores/php/update_empresa.php" method="post" enctype="multipart/form-data">
                     <p>
-                        <input type="text" name="id" id="id" value="<?php echo $row["emp_id"] ?>" hidden="hidden">
-                         <input type="text" name="codi" id="codi" value="<?php echo $codigo ?>" hidden="hidden">
+                        <input type="text" name="codi" id="codi" value="<?php echo $codigo ?>" hidden="hidden">
                         <label for="nombres">Nombre de la Empresa</label>
-                        <input type="text" name="nombres" id="nombres" value="<?php echo $row["emp_nombre"]?>" onkeyup="validarLetras(this,'nombres')">
+                        <input type="text" name="nombres" id="nombres" value="" onkeyup="validarLetras(this,'nombres')">
                     </p>
                     <p>
                         <label for="cedula">RUC</label>
-                        <input type="text" name="cedula" id="cedula" value="<?php echo $row["emp_ruc"]?>" onkeyup="validarCedula();validarNumeros(this,'cedula')">
+                        <input type="text" name="cedula" id="cedula" value="" onkeyup="validarCedula();validarNumeros(this,'cedula')">
                     </p>
                     <p>
                         <label for="telefono">Telefono</label>
-                        <input type="text" name="telefono" id="telefono" value="<?php echo $row["emp_telefono"]?>" onkeyup="validarTelefono();validarNumeros(this,'telefono')">
+                        <input type="text" name="telefono" id="telefono" value="" onkeyup="validarTelefono();validarNumeros(this,'telefono')">
                     </p>
                     <p>
                         <label for="direccion">Dirección</label>
-                        <input type="text" name="direccion" id="direccion" value="<?php echo $row["emp_direccion"]?>" onkeyup="validarLetras(this,'direccion')">
+                        <input type="text" name="direccion" id="direccion" value="" onkeyup="validarLetras(this,'direccion')">
                     </p>
                     <p>
                         <?php
@@ -109,18 +99,14 @@
                         <select name="ast" id="ast" onchange="cambio();">
                   			<?php
 								while($rowe = $resulte->fetch_assoc()){
-									if($rowe["cat_id"] == $row["emp_cat_id"]){
 										echo "<option value=".$rowe['cat_id']." selected>".$rowe['cat_desc']."</option>";
-									}else{
 										echo "<option value=".$rowe['cat_id'].">".$rowe['cat_desc']."</option>";
-									}
-									
 								}
 							?>
                         </select>
                     </p>
                     <p class="block">
-                        <input type="submit" value="Guardar Cambios" class="button" id="botonA">
+                        <input type="submit" value="Registrar" class="button" id="botonA">
                         <input type="reset" value="Cancelar" class="button" onclick="limpiar()" id="botonB">
                     </p>
                 </form>
