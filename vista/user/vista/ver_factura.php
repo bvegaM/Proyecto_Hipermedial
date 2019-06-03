@@ -112,7 +112,7 @@
 								T_FACTURA_CABECERA,
 								T_FACTURA_DETALLE
 								WHERE fc_id = fd_fc_id AND
-									  evt_id = fc_evt_id AND
+									  evt_id = fd_evt_id AND
 									  fd_cd_id =$fc";
 		
 						$result1 = $conn->query($sql1);
