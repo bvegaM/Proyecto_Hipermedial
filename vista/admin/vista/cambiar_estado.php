@@ -1,3 +1,4 @@
+
 <?php
     session_start();
     if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
@@ -6,19 +7,23 @@
 ?>
  <?php
 		$codigo = $_GET["codigo"];
+		$fc = $_GET["fc"];
 		include '../../../config/conexion.php';
 		
 		$sql="SELECT *
+			  FROM T_FACTURA_CABECERA
+			  WHERE usu_id = $fc";
+	
+		$sql1="SELECT *
 			  FROM T_USUARIOS
 			  WHERE usu_id = $codigo";
 		
+		
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
-		
-		$sql1="SELECT *
-			  FROM T_FACTURA_CABECERA";
-		
+	
 		$result1 = $conn->query($sql1);
+		$row1 = $result1->fetch_assoc();
 	?>
   <?php
 			include '../../../config/conexion.php';
@@ -37,11 +42,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Facturas</title>
+    <title>Contraseña</title>
+    <script type="text/javascript" src="../controladores/js/validar_registro.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles_evento.css">
-    <script type="text/javascript" src="../controladores/js/ajax.js"></script>
     <style>
 		.datos{
 			background: #181818;
@@ -72,63 +77,33 @@
 			</ul>
 		</div>
 		<div class="rol">
-			<a href="index.php?codigo=<?php echo $codigo?>" class="sesion"><i class="fas fa-smile-beam"><span>Bienvenido <?php echo $row["usu_nombres"]; ?></span></i></a>
+			<a href="index.php?codigo=<?php echo $codigo?>" class="sesion"><i class="fas fa-smile-beam"><span>Bienvenido <?php echo $row1["usu_nombres"]; ?></span></i></a>
 			<a href="../controladores/php/cerrar_sesion.php" class="sesion"><i class="fas fa-sign-in-alt" id="inicio"><span>Cerrar Sesión</span></i></a>
 		</div>
 	</nav>
     <div class="content">
-        <h1 class="logo"><span>Facturas</span></h1>
-        <div class="contact-wrapper-compras">               
-            <div class="contact-form-compras">
-                <form action="" class="busqueda" style="display:block;padding:0px 0; backgound:#181818;">
-                <h2 style="text-align:center; color:red;">Tu Buscador</h2>
-                <input type="text"  id="usuario" name="remitente" value="<?php echo $codigo?>" hidden="hidden">
-                <input type="text" name="evento" placeholder="buscar por codigo" id="evento" value="" onkeyup="buscarPorEvento()" style="display:block; margin:0 auto; padding:0px 85px; border-radius:5px; width:100%; border-style:solid; border-color:black;">
-   				 </form>
-                <form action="../controladores/php/crear_factura.php" method="post" onsubmit="return validar()" enctype="multipart/form-data" id="factura">
-                   <div class="detalle" style="background:white;">
-                   	<table style="width:100%; color:black; text-align:center;">
-                   		<tr>
-                   			<th style="border-bottom:1px solid black;">N° Factura</th>
-                   			<th style="border-bottom:1px solid black;">fecha de Emisión</th>
-                   			<th style="border-bottom:1px solid black;">Estado</th>
-                   			<th style="border-bottom:1px solid black;">Cambiar Estado</th>
-                   			<th style="border-bottom:1px solid black;">Ver</th>
-                   			<th style="border-bottom:1px solid black;">Anular Factura</th>
-                   			
-                   		</tr>
-                   		<?php
-							while($row1 = $result1->fetch_assoc()){
-								echo "<tr class='datos'>";
-									echo "<td>".$row1["fc_id"]."</td>";
-									echo "<td>".$row1["fc_fecha"]."</td>";
-									if($row1["fc_estado_entrega"] == 'ES'){
-										echo "<td>EN ESPERA</td>";
-									}
-									if($row1["fc_estado_entrega"] == 'NP'){
-										echo "<td>EN PROGRESO</td>";
-									}
-									if($row1["fc_estado_entrega"] == 'R'){
-										echo "<td>RECIBIDO</td>";
-									}
-									echo "<td>"."<a href='cambiar_estado.php?fc=".$row1["fc_id"]."&codigo=".$codigo"'>"."<i class='fas fa-edit' style='color:#1A5276;'></i>"."</a>"."</td>";
-									echo "<td>"."<a href='ver_factura.php?fc=".$row1["fc_id"]."&codigo=".$row1["fc_usu_id"]."&codA=".$codigo."'>"."<i class='far fa-eye' style='color:greenyellow;'></i>"."</a>"."</td>";
-									if($row1["fc_estado_elimina"] == 'N'){
-										echo "<td class='link_compra'><a href='../controladores/php/anular_factura.php?fc=".$row1["fc_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
-									}else{
-										echo "<td>ANULADA</td>";
-									}
-									
-								echo "</tr>";
-							}
-						?>
-                   	</table>
-                   </div>
+        <h1 class="logo">Cambiar <span>Estado</span></h1>
+        <div class="contact-wrapper-compras contact-wrapper">               
+            <div class="contact-form">
+                <form action="../controladores/php/cambiar_contrasena_user.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
+                  <input type="text" name="codigo" id="codigo" value="<?php echo $codigo;?>" hidden="hidden">
+                  <input type="text" name="codi" id="codi" value="<?php echo $fc;?>" hidden="hidden">
+                   <p>
+                   	<label for="contrasena">Eliga el nuevo estado</label>
+                   	<select name="estado" id="est">
+                   		<option value="ES">EN ESPERA</option>
+                   		<option value="EP">EN PROGRESO</option>
+                   		<option value="R">RECIBIDO</option>
+                   	</select>
+                   </p>
+                   <p class="block">
+                        <input type="submit" value="Cambiar" class="button" id="botonA">
+                    </p>
                 </form>
             </div>
         </div>
     </div>
-     <footer class="footer">
+    <footer class="footer">
 		<div class="footer-social-icons">
 			<ul>
 				<li><a href="" target="blank"><i class="fab fa-facebook-square"></i>
