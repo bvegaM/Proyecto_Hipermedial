@@ -30,7 +30,8 @@ function cambiarCantidad(){
 		document.getElementById("p2").innerHTML="$"+pT2
 		document.getElementById("c2").innerHTML=c
 		document.getElementById("cF2").value=c
-		document.getElementById("pT1").value=t2
+		document.getElementById("pT2").value=t2
+		alert(document.getElementById("pT2").value)
 		document.getElementById("d2").style.visibility="visible";
 	}
 	if(a == 3){
@@ -41,7 +42,8 @@ function cambiarCantidad(){
 		document.getElementById("p3").innerHTML="$"+pT3
 		document.getElementById("c3").innerHTML=c
 		document.getElementById("cF3").value=c
-		document.getElementById("pT1").value=t3
+		document.getElementById("pT3").value=t3
+		alert(document.getElementById("pT3").value)
 		document.getElementById("d3").style.visibility="visible";
 	}
 	if(a == 4){
