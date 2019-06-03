@@ -20,5 +20,10 @@
 
 	echo $cf4;
 	echo $cf5;
+
+	echo $cf3;
+	if($cf4 ==""){
+		echo "hola";
+	}
 	
 ?>
