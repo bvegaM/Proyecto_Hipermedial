@@ -219,7 +219,7 @@
 									echo "<td style='font-size:13px;'>".$row1["evt_desc"]." ".$row1["ast_desc"]." </td>";
 									echo "<td>$".$row1["eat_precio"]."</td>";
 								 	echo "<td id='p".$row1["ast_id"]."'>$".$row1["eat_precio"]."</td>";
-									echo "<td>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
+									echo "<td id='el".$row1["ast_id"]."' onclick='elimina();'>"."<i class='fas fa-trash-alt' style='color:red;'></i>"."</td>";
 								 	echo "<td>"."<input type='text'  name='pU".$row1["ast_id"]."' id='pU".$row1["ast_id"]."' value='".$row1["eat_precio"]."' hidden='hidden'>"."</td>";
 								 	echo "<td>"."<input type='text'  name='pT".$row1["ast_id"]."' id='pT".$row1["ast_id"]."' value='0' hidden='hidden'>"."</td>";
 								 	echo "<td>"."<input type='text'  name='cF".$row1["ast_id"]."' id='cF".$row1["ast_id"]."' value='0' hidden='hidden'>"."</td>";
