@@ -104,7 +104,7 @@
 									echo "<td>".$row1["evt_desc"]."</td>";
 									echo "<td>".$row1["evt_fec_evento"]."</td>";
 									echo "<td>".$row1["usu_nombres"]."</td>";
-									echo "<td>$".$row1["evt_calificacion"]."</td>";
+									echo "<td>".$row1["evt_calificacion"]."</td>";
 									if($row1["evt_estado_elimina"] == 'N'){
 										echo "<td class='link_compra'><a href='../controladores/php/eliminar_evento.php?evt=".$row1["evt_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
 									}else{
