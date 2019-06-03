@@ -86,11 +86,11 @@
 				}
 		}
 		if($aV!="" && $pV !=""){
-			echo "sii";
 			$sql3="SELECT COUNT(*) as count 
 				   FROM T_EVENTOS_ASIENTOS
 				   WHERE eat_evt_id = $evt AND
 	  					 eat_ast_id = 3";
+			echo $sql3;
 			$resul3=$conn->query($sql3);
 			$row3=$result3->fetch_assoc();
 				if($row3["count"] == 1){
