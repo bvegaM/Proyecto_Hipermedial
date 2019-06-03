@@ -138,7 +138,7 @@
 				<h1 style="color:red; font-size:40px; margin:0;"><?php echo $row1["evt_desc"]?></h1>
 				<h2>Fecha: <?php echo $row1["evt_fec_evento"]?></h2>
 				<h2>Direccion: <?php echo $row1["evt_direccion"]?></h2>
-				<p style="display:grid;  grid-template-columns: 1fr 1fr;">
+				<div style="display:grid;  grid-template-columns: 1fr 1fr;">
 					<h2>Calificar</h2>
 					<select name="cal" id="cal">
 						<option value="1">1</option>
@@ -147,7 +147,7 @@
 						<option value="4">4</option>
 						<option value="5">5</option>
 					</select>	
-				</p>
+				</div>
 			</article>
 			<?php echo "<img class='img_event' src='data:".$row1['evt_img_tipo']."; base64,".base64_encode($row1['evt_img'])."'>"; ?>
 		</section>
