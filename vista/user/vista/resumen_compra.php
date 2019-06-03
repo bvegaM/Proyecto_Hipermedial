@@ -124,6 +124,14 @@
             <div class="contact-form">
                 <h3>Vista Previa</h3>
                 <form action="../controladores/php/crear_factura.php" method="post" onsubmit="return validar()" enctype="multipart/form-data" style="display:block;">
+                  <?php
+							$sqlN="SELECT *
+								   FROM T_EVENTOS
+								   WHERE evt_id = $evt";
+							$resultN=$conn->query($sqlN);
+							$rowN=$resultN->fecth_assoc();
+						?>
+                  <input type="text" name="nombreE" value="<?php echo $rowN["evt_desc"]?>" hidden="hidden">
                   <input type="text" name="cnt" id="cnt" value="" hidden="hidden">
                   <input type="text" name="codigo" id="codigo" value="<?php echo $codigo;?>" hidden="hidden">
                   <input type="text" name="evento" id="evento" value="<?php echo $evt;?>" hidden="hidden">
