@@ -20,7 +20,8 @@
 			  FROM T_FACTURA_CABECERA,
 			  	   T_USUARIOS
 			  WHERE fc_usu_id = usu_id AND
-			  		fc_usu_id=$codigo";
+			  		fc_usu_id=$codigo AND
+					fc_estado_elimina='N'";
 		
 		$result1 = $conn->query($sql1);
 	?>
