@@ -27,9 +27,7 @@
 	//insertamos la factura cabecera
 	$sql = "INSERT INTO T_FACTURA_CABECERA(0,'$fecha',-79.45,29.48,'ES','N',$codigo)";
 
-	echo $pt1;
 	echo $pt2;
-	echo $pt3;
 
 	if($cf1 ==""){
 		echo "hola";
