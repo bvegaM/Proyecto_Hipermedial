@@ -58,4 +58,70 @@
 			WHERE evt_id = $evt";	
 		$result = $conn->query($sql);
 	}
+
+	if($aG!="" && $pG !=""){
+			$sql1="SELECT COUNT(*) as count 
+				   FROM T_EVENTOS_ASIENTOS
+				   WHERE eat_evt_id = $evt AND
+	  					 eat_ast_id = 1";
+			$result1=$conn->query($sql1);
+			$row1=$result1->fetch_assoc();
+			if($row1["count"] == 1){
+				echo "hola";
+			}else{
+				echo "chao";
+			}
+		}
+		if($aT!="" && $pT !=""){
+			$sql1="SELECT COUNT(*) as count 
+				   FROM T_EVENTOS_ASIENTOS
+				   WHERE eat_evt_id = $evt AND
+	  					 eat_ast_id = 2";
+			$result1=$conn->query($sql1);
+			$row1=$result1->fetch_assoc();
+				if($row1["count"] == 1){
+					echo "hola";
+				}else{
+					echo "chao";
+				}
+		}
+		if($aP!="" && $pP !=""){
+			$sql1="SELECT COUNT(*) as count 
+				   FROM T_EVENTOS_ASIENTOS
+				   WHERE eat_evt_id = $evt AND
+	  					 eat_ast_id = 4";
+			$result1=$conn->query($sql1);
+			$row1=$result1->fetch_assoc();
+				if($row1["count"] == 1){
+					echo "hola";
+				}else{
+					echo "chao";
+				}
+		}
+		if($aV!="" && $pV !=""){
+			$sql1="SELECT COUNT(*) as count 
+				   FROM T_EVENTOS_ASIENTOS
+				   WHERE eat_evt_id = $evt AND
+	  					 eat_ast_id = 3";
+			$result1=$conn->query($sql1);
+			$row1=$result1->fetch_assoc();
+				if($row1["count"] == 1){
+					echo "hola";
+				}else{
+					echo "chao";
+				}
+		}
+		if($aB!="" && $pB !=""){
+			$sql1="SELECT COUNT(*) as count 
+				   FROM T_EVENTOS_ASIENTOS
+				   WHERE eat_evt_id = $evt AND
+	  					 eat_ast_id = 5";
+			$result1=$conn->query($sql1);
+			$row1=$result1->fetch_assoc();
+				if($row1["count"] == 1){
+					echo "hola";
+				}else{
+					echo "chao";
+				}
+		}
 ?>
