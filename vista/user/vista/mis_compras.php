@@ -99,6 +99,7 @@
 							while($row1 = $result1->fetch_assoc()){
 								echo "<tr class='datos'>";
 									echo "<td>".$row1["fc_id"]."</td>";
+									echo "<td>".$row1["fc_fecha"]."</td>";
 									if($row1["fc_estado_entrega"] == 'ES'){
 										echo "<td>EN ESPERA</td>";
 									}
@@ -108,8 +109,7 @@
 									if($row1["fc_estado_entrega"] == 'R'){
 										echo "<td>RECIBIDO</td>";
 									}
-									echo "<td>".$row1["fc_estado_entrega"]."</td>";
-									echo "<td>Ver</td>";
+									echo "<td><i class='far fa-eye' style='color:red;'></i></td>";
 									echo "<td class='link_compra'><a href='../controladores/php/anular_factura.php?fc=".$row1["fc_id"]."&fd=".$row1["fd_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
 								echo "</tr>";
 							}
