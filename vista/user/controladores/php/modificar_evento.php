@@ -59,7 +59,7 @@
 		$result = $conn->query($sql);
 	}
 
-	if($aG!="" && $pG !=""){
+		if($aG!="" && $pG !=""){
 			$sql1="SELECT COUNT(*) as count 
 				   FROM T_EVENTOS_ASIENTOS
 				   WHERE eat_evt_id = $evt AND
@@ -86,6 +86,7 @@
 				}
 		}
 		if($aV!="" && $pV !=""){
+			echo "sii";
 			$sql3="SELECT COUNT(*) as count 
 				   FROM T_EVENTOS_ASIENTOS
 				   WHERE eat_evt_id = $evt AND
@@ -97,8 +98,6 @@
 				}else{
 					echo "chao v";
 				}
-		}else{
-			echo "nada";
 		}
 		if($aP!="" && $pP !=""){
 			$sql4="SELECT COUNT(*) as count 
