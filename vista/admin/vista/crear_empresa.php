@@ -72,7 +72,7 @@
         <div class="contact-wrapper" style="display:block;">
             <div class="contact-form">
                 <h3>Crea tu Empresa aquí</h3>
-                <form action="../controladores/php/update_empresa.php" method="post" enctype="multipart/form-data">
+                <form action="../controladores/php/crear_empresa.php" method="post" enctype="multipart/form-data">
                     <p>
                         <input type="text" name="codi" id="codi" value="<?php echo $codigo ?>" hidden="hidden">
                         <label for="nombres">Nombre de la Empresa</label>
