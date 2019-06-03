@@ -155,7 +155,7 @@
                    <p style="text-align:center display:block;"> 
                    	 Te recordamos que solo puedes escoger hasta tres boletos ya que más de 3 es excederse del limite acordado.
                    </p>
-                   <h3>Escoge la ubicación de tu evento</h3>    
+                   <h3>Escoge la ubicación de envio</h3>    
                  <div id="map_canvas" style="width: auto; height: 400px;" class="block"></div>	
                 </form>
             </div>
@@ -166,6 +166,8 @@
                   <input type="text" name="codigo" id="codigo" value="<?php echo $codigo;?>" hidden="hidden">
                   <input type="text" name="evento" id="evento" value="<?php echo $evt;?>" hidden="hidden">
                   <input type="text" name="eventoId" id="eventoId" value="<?php echo $evtId;?>" hidden="hidden">
+                  <input id="txtLat" name="latitud" type="text" style="color:red;" hidden="hidden" value="19.4326077"/>
+                  <input id="txtLng"  name="longitud" type="text" style="color:red;" hidden="hidden" value="-99.13320799999997" />
                    <div class="cabecera" style="background: white;">
                    	<i class="fas fa-ticket-alt" style="font-size:35px; color:red;"></i>
                    	<h2 style="margin:0; font-size:20px; color:black;">TIcket Home</h2>
