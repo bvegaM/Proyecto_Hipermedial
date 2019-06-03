@@ -12,7 +12,7 @@
 		
 		$sql="SELECT *
 			  FROM T_FACTURA_CABECERA
-			  WHERE usu_id = $fc";
+			  WHERE fc_id = $fc";
 	
 		$sql1="SELECT *
 			  FROM T_USUARIOS
