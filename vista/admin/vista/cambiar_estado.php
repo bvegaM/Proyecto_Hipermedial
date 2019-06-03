@@ -85,7 +85,7 @@
         <h1 class="logo">Cambiar <span>Estado</span></h1>
         <div class="contact-wrapper-compras contact-wrapper">               
             <div class="contact-form">
-                <form action="../controladores/php/cambiar_contrasena_user.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
+                <form action="../controladores/php/cambiar_estado.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
                   <input type="text" name="codigo" id="codigo" value="<?php echo $codigo;?>" hidden="hidden">
                   <input type="text" name="codi" id="codi" value="<?php echo $fc;?>" hidden="hidden">
                    <p>
