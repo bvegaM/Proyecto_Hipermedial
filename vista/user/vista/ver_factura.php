@@ -105,26 +105,6 @@
                    		<br>
                    		<br>
                    		<br>
-                   		<?php
-	
-						 $sql1="SELECT * 
-			   					FROM T_EVENTOS,
-								T_FACTURA_CABECERA,
-								T_FACTURA_DETALLE
-								WHERE fc_id = fd_fc_id AND
-									  evt_id = fc_evt_id AND
-									  fd_cd_id =$fc";
-		
-						$result1 = $conn->query($sql1);
-						while($row1 = $result1->fetch_assoc()){
-								echo "<tr>";
-									echo "<td>".$row1["fd_cantidad"]."</td>";
-									echo "<td style='font-size:13px;'>".$row1["fd_desc"] ".</td>";
-									echo "<td>$".$row1["fd_precio"]."</td>";
-									echo "<td>$".$row1["fd_total"]."</td>";
-								echo "</tr>";
-						}
-						?>
                    		
                    	</table>   
             </div>
