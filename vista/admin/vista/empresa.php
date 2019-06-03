@@ -93,6 +93,7 @@
                    			<th style="border-bottom:1px solid black;">RUC</th>
                    			<th style="border-bottom:1px solid black;">Direccion</th>
                    			<th style="border-bottom:1px solid black;">Telefono</th>
+                   			<th style="border-bottom:1px solid black;">Modificar Empresa</th>
                    			<th style="border-bottom:1px solid black;">Eliminar Empresa</th>
                    		</tr>
                    		<?php
