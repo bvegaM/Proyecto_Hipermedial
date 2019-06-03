@@ -19,7 +19,6 @@ function cambiarCantidad(){
 		document.getElementById("p1").innerHTML="$"+pT1
 		document.getElementById("cF1").value=c
 		document.getElementById("pT1").value=t1
-		alert(document.getElementById("pT1").value)
 		document.getElementById("d1").style.visibility="visible";
 	}
 	if(a == 2){
@@ -31,7 +30,6 @@ function cambiarCantidad(){
 		document.getElementById("c2").innerHTML=c
 		document.getElementById("cF2").value=c
 		document.getElementById("pT2").value=t2
-		alert(document.getElementById("pT2").value)
 		document.getElementById("d2").style.visibility="visible";
 	}
 	if(a == 3){
@@ -43,7 +41,6 @@ function cambiarCantidad(){
 		document.getElementById("c3").innerHTML=c
 		document.getElementById("cF3").value=c
 		document.getElementById("pT3").value=t3
-		alert(document.getElementById("pT3").value)
 		document.getElementById("d3").style.visibility="visible";
 	}
 	if(a == 4){
@@ -78,5 +75,30 @@ function cambio(){
 }
 
 function elimina(){
-	
+	var i =  Number(document.getElementById("el").value)
+	if (i == 1){
+		document.getElementById("c1").innerHTML=0
+		document.getElementById("cF1").value=0
+		document.getElementById("d1").style.visibility="hidden";
+	}
+	if (i == 2){
+		document.getElementById("c2").innerHTML=0
+		document.getElementById("cF2").value=0
+		document.getElementById("d2").style.visibility="hidden";
+	}
+	if (i == 3){
+		document.getElementById("c3").innerHTML=0
+		document.getElementById("cF3").value=0
+		document.getElementById("d3").style.visibility="hidden";
+	}
+	if (i == 4){
+		document.getElementById("c4").innerHTML=0
+		document.getElementById("cF4").value=0
+		document.getElementById("d4").style.visibility="hidden";
+	}
+	if (i == 5){
+		document.getElementById("c5").innerHTML=0
+		document.getElementById("cF5").value=0
+		document.getElementById("d5").style.visibility="hidden";
+	}
 }
