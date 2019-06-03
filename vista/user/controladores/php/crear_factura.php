@@ -32,6 +32,7 @@
 	
 	if($cf1 !=""){
 		$sql1= "INSERT INTO T_FACTURA_DETALLE VALUES(0,'$nombre'.' '.'General',$cf1,$pt1,$fc_id,$evento)";
+		echo $sql1;
 		$result1=$conn->query($sql1);
 	}
 	if($cf2 !=""){
