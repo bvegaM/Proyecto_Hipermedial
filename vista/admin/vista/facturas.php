@@ -92,8 +92,10 @@
                    			<th style="border-bottom:1px solid black;">N° Factura</th>
                    			<th style="border-bottom:1px solid black;">fecha de Emisión</th>
                    			<th style="border-bottom:1px solid black;">Estado</th>
+                   			<th style="border-bottom:1px solid black;">Cambiar Estado</th>
                    			<th style="border-bottom:1px solid black;">Ver</th>
                    			<th style="border-bottom:1px solid black;">Anular Factura</th>
+                   			
                    		</tr>
                    		<?php
 							while($row1 = $result1->fetch_assoc()){
@@ -109,6 +111,7 @@
 									if($row1["fc_estado_entrega"] == 'R'){
 										echo "<td>RECIBIDO</td>";
 									}
+									echo "<td>"."<a href='ver_factura.php?fc=".$row1["fc_id"]."&codigo=".$row1["fc_usu_id"]."&codA=".$codigo."'>"."<i class='far fa-eye' style='color:#1A5276;'></i>"."</a>"."</td>";
 									echo "<td>"."<a href='ver_factura.php?fc=".$row1["fc_id"]."&codigo=".$row1["fc_usu_id"]."&codA=".$codigo."'>"."<i class='far fa-eye' style='color:greenyellow;'></i>"."</a>"."</td>";
 									if($row1["fc_estado_elimina"] == 'N'){
 										echo "<td class='link_compra'><a href='../controladores/php/anular_factura.php?fc=".$row1["fc_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
