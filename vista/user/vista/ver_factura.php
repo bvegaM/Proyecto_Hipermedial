@@ -125,6 +125,22 @@
 								echo "</tr>";
 						}
 						?>
+                  		<?php
+						$sql1="SELECT SUM(fd_total) as sub
+							   FROM T_FACTURA_CABECERA,
+	 								T_FACTURA_DETALLE
+									WHERE fd_fc_id = fc_id AND
+										  fd_fc_id = $fc";
+		
+						$result1 = $conn->query($sql1);
+						$row1 = $result1->fetch_assoc();
+						echo "<tr>";
+                   				echo "<td></td>";
+								echo "<td></td>";
+                   				echo "<td style='font-weight: bolder;'>Subtotal:</td>";
+                   				echo "<td id='total'>$".$row1["sub"]."</td>";
+                   		echo "</tr>";
+						?>
                    	</table>   
             </div>
         </div>
