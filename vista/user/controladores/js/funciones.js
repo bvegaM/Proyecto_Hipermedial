@@ -13,11 +13,14 @@ function cambiarCantidad(){
 	var pT3 =Number(document.getElementById("pT3").value)
 	var pT4 =Number(document.getElementById("pT4").value)
 	var pT5 =Number(document.getElementById("pT5").value)
-	
+	alert(pT1)
+	alert(pT2)
+	alert(pT3)
+	alert(pT4)
+	alert(pT5)
 	if(a == 1){
 		var pu = Number(document.getElementById("pU1").value)
 		var pT = pu*c
-		t1 = pT
 		document.getElementById("c1").innerHTML=c
 		document.getElementById("p1").innerHTML="$"+pT
 		document.getElementById("pT1").value=pT
@@ -27,7 +30,6 @@ function cambiarCantidad(){
 	if(a == 2){
 		var pu = Number(document.getElementById("pU2").value)
 		var pT = pu*c
-		t2 = pT
 		document.getElementById("p2").innerHTML="$"+pT
 		document.getElementById("c2").innerHTML=c
 		document.getElementById("pT2").value=pT
@@ -37,7 +39,6 @@ function cambiarCantidad(){
 	if(a == 3){
 		var pu = Number(document.getElementById("pU3").value)
 		var pT = pu*c
-		t3=pT
 		document.getElementById("p3").innerHTML="$"+pT
 		document.getElementById("c3").innerHTML=c
 		document.getElementById("pT3").value=pT
@@ -47,7 +48,6 @@ function cambiarCantidad(){
 	if(a == 4){
 		var pu = Number(document.getElementById("pU4").value)
 		var pT = pu*c
-		t4 = pT
 		document.getElementById("p4").innerHTML="$"+pT
 		document.getElementById("c4").innerHTML=c
 		document.getElementById("pT4").value=pT
@@ -57,7 +57,6 @@ function cambiarCantidad(){
 	if(a == 5){
 		var pu = Number(document.getElementById("pU5").value)
 		var pT = pu*c
-		t5= pT
 		document.getElementById("p5").innerHTML="$"+pT
 		document.getElementById("c5").innerHTML=c
 		document.getElementById("pT5").value=pT
