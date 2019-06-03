@@ -51,6 +51,42 @@
 			font-size: 10px;
 		}
 	</style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoJ3ujl8XgJZMJ3H8Hfu4wXa41tY_Eozc"></script>
+    <script type="text/javascript">
+        function initialize() {
+            // Creating map object
+            var map = new google.maps.Map(document.getElementById('map_canvas'), {
+                zoom: 12,
+                center: new google.maps.LatLng(-2.897583, -78.997963),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            // creates a draggable marker to the given coords
+            var vMarker = new google.maps.Marker({
+                position: new google.maps.LatLng(-2.897583, -78.997963),
+                draggable: true
+            });
+
+            // adds a listener to the marker
+            // gets the coords when drag event ends
+            // then updates the input with the new coords
+            google.maps.event.addListener(vMarker, 'dragend', function (evt) {
+                $("#txtLat").val(evt.latLng.lat().toFixed(6));
+                $("#txtLng").val(evt.latLng.lng().toFixed(6));
+
+                map.panTo(evt.latLng);
+            });
+
+            // centers the map on markers coords
+            map.setCenter(vMarker.position);
+
+            // adds the marker on the map
+            vMarker.setMap(map);
+        }
+    </script>
 </head>
 <body>  
  	<header class="header">
@@ -119,6 +155,8 @@
                    <p style="text-align:center display:block;"> 
                    	 Te recordamos que solo puedes escoger hasta tres boletos ya que más de 3 es excederse del limite acordado.
                    </p>
+                   <h3>Escoge la ubicación de tu evento</h3>    
+                 <div id="map_canvas" style="width: auto; height: 400px;" class="block"></div>	
                 </form>
             </div>
             <div class="contact-form">
