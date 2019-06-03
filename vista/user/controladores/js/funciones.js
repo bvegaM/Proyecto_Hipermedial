@@ -18,7 +18,7 @@ function cambiarCantidad(){
 		var pT = pu*c
 		document.getElementById("c1").innerHTML=c
 		document.getElementById("p1").innerHTML="$"+pT
-		document.getElementById("pT1").value=pT
+		pT1.value=pT
 		document.getElementById("cF1").value=c
 		document.getElementById("d1").style.visibility="visible";
 	}
@@ -27,7 +27,7 @@ function cambiarCantidad(){
 		var pT = pu*c
 		document.getElementById("p2").innerHTML="$"+pT
 		document.getElementById("c2").innerHTML=c
-		document.getElementById("pT2").value=pT
+		pT2.value=pT
 		document.getElementById("cF2").value=c
 		document.getElementById("d2").style.visibility="visible";
 	}
@@ -36,7 +36,7 @@ function cambiarCantidad(){
 		var pT = pu*c
 		document.getElementById("p3").innerHTML="$"+pT
 		document.getElementById("c3").innerHTML=c
-		document.getElementById("pT3").value=pT
+		pT3.value=pT
 		document.getElementById("cF3").value=c
 		document.getElementById("d3").style.visibility="visible";
 	}
