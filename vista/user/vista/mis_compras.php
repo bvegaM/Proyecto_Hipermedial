@@ -109,7 +109,7 @@
 									if($row1["fc_estado_entrega"] == 'R'){
 										echo "<td>RECIBIDO</td>";
 									}
-									echo "<td><i class='far fa-eye' style='color:red;'></i></td>";
+									echo "<td><i class='far fa-eye' style='color:green;'></i></td>";
 									echo "<td class='link_compra'><a href='../controladores/php/anular_factura.php?fc=".$row1["fc_id"]."&fd=".$row1["fd_id"]."&codigo=".$codigo."'><i class='fas fa-trash-alt' style='color:red;'></i></a></td>";
 								echo "</tr>";
 							}
