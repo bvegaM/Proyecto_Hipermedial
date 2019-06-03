@@ -8,7 +8,7 @@
 	$fecha = date("y-m-d h:i:s",time());
 	$codigo = isset($_POST["codigo"]) ? trim($_POST["codigo"]): null;
 	$evento = isset($_POST["evento"]) ? trim($_POST["evento"]): null;
-	$nombre =isset($_POST["nombreE"]) ? mb_strtoupper(trim($_POST["nombreE"]),"UTF-8"): null;
+	$nombre =isset($_POST["nombreDesc"]) ? mb_strtoupper(trim($_POST["nombreDesc"]),"UTF-8"): null;
 
 	//precios totales
 	$pt1 =  isset($_POST["pT1"])?trim($_POST["pT1"]):null; 
