@@ -217,7 +217,7 @@
                    				echo "<td></td>";
 								echo "<td></td>";
                    				echo "<td style='font-weight: bolder;'>Subtotal:</td>";
-                   				echo "<td id='totalTo'>$".$row1["eat_precio"]*0.12."</td>";
+                   				echo "<td id='totalTo'>$".$row1["eat_precio"]+($row1["eat_precio"]*0.12)."</td>";
                    		echo "</tr>";	
 						?>
                    		

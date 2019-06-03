@@ -63,7 +63,7 @@ function cambiarCantidad(){
 		document.getElementById("d5").style.visibility="visible";
 	}
 	t=t1+t2+t3+t4+t5
-	ti=t*0.12
+	ti=(t*0.12)+t
 	document.getElementById("total").innerHTML="$"+t;
 	document.getElementById("totalTo").innerHTML="$"+ti;
 }
